@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-[10vmax] overflow-y-scroll">
+    <div className="min-h-[10vmax] overflow-y-scroll overflow-x-hidden">
 
       <div className="min-h-[150px] bg-black"></div>
       <div className="min-h-[1000px] bg-black flex flex-col items-center justify-center">

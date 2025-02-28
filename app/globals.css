@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'NJTD-Regular';
+  src: url(../public/fonts/NJTD-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+};
+@font-face {
+  font-family: 'NJTD-Bold';
+  src: url(../public/fonts/NJTD-Bold.ttf) format('truetype');
+  font-weight: bold;
+  font-style:normal
+}
+
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -40,10 +53,26 @@
     --highlight-color: rgb(100, 120, 185);
   }
 }
-
+html::-webkit-scrollbar{
+  display: none;
+}
+html{
+  scrollbar-3dlight-color: black;
+  scrollbar-base-color: black;
+  scrollbar-color: black;
+  scrollbar-face-color: black;
+  scrollbar-darkshadow-color: black;
+  scrollbar-highlight-color: black;
+  scrollbar-track-color: black;
+  scrollbar-shadow-color: black;
+  scrollbar-arrow-color: black;
+  scrollbar-width:0;
+  margin-right: -20px;
+}
 body {
   color: var(--foreground);
   background: var(--background);
+  
 }
 
 body {
@@ -54,6 +83,27 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.title{
+  font-size: 4vw;
+  font-family: 'Geologica', sans-serif;
+  font-variation-settings: 'wght' 700;
+  font-variation-settings: 'CRSV' 0.5;
+  font-variation-settings: 'SHRP' 100;
+  color: var(--light-color);
+  text-shadow: -4px 2px 4px var(--mid-color);
+  text-align:center;
+}
+.subTitle{
+  font-size: 3vw;
+  font-family: 'Geologica', sans-serif;
+  font-variation-settings: 'wght' 600;
+  font-variation-settings: 'CRSV' 0.5;
+  font-variation-settings: 'SHRP' 100;
+  color: var(--light-color);
+  text-shadow: -2px 1px 2px var(--mid-color);
+  text-align:center;
 }
 
 .update{
