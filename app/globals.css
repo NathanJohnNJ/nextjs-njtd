@@ -3,22 +3,125 @@
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --drop-shadow-box: 0 0 1px var(--darkCol) , 0 0 2px var(--darkCol) inset, 0 0 4px var(--lightCol) , 0 0 8px var(--darkCol) inset, 0 0 16px var(--lightCol), 0 0 1px hsl(0deg 0% 0% / 0.075) inset,  0 0 2px hsl(0deg 0% 0% / 0.075), 0 0 4px hsl(0deg 0% 0% / 0.075) inset,  0 0 8px hsl(0deg 0% 0% / 0.075), 0 0 16px hsl(0deg 0% 0% / 0.075);
+  --drop-shadow-splash: inset 0 0 1px var(--darkCol), 0 0 2px var(--darkCol) inset, 0 0 4px var(--lightCol) inset, 0 0 16px var(--lightCol)inset, inset 0 0 2px hsl(0deg 0% 0% / 0.075), inset 0 0 8px hsl(0deg 0% 0% / 0.075), inset 0 0 16px hsl(0deg 0% 0% / 0.075);
+  --drop-shadow-card: inset 0 0 1px var(--blackCol), 0 0 2px var(--infoCol), 0 0 4px var(--blackCol) , 0 0 8px var(--infoCol), 0 0 16px var(--blackCol), 0 0 1px hsl(0deg 0% 0% / 0.075) inset, 0 0 2px hsl(0deg 0% 0% / 0.075) inset, 0 0 4px hsl(0deg 0% 0% / 0.075) inset, 0 0 8px hsl(0deg 0% 0% / 0.075) inset, 0 0 16px hsl(0deg 0% 0% / 0.075) inset;
+  --drop-shadow-text: 4px 2px 4px var(--darkCol);
+  --drop-shadow-textBox: inset 0 0 1px var(--darkCol), 0 0 2px var(--darkCol), 0 0 4px var(--lightCol) inset, 0 0 8px var(--darkCol), 0 0 16px var(--lightCol)inset, 0 0 1px hsl(0deg 0% 0% / 0.075), inset 0 0 2px hsl(0deg 0% 0% / 0.075), 0 0 4px hsl(0deg 0% 0% / 0.075), inset 0 0 8px hsl(0deg 0% 0% / 0.075), inset 0 0 16px hsl(0deg 0% 0% / 0.075);
 }
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --foreground-rgb: 30, 30, 30;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --black-color: rgb(35, 35, 35);
+  --white-color:  rgb(215, 215, 215);
+  --dark-color:  rgb(50, 50, 50);
+  --light-color:  rgb(200, 200, 200);
+  --mid-color:  rgb(115, 115, 115);
+  --border-color:  #2F4EB2;
+  --highlight-color: #6679b7;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --foreground-rgb: 235, 235, 235;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 20, 25, 30;
+    --black-color: rgb(195, 195, 195);
+    --white-color: rgb(25, 25, 25);
+    --dark-color:  rgb(180, 180, 180);
+    --light-color:  rgb(20, 20, 20);
+    --mid-color:  rgb(99, 99, 99);
+    --border-color:  rgb(45, 80, 190);
+    --highlight-color: rgb(100, 120, 185);
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottomright,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.update{
+  @property --bg-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: "<angle>";
+  }
+  animation: rainbowAnimation 12s infinite linear running;
+  background:
+    padding-box,
+    conic-gradient(
+      from var(--bg-angle) in oklch longer hue,
+      oklch(1 0.37 0) 0 0
+    )
+    border-box; 
+    border: 1px solid transparent;
+    background-clip: text;
+    color:transparent
+}
+.firstLogo{
+  @property --bg-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: "<angle>";
+  }
+  border-radius: 50%;
+  animation: rainbowAnimation 12s infinite linear running;
+  background:
+    padding-box,
+    conic-gradient(
+      from var(--bg-angle) in oklch longer hue,
+      oklch(1 0.37 0) 0 0
+    )
+    border-box; 
+    border: 1px solid transparent;
+    color:transparent
+}
+.update{
+	animation: stroke 8s infinite alternate;
+    -moz-animation: stroke 8s infinite alternate;
+    -webkit-animation: stroke 8s infinite alternate;
+    stroke-width: 3;
+    fill: white;
+    background: transparent;
+}
+@keyframes stroke {
+	0% {fill: black; stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 1;}
+	50% {fill: black; stroke-width: 1.5;}
+	100% {fill: white; stroke-dashoffset: 0%; stroke-dasharray: 50% 0; stroke-width: 3;}
+}
+
+@-moz-keyframes stroke {
+	0% {fill: black; stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 1;}
+	50% {fill: black; stroke-width: 1.5;}
+	100% {fill: white; stroke-dashoffset: 0%; stroke-dasharray: 50% 0; stroke-width: 3;}
+}
+@-webkit-keyframes stroke {
+	0% {fill: black; stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 1;}
+	50% {fill: black; stroke-width: 1.5;}
+	100% {fill: white; stroke-dashoffset: 0%; stroke-dasharray: 50% 0; stroke-width: 3;}
+}
+@keyframes rainbowAnimation {
+  to {
+    --bg-angle: 360deg;
+  }
+}
+#homePage{
+  height: 600vh;
+  overflow:visible
 }

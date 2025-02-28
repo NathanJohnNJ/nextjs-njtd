@@ -1,4 +1,21 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import withSvgr from "next-svgr";
 
-export default nextConfig;
+const nextConfig = {
+  experimental: {
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        }
+      },
+      resolveAlias: {
+        'react-native': 'react-native-web',
+        'react-native-svg': 'react-native-svg-web'
+      }
+    }
+  }
+};
+
+export default withSvgr(nextConfig);
