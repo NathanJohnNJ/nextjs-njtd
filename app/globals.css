@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'NJTD-Regular';
+  src: url(../public/fonts/NJTD-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+};
+@font-face {
+  font-family: 'NJTD-Bold';
+  src: url(../public/fonts/NJTD-Bold.ttf) format('truetype');
+  font-weight: bold;
+  font-style:normal
+}
+
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);

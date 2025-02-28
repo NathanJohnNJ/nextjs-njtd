@@ -3,7 +3,7 @@ const Privacy = () => {
     <div className="h-[200vh] text-[var(--mid-color)] ">
       <div className="flex flex-col items-center justify-around h-[80vh] p-[25vh]">
         <div className="flex flex-col items-center justify-center">
-        <h1 className="text-7xl mt-20 NJTDBold.className font-extrabold">NJTD</h1>
+        <h1 className="text-7xl mt-20 font-[NJTD-Bold] font-extrabold">NJTD</h1>
         <h2 className="subTitle">Privacy Policy</h2>
         <h2 className="flex text-xl align-center font-[poppins] text-[var(--mid-color)]">NJTD does not collect or hold any information from/about the visitors to this site.</h2>
         <h2 className="flex text-xl align-center font-[poppins] text-[var(--mid-color)]">This is subject to change at any time, without prior notification.</h2>

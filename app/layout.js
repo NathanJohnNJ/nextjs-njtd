@@ -1,6 +1,6 @@
 'use client';
 import { Poppins, Geologica } from "next/font/google";
-import { localFont } from "next/font/local";
+// import { localFont } from "next/font/local";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -13,17 +13,17 @@ export const poppins = Poppins({
   style: ['normal'],
   variable: "--font-poppins"
 });
-const NJTDBold = localFont({
-  src: "../public/fonts/NJTD-Bold.ttf",
-  variable: "--font-njtd-bold",
-  display: 'swap'
-})
+// const NJTDBold = localFont({
+//   src: "../public/fonts/NJTD-Bold.ttf",
+//   variable: "--font-njtd-bold",
+//   display: 'swap'
+// })
 
-const NJTDRegular = localFont({
-  src: "../public/fonts/NJTD-Regular.ttf",
-  variable: "--font-njtd",
-  display: 'swap'
-})
+// const NJTDRegular = localFont({
+//   src: "../public/fonts/NJTD-Regular.ttf",
+//   variable: "--font-njtd",
+//   display: 'swap'
+// })
 // export const raleway = Raleway({ 
 //   subsets: ['latin'],
 //   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -81,7 +81,8 @@ export default function RootLayout({ children }) {
   return (
       <html lang="en" className="bg-black">
         <body
-          className={`${poppins.variable} ${geologica.variable} ${NJTDRegular.className} ${NJTDBold.className} antialiased bg-black`}
+          // className={`${poppins.variable} ${geologica.variable} ${NJTDRegular.className} ${NJTDBold.className} antialiased bg-black`}
+          className={`${poppins.variable} ${geologica.variable} antialiased bg-black`}
         >
           <AnimatePresence >
             {showHeader &&
