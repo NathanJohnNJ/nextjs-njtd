@@ -1,0 +1,20 @@
+<svg height="1024" viewBox="0 0 1024 1024" width="1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="layer5" fill="none" stroke="#ffffff"  stroke-width="13" stroke-linecap="round" transform="scale(1.25)" transform-origin="center">
+    <g>
+      <path id="n" d="M200 698v-125c0 -15 25 -30 45 -15l60,80v-87 M238 698v-87l60,80c20,15 45,0 45,-15v-125" stroke="#333333" transform="translate(-5,5)" stroke-opacity="0.35" stroke-width="14.5" />
+      <path id="n" d="M200 698v-125c0 -15 25 -30 45 -15l60,80v-87 M238 698v-87l60,80c20,15 45,0 45,-15v-125" />
+    </g>
+    <g>
+      <path id="j" d="M438 551h40c12.5 0 25 12.5 25 25v68c0 71 -140 71 -140 3 M438 590 h20 c5 0 10 5 10 10 v37 c0 38 -68 38 -68 10" stroke="#333333" transform="translate(-5,5)" stroke-opacity="0.35" stroke-width="14.5" />
+      <path id="j" d="M438 551h40c12.5 0 25 12.5 25 25v68c0 71 -140 71 -140 3 M438 590 h20 c5 0 10 5 10 10 v37 c0 38 -68 38 -68 10" />
+    </g>
+    <g>
+      <path id="t" d="M522.5 551h145 M522.5 590 h40c5 0 10 5 10 10 v98 M617.5 698v-98c0 -5 5 -10 10 -10h40" stroke="#333333" transform="translate(-5,5)" stroke-opacity="0.35" stroke-width="14.5" />
+      <path id="t" d="M522.5 551h145 M522.5 590 h40c5 0 10 5 10 10 v98 M617.5 698v-98c0 -5 5 -10 10 -10h40" />
+    </g>
+    <g>
+      <path id="d" d="M727,551h30c95,15 95,130 15,146h-50c-35,0 -35,0 -35,-35v-76c0,-35 0,-35 35,-35z M732 588 h5c 70,5 70,75 -5,70h-5v-70z" stroke="#333333" transform="translate(-5,5)" stroke-opacity="0.35" stroke-width="14.5" />
+      <path id="d" d="M727,551h30c95,15 95,130 15,146h-50c-35,0 -35,0 -35,-35v-76c0,-35 0,-35 35,-35z M732 588 h5c 70,5 70,75 -5,70h-5v-70z" />
+    </g>
+  </g>
+</svg>

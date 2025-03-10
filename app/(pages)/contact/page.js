@@ -1,5 +1,5 @@
 
-export default function About() {
+export default function Contact() {
   return (
     <div className="h-[100vh]">
       <svg width="100vw" height="100vh" viewBox="0 0 1000 1000">
