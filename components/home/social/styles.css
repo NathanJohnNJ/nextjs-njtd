@@ -1,0 +1,92 @@
+.Btn {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  border-radius: 15px;
+  transition: all .3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  z-index: -1;
+  border-radius: 15px;
+  pointer-events: none;
+  transition: all .3s;
+}
+.LinkedBG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #0072b1;
+  z-index: -1;
+  border-radius: 15px;
+  pointer-events: none;
+  transition: all .3s;
+}
+.Btn:hover .LinkedBG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+  backdrop-filter: blur(4px);
+}
+
+.socialSvg{
+  scale: 6;
+}
+
+/* REPEATING BACKGROUND */
+/* From Uiverse.io by csemszepp */ 
+/* .containerBG {
+  width: 100%;
+  height: 100%;
+  --s: 200px; 
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+}  */

@@ -1,8 +1,8 @@
 import { motion } from 'motion/react';
 import { View, Text, FlatList } from 'react-native-web';
 import { Link } from 'next/link';
-import { Image } from 'react-native-svg-web';
-import { StyleSheet } from 'react-native';
+// import { Image } from 'react-native-svg-web';
+// import { StyleSheet } from 'react-native';
 
 function Title(props){
   const { cardList, module, side } = props;
