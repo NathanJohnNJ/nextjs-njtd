@@ -1,0 +1,92 @@
+@supports (animation-timeline: view()) {
+  [data-component="carousel"] {
+      timeline-scope: --carousel;
+  }
+}
+
+[data-component="carousel"] {
+  position: relative;
+  margin: 0 auto 10vh;
+  height: 70vmin;
+  width: 50vw;
+  overflow: hidden;
+  timeline-scope: --carousel;
+
+  .entries {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-direction: row;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+      overscroll-behavior: contain;
+      scroll-timeline: --carousel x;
+  }
+  .markers{
+    display: flex;
+    flex-direction: row;
+    gap: 0.25em;
+    font-size: 2em;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    translate: -50% 0;
+  }
+  .markers a {
+		animation-timeline: --carousel;
+	}
+}
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+.markers a {
+	animation-range: calc((var(--i) - 1) * 25%) calc(var(--i) * 25% + 1px);
+  animation-timeline: --carousel;
+}
+.markers{
+  display: flex;
+  flex-direction: row;
+  gap: 0.25em;
+  font-size: 2em;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  translate: -50% -100%;
+}
+
+[data-component="carousel"] {
+  & .markers {
+      & li {
+          &:nth-child(1) {
+              --i: 1;
+          }
+      }
+  }
+}
+
+.markers {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgb(255, 0, 250);
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

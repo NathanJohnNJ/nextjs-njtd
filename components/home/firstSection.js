@@ -16,13 +16,13 @@ export default function First() {
 
   const text = "Full-Stack Web Developer";
   const developerArray = text.split('');
-  const audienceArray = ["reach,", "scale,", "experience,", "\n\b\n\b\n\b\n\b\n\b\n\b\n\b\n\b\n\b\n\bor goals."]
+  const audienceArray = ["reach,", "scale,", "experience,", "          or goals."]
 
   return (
     <section ref={ref} className="relative h-[500vh] w-[90vw] flex flex-col self-center justify-self-center items-center justify-flex-end mt-[45vh]">
       <div id="stickyDiv"  className="sticky top-[250px] w-[85%] flex flex-col p-4 border rounded-4xl shadow-2xl shadow-(color:--darkBorder-color)">
-        <div id="rowDiv" className="flex lg:flex-row flex-col">
-          <div id="imageDiv" className="ml-[12vw] p-0" >
+        <div id="rowDiv" className="flex lg:flex-row flex-col ">
+          <div id="imageDiv" className="ml-[12vw] -mt-[4vh] p-0 " >
             <svg width="290" height="290" viewBox="0 0 290 290" className="-translate-x-[25px] translate-y-[300px] overflow-visible" >
               <motion.g style={{ opacity: pictureOpacity }}>
                 <motion.circle id="border"  cx="30" cy="80" r="145" className="stroke-[var(--border-color)] -rotate-90" style={{ pathLength: pathLengthLength, strokeDashoffset: 0, strokeWidth: '5%', fill: 'none' }} />
@@ -59,9 +59,9 @@ export default function First() {
                 {audienceArray.map((audience, i) => {
                   return(
                     <AnimatePresence key={i}>
-                      <motion.span initial={{ opacity: 0, MarginLeft: '-100vw'}} whileInView={{ opacity: 1, marginLeft: `${i*9}vw`,  }} exit={{ opacity: 0}} transition={{ duration: 0.75, ease: 'easeInOut', delay: i}}>
+                      <motion.pre className="geoFont" initial={{ opacity: 0, MarginLeft: '-100vw'}} whileInView={{ opacity: 1, marginLeft: `${i*9}vw`,  }} exit={{ opacity: 0}} transition={{ duration: 0.75, ease: 'easeInOut', delay: i}}>
                         {audience} <br />
-                      </motion.span>
+                      </motion.pre>
                     </AnimatePresence>
                   )
                 })}

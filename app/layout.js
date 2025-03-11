@@ -1,5 +1,5 @@
 'use client';
-import { Poppins, Geologica } from "next/font/google";
+import { Poppins, League_Spartan } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
 import Image from "next/image";
@@ -24,12 +24,12 @@ export const poppins = Poppins({
 //   style: ['normal'],
 //   variable: "--font-raleway"
 // });
-// export const spartan = League_Spartan({ 
-//   subsets: ['latin'],
-//   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-//   style: ['normal'],
-//   variable: "--font-spartan"
-// });
+export const spartan = League_Spartan({ 
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  style: ['normal'],
+  variable: "--font-spartan"
+});
 // export const gothic = League_Gothic({ 
 //   subsets: ['latin'],
 //   weight: ['variable'],
@@ -75,7 +75,7 @@ export default function RootLayout({ children }) {
   gsap.registerPlugin(useGSAP)
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased containerBG`}>
+      <body className={`${poppins.variable} ${spartan.variable} antialiased containerBG`}>
         <Navbar yPosition={yPosition} showNav={showNav} setShowNav={setShowNav} scrollY={scrollY} scrollYProgress={scrollYProgress} />
         <AnimatePresence>
           {yPosition <= 0.03 && current === "/" &&
