@@ -72,7 +72,7 @@
     --background-start-rgb: rgb(0, 0, 0);
     --background-end-rgb: rgb(20, 25, 30);
     --black-color: rgb(25, 25, 25);
-    --white-color: rgb(195, 195, 195);
+    --white-color: rgb(225, 225, 225);
     --dark-color: rgb(20, 20, 20);
     --light-color: rgb(180, 180, 180);
     --mid-color: rgb(99, 99, 99);
@@ -100,8 +100,8 @@ html{
   margin-right: -20px;
 }
 
-/* body {
-  --s: 400px; 
+.cubes{
+  --s: 150px; 
   --c1: #1d1d1d;
   --c2: #4b4d51;
   --c3: #3c3c3c;
@@ -118,7 +118,7 @@ html{
       var(--c3) 0 180deg
     );
   background-size: var(--s) calc(var(--s) * 0.577);
-} */
+}
 
 .geoFont{
   font-family: 'Geologica', sans-serif;
@@ -172,6 +172,18 @@ html{
   background: var(--rainbow-bg);
   border: 10px solid transparent;
 }
+.rainbowBG{
+  background:
+    padding-box,
+    conic-gradient(
+      from var(--bg-angle) in oklch longer hue,
+      oklch(1 0.37 0) 0 0
+    )
+    border-box; 
+  animation: rainbowAnimation 12s infinite linear running;
+  border-radius: 25px;
+  border: 10px solid transparent;
+}
 .spin{
 	animation: spin 0.5s infinite linear forwards;
   -moz-animation: spin 0.5s infinite linear forwards;
@@ -212,7 +224,28 @@ html{
     --bg-angle: 360deg;
   }
 }
-#homePage{
-  height: 600vh;
-  overflow:visible
+@keyframes reveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes left {
+  from { translate: (100, 0); opacity: 0; }
+  to { translate: (0, 0); opacity: 1; }
+}
+@keyframes right {
+  from { scale: 2; opacity: 0; }
+  to { scale: 1; opacity: 1; }
+}
+
+.reveal {
+  animation: reveal linear;
+  animation-timeline: view();
+}
+.left {
+  animation: left linear;
+  animation-timeline: view();
+}
+.right {
+  animation: right linear;
+  animation-timeline: view();
 }

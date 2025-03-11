@@ -1,7 +1,41 @@
-
+import Carousel from '@/components/portfolio/carousel';
 export default function Portfolio() {
+
+    const drumkit = { 
+        title: "Drumkit",
+        src: 'images/portfolio/drumPreview.png',
+        href: "https://keycode.njtd.xyz",
+        skills: ["HTML", "CSS", "JavaScript"],
+        git: "https://github.com/NathanJohnNJ/drumkit"
+      }
+      const matrix = {
+        title: "Matrix",
+        src: 'images/portfolio/matrix.png',
+        href: "https://matrix.njtd.xyz",
+        skills: ["HTML", "CSS", "JavaScript", "ReactJS"],
+        git: "https://github.com/NathanJohnNJ/matrix"
+      }
+      const dice = {
+        title: "Dice Game",
+        src: 'images/portfolio/dice.png',
+        href: "https://dice.njtd.xyz",
+        skills: ["HTML", "CSS", "JavaScript"],
+        git: "https://github.com/NathanJohnNJ/dice"
+      }
+      const keycode = {
+        title: "Keycode Generator",
+        src: 'images/portfolio/keycode.png',
+        href: "https://keycode.njtd.xyz",
+        skills: ["HTML", "CSS", "JavaScript"],
+        git: "https://github.com/NathanJohnNJ/keycode"
+      }
+
+    const cardList = [drumkit, keycode, dice, matrix]
   return (
-    <div className="h-[100vh]">
+    <div className="h-[300vh]">
+      <div  className="mt-[40vh]">
+      <Carousel cardList={cardList} title="JavaScript" />
+      </div>
       <svg width="100vw" height="100vh" viewBox="0 0 1000 1000">
         <defs>
           <linearGradient id="Gradient1">
