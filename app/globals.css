@@ -18,11 +18,63 @@
   src: local(Geologica);
   font-variation-settings: "CRSV" 1, "SHRP" 100 ;
 }
-@property --bg-angle {
-  inherits: false;
-  initial-value: 0deg;
-  syntax: "<angle>";
-} 
+@font-face {
+  font-family: 'GeologicaBlack';
+  src: url('../public/fonts/Geologica-Sharp/Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GeologicaBold';
+  src: url('../public/fonts/Geologica-Sharp/Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GeologicaLight';
+  src: url('../public/fonts/Geologica-Sharp/Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GeologicaExtraBold';
+  src: url('../public/fonts/Geologica-Sharp/ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GeologicaExtraLight';
+  src: url('../public/fonts/Geologica-Sharp/ExtraLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GeologicaThin';
+  src: url('../public/fonts/Geologica-Sharp/Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GeologicaRegular';
+  src: url('../public/fonts/Geologica-Sharp/Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GeologicaMedium';
+  src: url('../public/fonts/Geologica-Sharp/Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GeologicaSemiBold';
+  src: url('../public/fonts/Geologica-Sharp/SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 
 @theme {
   --font-geologica: 'Geologica', sans-serif;
@@ -33,12 +85,20 @@
   --drop-shadow-card: inset 0 0 1px var(--blackCol), 0 0 2px var(--infoCol), 0 0 4px var(--blackCol) , 0 0 8px var(--infoCol), 0 0 16px var(--blackCol), 0 0 1px hsl(0deg 0% 0% / 0.075) inset, 0 0 2px hsl(0deg 0% 0% / 0.075) inset, 0 0 4px hsl(0deg 0% 0% / 0.075) inset, 0 0 8px hsl(0deg 0% 0% / 0.075) inset, 0 0 16px hsl(0deg 0% 0% / 0.075) inset;
   --drop-shadow-text: 4px 2px 4px var(--darkCol);
   --drop-shadow-textBox: inset 0 0 1px var(--darkCol), 0 0 2px var(--darkCol), 0 0 4px var(--lightCol) inset, 0 0 8px var(--darkCol), 0 0 16px var(--lightCol)inset, 0 0 1px hsl(0deg 0% 0% / 0.075), inset 0 0 2px hsl(0deg 0% 0% / 0.075), 0 0 4px hsl(0deg 0% 0% / 0.075), inset 0 0 8px hsl(0deg 0% 0% / 0.075), inset 0 0 16px hsl(0deg 0% 0% / 0.075);
+  --shadow-big:  4px 4px 4px 4px var(--blackCol), 4px -4px 4px 4px var(--blackCol), -4px 4px 4px 4px var(--blackCol) , -4px -4px 4px 4px var(--blackCol);
 }
 :root {
   --font-geologica: 'Geologica', sans-serif;
+  --GeoBlack: 'GeologicaBlack', sans-serif;
+  --GeoBold: 'GeologicaBold', sans-serif;
+  --GeoLight: 'GeologicaLight', sans-serif;
+  --GeoExtraBold: 'GeologicaExtraBold', sans-serif;
+  --GeoExtraLight: 'GeologicaExtraLight', sans-serif;
+  --GeoThin: 'GeologicaThin', sans-serif;
+  --GeoRegular: 'GeologicaRegular', sans-serif;
+  --GeoMedium: 'GeologicaMedium', sans-serif;
+  --GeoSemiBold: 'GeologicaSemiBold', sans-serif;
   --font-geologica--font-variation-settings: "CRSV" 1, "SHRP" 100;
-  --background: #ffffff;
-  --foreground: #171717;
   --foreground-rgb: rgb(30, 30, 30);
   --background-start-rgb:rgb(214, 219, 220);
   --background-end-rgb: rgb(255, 255, 255);
@@ -58,16 +118,23 @@
   --second-svg-stroke-light: rgba(200,200,200,0.8);
   --third-svg-stroke: rgba(170,170,170,0.8);
   --third-svg-stroke-light: rgba(125,125,125,0.75);
-  --my-shadow: 0, 2px, 2px, var(--highligh-color) 0 -2px 2px var(--highlight-color),2px 0 2px var(--highlight-color),-2px 0 2px var(--highlight-color);
+  --my-shadow: 0, 2px, 2px, var(--highlight-color) 0 -2px 2px var(--highlight-color),2px 0 2px var(--highlight-color),-2px 0 2px var(--highlight-color);
   --current-shadow: drop-shadow(0 2px 2px var(--border-color)) drop-shadow(0 -2px 2px var(--border-color)) drop-shadow(2px 0 2px var(--border-color)) drop-shadow(-2px 0 2px var(--border-color));
   --rainbow-bg: border-box, conic-gradient( from var(--bg-angle) in oklch longer hue, oklch(1 0.37 0) 0 0 ) content-box, none; animation: rainbowAnimation 12s infinite linear running;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --font-geologica: 'Geologica', sans-serif;
+    --GeoBlack: 'GeologicaBlack', sans-serif;
+    --GeoBold: 'GeologicaBold', sans-serif;
+    --GeoLight: 'GeologicaLight', sans-serif;
+    --GeoExtraBold: 'GeologicaExtraBold', sans-serif;
+    --GeoExtraLight: 'GeologicaExtraLight', sans-serif;
+    --GeoThin: 'GeologicaThin', sans-serif;
+    --GeoRegular: 'GeologicaRegular', sans-serif;
+    --GeoMedium: 'GeologicaMedium', sans-serif;
+    --GeoSemiBold: 'GeologicaSemiBold', sans-serif;
     --font-geologica--font-variation-settings: "CRSV" 1, "SHRP" 100;
-    --background: #0a0a0a;
-    --foreground: #ededed;
     --foreground-rgb: rgb(235, 235, 235);
     --background-start-rgb: rgb(0, 0, 0);
     --background-end-rgb: rgb(20, 25, 30);

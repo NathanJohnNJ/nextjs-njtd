@@ -1,7 +1,17 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
-    }
-  }
+      "@/*": ["./*"],
+      "@/components/*": ["components/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/app/*": ["app/*"]
+    },
+    "module": "Node16",
+    "moduleResolution": "node16",
+    "checkJs": false,
+    "jsx": "react",
+    // "target": ""
+  },
+  "exclude": ["node_modules", ".next"]
 }

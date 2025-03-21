@@ -14,7 +14,7 @@ const SecondSection = () => {
 
   return(
     <motion.div ref={ref} className="relative h-[500vh] w-[90vw] flex flex-col self-center justify-self-center items-center justify-flex-end mt-[45vh]">
-      <motion.div className="sticky top-[250px] w-[85%] flex flex-col p-8 border rounded-4xl shadow-2xl shadow-(color:--darkBorder-color)">    
+      <motion.div className="sticky top-[30vh] w-[85%] flex flex-col p-8 border rounded-4xl shadow-2xl shadow-(color:--darkBorder-color)">    
         <motion.h1 className='geoFont text-[var(--dark-color)] font-extrabold whitespace-nowrap text-7xl mt-[5vh] self-center coloredShadow ' id="headline2">
           Find Me On...
         </motion.h1>
@@ -30,8 +30,8 @@ const SecondSection = () => {
           </a>
         </motion.div>
       </motion.div>
-      <motion.div className="sticky top-[50px] bg-white w-[45%] flex flex-col p-4 border rounded-4xl shadow-2xl shadow-(color:--darkBorder-color)" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ amount: 0.5 }} transition={{ duration: 0.5, ease: 'linear', delay: 0}} style={{ translateX: translateX }}>
-        <motion.h2 className='geoFont font-light text-[1.7rem] text-[var(--mid-color)]' id="subHeading2">
+      <motion.div className="sticky top-[15vh] bg-[#a0a0a0] w-[45%] flex flex-col p-4 border rounded-4xl shadow-2xl shadow-(color:--darkBorder-color)" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ amount: 0.5 }} transition={{ duration: 0.5, ease: 'linear', delay: 0}} style={{ translateX: translateX }}>
+        <motion.h2 className='geoFont font-light text-[1.7rem] text-[var(--white-color)]' id="subHeading2">
           Feel free to take a look at what I’ve been working on, and follow me so I can keep you updated with exciting new projects along my journey.
         </motion.h2>
       </motion.div>

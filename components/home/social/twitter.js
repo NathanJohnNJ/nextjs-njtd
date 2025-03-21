@@ -13,7 +13,7 @@ const Twitter = () => {
         </span>
         <span className="BG shadow-2xl" />
       </button>
-      <h1 id="xLabel" style={{visibility: visibility}} className="text-6xl justify-self-center font-bold fontGeo absolute coloredShadow top-[80%] left-[30%] text-[var(--mid-color)] rounded-2xl bg-[var(--light-color)] p-[8px] shadow-2xl shadow-(color:--darkBorder-color)">X</h1>
+      <h1 id="xLabel" style={{visibility: visibility}} className="text-4xl justify-self-center font-bold fontGeo absolute coloredShadow top-[80%] left-[30%] text-[var(--white-color)] rounded-2xl bg-[#a0a0a0] p-[8px] shadow-2xl shadow-(color:--darkBorder-color)">X</h1>
     </div>
   )
 };

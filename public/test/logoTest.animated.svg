@@ -1,0 +1,332 @@
+<svg id="parent" height="1024" width="1024" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="clipCircle">
+      <circle cx="512" cy="512" r="465"/>
+    </clipPath>
+    <clipPath id="camoClip">
+        <!-- <path d="M0,0 h1024 v1024 h-1024 v-1024z
+        M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z
+        M 679 729 c -40 39 71 56 31 95 q -40 39 22 67 c 65 37 -78 83 -114 69 q -39 -8 -34 -41 q 18 -43 -20 -78 t 30 -52 c 41 -34 -15 -79 75 -93 c 30 -5 27 18 11 33 z
+        M 357 738 c -49 -26 -31 85 -81 59 q -49 -26 -57 42 c -15 73 -103 -49 -101 -87 q -4 -40 28 -45 q 46 4 68 -43 t 59 12 c 45 28 70 -39 112 43 c 14 27 -9 31 -28 21 z
+        M 249 434 c 10 -55 -90 -3 -81 -59 q 10 -55 -58 -41 c -74 8 15 -113 52 -123 q 37 -16 51 13 q 10 45 62 51 t 7 60 c -13 51 59 55 -6 120 c -21 22 -32 1 -29 -20 z
+        M 505 238 c 55 -7 -25 -87 31 -95 q 55 -7 21 -68 c -30 -68 112 -21 133 11 q 27 30 3 53 q -40 23 -29 75 t -55 25 c -53 3 -34 73 -116 31 c -27 -13 -11 -30 10 -34 z" transform="rotate(40 512 512)" clip-rule="evenodd"/> -->
+        <path d="M 0 0 H 1024 V 1024 H0 V0z
+M 412 257 C 461 232 358 184 408 157 Q 458 132 405 86 C 342 29 496 41 534 51 Q 582 66 555 100 Q 525 135 553 180 T 510 222 C 477 221 500 312 411 291 C 361 281 391 267 412 257 Z 
+M 621 261 C 674 278 636 171 690 188 Q 743 205 737 135 C 733 50 834 168 853 201 Q 877 246 834 250 Q 788 254 776 306 T 715 306 C 693 282 645 362 597 285 C 569 242 600 253 621 261 Z
+ M 767 412 C 792 461 840 358 867 408 Q 892 458 938 405 C 995 342 983 496 973 534 Q 958 582 924 555 Q 889 525 844 553 T 802 510 C 803 477 712 500 733 411 C 743 361 757 391 767 412 Z 
+M 763 621 C 746 674 853 636 836 690 Q 819 743 889 737 C 974 733 856 834 823 853 Q 778 877 774 834 Q 770 788 718 776 T 718 715 C 742 693 662 645 739 597 C 782 569 771 600 763 621 Z 
+M 612 767 C 563 792 666 840 616 867 Q 566 892 619 938 C 682 995 528 983 490 973 Q 442 958 469 924 Q 499 889 471 844 T 514 802 C 547 803 524 712 613 733 C 663 743 633 757 612 767 Z 
+M 403 763 C 350 746 388 853 334 836 Q 281 819 287 889 C 291 974 190 856 171 823 Q 147 778 190 774 Q 236 770 248 718 T 309 718 C 331 742 379 662 427 739 C 455 782 424 771 403 763 Z 
+M 257 612 C 232 563 184 666 157 616 Q 132 566 86 619 C 29 682 41 528 51 490 Q 66 442 100 469 Q 135 499 180 471 T 222 514 C 221 547 312 524 291 613 C 281 663 267 633 257 612 Z 
+M 261 403 C 278 350 171 388 188 334 Q 205 281 135 287 C 50 291 168 190 201 171 Q 246 147 250 190 Q 254 236 306 248 T 306 309 C 282 331 362 379 285 427 C 242 455 253 424 261 403 Z " transform="rotate(40 512 512)" clip-rule="evenodd"/>
+    </clipPath>
+    <linearGradient id="camoGrad" gradientTransform="rotate(50)" userSpaceOnUse="nonzero">
+      <stop offset="35%" stop-color="rgb(165,165,165)" />
+      <stop offset="55%" stop-color="rgb(190,190,190)" />
+      <stop offset="70%" stop-color="rgb(160,160,160)" />
+      <stop offset="85%" stop-color="rgb(145,145,145)" />
+      <stop offset="100%" stop-color="rgb(175,175,175)" />
+    </linearGradient>
+    <linearGradient id="camoGrad2">
+      <stop offset="0%" stop-color="rgb(80,80,80)" />
+      <stop offset="30%" stop-color="rgb(110,110,110)" />
+      <stop offset="70%" stop-color="rgb(130,130,130)" />
+      <stop offset="100%" stop-color="rgb(90,90,90)" />
+    </linearGradient>
+    <linearGradient id="camoGrad3" gradientTransform="rotate(95)">
+      <stop offset="5%" stop-color="rgb(90,90,90)" />
+      <stop offset="45%" stop-color="rgb(60,60,60)" />
+      <stop offset="85%" stop-color="rgb(50,50,50)" />
+      <stop offset="100%" stop-color="rgb(65,65,65)" />
+    </linearGradient>
+    <linearGradient id="camoGrad4" gradientTransform="rotate(105)">
+      <stop offset="5%" stop-color="rgb(160,160,160)" />
+      <stop offset="35%" stop-color="rgb(130,130,130)" />
+      <stop offset="75%" stop-color="rgb(100,100,100)" />
+      <stop offset="100%" stop-color="rgb(120,120,120)" />
+    </linearGradient>
+    <linearGradient id="hatGrad">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="25%" stop-color="#3c3c3c" />
+      <stop offset="50%" stop-color="#6f6f6f" />
+      <stop offset="55%" stop-color="#6f6f6f" />
+      <stop offset="75%" stop-color="#3c3c3c" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    <linearGradient id="bodyGrad">
+      <stop offset="1%" stop-color="#1f1f1f" />
+      <stop offset="75%" stop-color="#3c3c3c" />
+    </linearGradient>
+    <linearGradient id="macGrad" gradientTransform="rotate(90)">
+      <stop offset="10%" stop-color="#cfcfcf" />
+      <stop offset="95%" stop-color="#7e7e82" />
+    </linearGradient>
+    <linearGradient id="faceGrad" gradientTransform="rotate(90)">
+      <stop offset="10%" stop-color="#a9825a" />
+      <stop offset="30%" stop-color="#c5845c" />
+      <stop offset="80%" stop-color="#e5ac79" />
+      <stop offset="85%" stop-color="#ffd9ae" />
+    </linearGradient>
+    <linearGradient id="earGrad" gradientTransform="rotate(90)">
+      <stop offset="10%" stop-color="#ffd9ae" />
+      <stop offset="55%" stop-color="#e5ac79" />
+    </linearGradient>
+    <linearGradient id="shadowGrad" gradientTransform="rotate(90)">
+      <stop offset="0%" stop-color="#a68642" />
+      <stop offset="90%" stop-color="#7d5524" />
+    </linearGradient>
+    <linearGradient id="eyeGrad" gradientTransform="rotate(90)">
+      <stop offset="50%" stop-color="#000000" />
+      <stop offset="75%" stop-color="#ffffff" />
+    </linearGradient>
+    <linearGradient id="browGrad" gradientTransform="rotate(15)">
+      <stop offset="50%" stop-color="#4d3120" />
+      <stop offset="75%" stop-color="#5c3b2a" />
+    </linearGradient>
+    <linearGradient id="noseHL" gradientTransform="rotate(90)">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.1)" />
+      <stop offset="60%" stop-color="rgba(255,255,255,0.15)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.68)" />
+    </linearGradient>
+    <linearGradient id="glassesGrad" gradientTransform="rotate(90)">
+      <stop stop-color="#202020" />
+      <stop offset="33%" stop-color="#4a4d4d" />
+    </linearGradient>
+    <linearGradient id="piercingGrad" gradientTransform="rotate(90)">
+      <stop stop-color="#0000ff" />
+      <stop offset="33%" stop-color="#020d2f" />
+    </linearGradient>
+  </defs>
+
+
+  <!-- LAYER 1 -->
+
+  <g id="layer1">
+    <circle r="504" cx="512" cy="512" style="stroke:black;fill:none;stroke-width:12px" transform-origin="center" transform="scale(0)">
+      <animateTransform id="circleAnim1" attributType="XML" attributeName="transform" type="scale" values="0;1" dur="1s" begin="0s" repeatCount="1" fill="freeze" />     
+    </circle>
+    <circle r="483" cx="512" cy="512" style="stroke:black;fill:none;stroke-width:8px" transform-origin="center" transform="scale(0)">
+      <animateTransform id="circleAnim2" attributType="XML" attributeName="transform" type="scale" values="0;1" dur="1s" begin="circleAnim1.end-1s" repeatCount="1" fill="freeze" />     
+    </circle>
+    <circle r="465" cx="512" cy="512" style="stroke:black;fill:none;stroke-width:4px" transform-origin="center" transform="scale(0)">
+      <animateTransform id="circleAnim3" attributType="XML" attributeName="transform" type="scale" values="0;1" dur="1s" begin="circleAnim2.end-1s" repeatCount="1" fill="freeze" />     
+    </circle>
+  </g>
+
+
+  <!-- LAYER 2 -->
+
+  <circle id="layer2" r="465" cx="512" cy="512" style="stroke:black;fill:black;" transform-origin="center" transform="scale(0)" clip-path="url(#camoClip)">
+    <animateTransform id="circleAnim4" attributType="XML" attributeName="transform" type="scale" values="0;1" dur="1s" begin="circleAnim3.end-1s" repeatCount="1" fill="freeze" />     
+  </circle>
+
+
+  <!-- LAYER 3 -->
+
+  <g id="layer3" clip-path="url(#clipCircle)"> 
+    <!-- <g fill-opacity="0" stroke-width="0" fill="url(#camoGrad)" stroke="url(#camoGrad)"> -->
+
+    <g fill-opacity="0" stroke-width="0" fill="url('./conicalGradient.png')" stroke="url(#camoGrad)">
+      <path d="M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z" />
+      <path d="M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z" transform="rotate(72 512 512)" />
+
+      <path d="M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z" transform="rotate(144 512 512)" />
+      <path d="M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z" transform="rotate(216 512 512)" />
+      <path d="M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z" transform="rotate(288 512 512)" />
+<!-- <path d="
+M 449 286 C 474 261 458 230 485 224 Q 556 219 524 178 C 470 96 560 138 582 154 Q 612 175 586 195 Q 556 216 565 258 T 524 279 C 503 272 495 348 440 312 C 416 296 450 296 449 286 Z M 627 307 C 662 307 673 275 697 289 Q 749 336 757 283 C 777 189 810 281 816 309 Q 821 344 788 340 Q 752 334 729 369 T 686 357 C 675 337 616 385 602 319 C 599 292 622 315 627 307 Z M 738 449 C 763 474 794 458 800 485 Q 805 556 846 524 C 928 470 886 560 870 582 Q 849 612 829 586 Q 808 556 766 565 T 745 524 C 752 503 676 495 712 440 C 728 416 728 450 738 449 Z M 717 627 C 717 662 749 673 735 697 Q 688 749 741 757 C 835 777 743 810 715 816 Q 680 821 684 788 Q 690 752 655 729 T 667 686 C 687 675 639 616 705 602 C 732 599 709 622 717 627 Z M 575 738 C 550 763 566 794 539 800 Q 468 805 500 846 C 554 928 464 886 442 870 Q 412 849 438 829 Q 468 808 459 766 T 500 745 C 521 752 529 676 584 712 C 608 728 574 728 575 738 Z M 397 717 C 362 717 351 749 327 735 Q 275 688 267 741 C 247 835 214 743 208 715 Q 203 680 236 684 Q 272 690 295 655 T 338 667 C 349 687 408 639 422 705 C 425 732 402 709 397 717 Z M 286 575 C 261 550 230 566 224 539 Q 219 468 178 500 C 96 554 138 464 154 442 Q 175 412 195 438 Q 216 468 258 459 T 279 500 C 272 521 348 529 312 584 C 296 608 296 574 286 575 Z M 307 397 C 307 362 275 351 289 327 Q 336 275 283 267 C 189 247 281 214 309 208 Q 344 203 340 236 Q 334 272 369 295 T 357 338 C 337 349 385 408 319 422 C 292 425 315 402 307 397 Z " /> -->
+
+
+
+      <animate id="strokeAnim1" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="1.5s" begin="circleAnim4.end" repeatCount="1" calcMode="linear"/>
+      <animate attributeName="fill-opacity" values="0;1" dur="2s" begin="circleAnim4.end+1s" repeatCount="1" fill="freeze" />
+      <animate attributeName="stroke-width" values="5;1" dur="2s" begin="circleAnim4.end" repeatCount="1" fill="freeze" />
+    </g>
+    <g fill-opacity="0" stroke-width="0" fill="url(#camoGrad2)" stroke="url(#camoGrad2)">
+      <!-- <path d="M200,150c-30,-85 90,-40 110,0q60,70 90,0c35,-65 75,100 40,130c5,0 -30,30 -60,20c-60,-40 -55,75 -90,0c-50,-100 -80,25 -150,-70c0,-30 70,-5 -15,-95z" />
+      <path d="M200,150c-30,-85 90,-40 110,0q60,70 90,0c35,-65 75,100 40,130c5,0 -30,30 -60,20c-60,-40 -55,75 -90,0c-50,-100 -80,25 -150,-70c0,-30 70,-5 -15,-95z" transform="rotate(60 512 512)" />
+      <path d="M200,150c-30,-85 90,-40 110,0q60,70 90,0c35,-65 75,100 40,130c5,0 -30,30 -60,20c-60,-40 -55,75 -90,0c-50,-100 -80,25 -150,-70c0,-30 70,-5 -15,-95z" transform="rotate(120 512 512)" />
+      <path d="M200,150c-30,-85 90,-40 110,0q60,70 90,0c35,-65 75,100 40,130c5,0 -30,30 -60,20c-60,-40 -55,75 -90,0c-50,-100 -80,25 -150,-70c0,-30 70,-5 -15,-95z" transform="rotate(180 512 512)" />
+      <path d="M200,150c-30,-85 90,-40 110,0q60,70 90,0c35,-65 75,100 40,130c5,0 -30,30 -60,20c-60,-40 -55,75 -90,0c-50,-100 -80,25 -150,-70c0,-30 70,-5 -15,-95z" transform="rotate(240 512 512)" />
+      <path d="M200,150c-30,-85 90,-40 110,0q60,70 90,0c35,-65 75,100 40,130c5,0 -30,30 -60,20c-60,-40 -55,75 -90,0c-50,-100 -80,25 -150,-70c0,-30 70,-5 -15,-95z" transform="rotate(300 512 512)" /> -->
+
+      <path d="M 536 145 C 516 89 600 189 647 153 C 749 74 670 203 707 228 C 791 269 669 400 687 325 C 701 272 609 258 611 280 C 605 321 625 374 522 293 C 480 259 594 234 536 145 Z 
+M 879 536 C 935 516 835 600 871 647 C 950 749 821 670 796 707 C 755 791 624 669 699 687 C 752 701 766 609 744 611 C 703 605 650 625 731 522 C 765 480 790 594 879 536 Z 
+M 488 879 C 508 935 424 835 377 871 C 275 950 354 821 317 796 C 233 755 355 624 337 699 C 323 752 415 766 413 744 C 419 703 399 650 502 731 C 544 765 430 790 488 879 Z 
+M 145 488 C 89 508 189 424 153 377 C 74 275 203 354 228 317 C 269 233 400 355 325 337 C 272 323 258 415 280 413 C 321 419 374 399 293 502 C 259 544 234 430 145 488 Z " />
+      <animate id="strokeAnim2" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="1.5s" repeatCount="1" calcMode="linear" begin="strokeAnim1.end-2s" />
+      <animate attributeName="fill-opacity" from="0" to="1" dur="2s" begin="strokeAnim1.end-1s" repeatCount="1" fill="freeze" calcMode="linear" />
+      <animate attributeName="stroke-width" values="5;1" dur="2s" begin="strokeAnim1.end" repeatCount="1" fill="freeze" />
+    </g>
+    <g clip-path="url(#clipCircle)" fill-opacity="0" stroke-width="0" fill="url(#camoGrad3)" stroke="url(#camoGrad3)">
+      <!-- <path d="m 350 425 c -50 -31 30 -23 32 -51 q 14 -71 50 -27 c 21 56 10 -90 67 -40 c 34 53 96 -59 104 49 c -58 89 87 60 -25 168 c -84 102 -70 -35 -162 7 c -151 41 20 -27 -44 -94 z" />
+      <path d="m 425 565 c 41 -64 64 44 111 8 c 102 -79 23 50 84 113 c 112 20 -8 131 -81 17 c -40 -47 5 102 -48 88 c -55 19 -5 -58 -80 -78 c -72 -9 37 -80 12 -147 z" /> -->
+
+      <path d=" M 29 484 C 23 533 146 435 92 502 S 193 529 136 558 S 9 553 40 625 Q 78 751 -24 559 C -211 526 64 221 29 484 Z M 512 512 V 612 C 424 621 401 708 371 674 C 300 600 525 660 392 563 C 332 543 393 537 412 512 H 512 Z M 540 29 C 491 23 589 146 522 92 S 495 193 466 136 S 471 9 399 40 Q 273 78 465 -24 C 498 -211 803 64 540 29 Z M 512 512 H 412 C 403 424 316 401 350 371 C 424 300 364 525 461 392 C 481 332 487 393 512 412 V 512 Z
+M 995 540 C 1001 491 878 589 932 522 S 831 495 888 466 S 1015 471 984 399 Q 946 273 1048 465 C 1235 498 960 803 995 540 Z M 512 512 V 412 C 600 403 623 316 653 350 C 724 424 499 364 632 461 C 692 481 631 487 612 512 H 512 Z M 484 995 C 533 1001 435 878 502 932 S 529 831 558 888 S 553 1015 625 984 Q 751 946 559 1048 C 526 1235 221 960 484 995 Z M 512 512 H 612 C 621 600 708 623 674 653 C 600 724 660 499 563 632 C 543 692 537 631 512 612 V 512 Z" />
+      <animate id="strokeAnim4" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="1.5s" repeatCount="1" calcMode="linear" begin="strokeAnim3.end-2s" />
+      <animate attributeName="fill-opacity" from="0" to="1" dur="2s" begin="strokeAnim3.end-1s" repeatCount="1" fill="freeze" calcMode="linear" />
+      <animate attributeName="stroke-width" values="5;1" dur="2s" begin="strokeAnim3.end-2s" repeatCount="1" fill="freeze" />
+    </g>
+    <g clip-path="url(#clipCircle)" fill-opacity="0" stroke-width="0" fill="url(#camoGrad4)" stroke="url(#camoGrad4)">
+      <!-- <path d="M 270 250 c 7 -30 45 -40 55 10 s 12.5 0 64 -2 s 30 38 65 30 s 15 25 28 38 s -32 47 -50 20 s -60 15 -57 39 s -50 20 -58 0 s -32 7 -45 15 q -52 33 5 -50 q 5 -20 -20 -40 c -40 -40 -1 -18 13 -60 z" />
+      <path d="M 290 250 c 7 -30 45 -40 55 10 s 12.5 0 64 -2 s 30 38 65 30 s 15 25 28 38 s -32 47 -50 20 s -60 15 -57 39 s -50 20 -58 0 s -32 7 -45 15 q -52 33 5 -50 q 5 -20 -20 -40 c -40 -40 -1 -18 13 -60 z" transform="rotate(90 512 512)" />
+      <path d="M 270 250 c 7 -30 45 -40 55 10 s 12.5 0 64 -2 s 30 38 65 30 s 15 25 28 38 s -32 47 -50 20 s -60 15 -57 39 s -50 20 -58 0 s -32 7 -45 15 q -52 33 5 -50 q 5 -20 -20 -40 c -40 -40 -1 -18 13 -60 z" transform="rotate(180 512 512)" />
+      <path d="M 290 250 c 7 -30 45 -40 55 10 s 12.5 0 64 -2 s 30 38 65 30 s 15 25 28 38 s -32 47 -50 20 s -60 15 -57 39 s -50 20 -58 0 s -32 7 -45 15 q -52 33 5 -50 q 5 -20 -20 -40 c -40 -40 -1 -18 13 -60 z" transform="rotate(270 512 512)" /> -->
+      <animate id="strokeAnim3" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="1.5s" repeatCount="1" calcMode="linear" begin="strokeAnim2.end-2s" />
+      <animate attributeName="fill-opacity" from="0" to="1" dur="2s" begin="strokeAnim2.end-1s" repeatCount="1" fill="freeze" calcMode="linear" />
+      <animate attributeName="stroke-width" values="5;1" dur="2s" begin="strokeAnim2.end-2s" repeatCount="1" fill="freeze" />
+    </g>
+  </g>
+    
+
+  <!-- LAYER 4 --> 
+<g transform="translate(0, 75)">
+  <g id="layer4" transform="scale(0)" opacity="0" transform-origin="center">
+    <g id="face">
+      <g id="ears">
+        <g id="leftEar">
+          <path id="leftOne" d="M414,310 c-25,-16 -20,25 5,52" style="fill: url('#faceGrad'); stroke: url(#faceGrad); stroke-width: 3;" gradientUnits="userSpaceOnUse"/>
+          <path id="leftTwo" d="M414,310 c-25,-16 -20,25 5,50" style="fill: none; stroke: url(#earGrad); stroke-width: 5;" gradientUnits="userSpaceOnUse"/> 
+          <circle id="leftThree" cx="405" cy="344" r="2" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse"  />  
+          <circle id="leftFour" cx="403" cy="340" r="2" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse"  />  
+          <circle id="leftFive" cx="401" cy="336" r="2" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse"  /> 
+          <circle id="leftSix" cx="411" cy="352.25" r="5.5" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse"  />
+          <g id="leftTragus" transform="translate(0,-1.5)">
+            <circle id="leftSeven" cx="411" cy="336" r="2" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse"  /> 
+            <circle id="leftEight" cx="411" cy="331" r="2" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse"  /> 
+          </g>
+          <circle id="leftNine" cx="403" cy="312" r="2" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse"  /> 
+        </g>
+        <g id="rightEar">
+          <path id="rightOne" transform="scale(-1, 1)" transform-origin="center" d="M414,310 c-25,-16 -20,25 5,52" style="fill: url('#faceGrad'); stroke: url(#faceGrad); stroke-width: 3;" gradientUnits="userSpaceOnUse"/>
+          <path id="rightTwo" transform="scale(-1, 1)" transform-origin="center" d="M414,310 c-25,-16 -20,25 5,50" style="fill: none; stroke: url(#earGrad); stroke-width: 5;" gradientUnits="userSpaceOnUse"/>  
+          <circle id="rightThree" transform="scale(-1, 1)" transform-origin="center" cx="403" cy="342" r="2" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse" /> 
+          <g id="rightTragus" transform="translate(0,-1.5)">
+            <circle id="rightFour" transform="scale(-1, 1)" transform-origin="center" cx="411" cy="332" r="2" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse" />
+            <circle id="rightFive" transform="scale(-1, 1)" transform-origin="center" cx="410" cy="335" r="2" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse" />
+            <circle id="rightSix" transform="scale(-1, 1)" transform-origin="center" cx="410" cy="329" r="2" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse"  />
+          </g>
+          <circle id="rightSeven" transform="scale(-1, 1)" transform-origin="center" cx="411" cy="352.25" r="5.5" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse" />
+          <circle id="rightEight" transform="scale(-1, 1)" transform-origin="center" cx="406" cy="339" r="2" style="fill:url(#piercingGrad);stroke-width:1px" gradientUnits="userSpaceOnUse"  />
+        </g>
+      </g>
+      <path id="mainFace" d="M409.6,300 L512,260 L 614.4,300 Q614.4,330 606,380 H418 Q409.6,330 409.6,300" style="fill: url('#faceGrad'); stroke: url(#shadowGrad); stroke-width: 2;" gradientUnits="userSpaceOnUse"/>
+      <g id="eyes" >
+        <g id="left" transform="translate(-1,1) rotate(5, 512, 358.4)">
+          <path id="leftEyeOne" d="M439.5,338 q20,-25 50,-2 q-25,30 -48, 1" style="fill: #ffffff; stroke:#ffffff;stroke-width:1;opacity:0.35" gradientUnits="userSpaceOnUse"/>
+          <path id="leftEyeTwo" d="M441,339 Q462,313 492,336 Q462,356 441, 339" style="fill: #efefef; stroke: url(#eyeGrad); stroke-width: 1;" gradientUnits="userSpaceOnUse"/> 
+          <circle id="leftEyeThree" cx="467" cy="336" r="8.5" style="fill: black; stroke: #0e2089; stroke-width: 4.5;"/>
+          <circle id="leftEyeFour" cx="469" cy="342" r="3.5" style="fill: white; stroke-width: 0;"/>
+          <circle id="leftEyeFive" cx="468.5" cy="341" r="4.5" style="fill: rgba(255,255,255,0.4); stroke-width: 0;"/>
+          <path id="leftLash" d="M440,337Q440,338,436,335L446,333Q446,334,442,331L452,329Q452,330,448,327L458,325Q473,317,493,337Q466,312,441,339Z " style="fill: #black; stroke:black; stroke-width: 1.1; opacity:0.95" gradientUnits="userSpaceOnUse"/>
+        </g>
+        <g id="right" transform="translate(1,1) rotate(-5, 512, 358.4)">
+          <path id="rightEyeOne" transform="scale(-1, 1)" transform-origin="center" d="M439.5,338 q20,-25 50,-2 q-25,30 -48, 1 " style="fill: #ffffff; stroke:#ffffff;stroke-width:1;opacity:0.35" gradientUnits="userSpaceOnUse" />
+          <path id="rightEyetwo" transform="scale(-1, 1)" transform-origin="center" d="M441,339 Q462,313 492,336 Q462,356 441, 339" style="fill: #efefef; stroke: url(#eyeGrad); stroke-width: 1;" gradientUnits="userSpaceOnUse"/>   
+          <circle id="rightEyeThree" transform="scale(-1, 1)" transform-origin="center" cx="467" cy="336" r="8.5" style="fill: black; stroke: #0e2089; stroke-width:4.5;"/>
+          <circle id="rightEyeFour" cx="469" cy="342" r="3.5" style="fill: white; stroke-width: 0;" transform="scale(-1, 1)" transform-origin="center"/>
+          <circle id="rightEyeFive" cx="468.5" cy="341" r="4.5" style="fill: rgba(255,255,255,0.4); stroke-width: 0;" transform="scale(-1, 1)" transform-origin="center"/>
+          <path id="rightLash" transform="scale(-1 1)" transform-origin="center" d="M440,337Q440,338,436,335L446,333Q446,334,442,331L452,329Q452,330,448,327L458,325Q473,317,493,337Q466,312,441,339Z" style="fill: #black; stroke:black; stroke-width: 1; opacity:0.95" gradientUnits="userSpaceOnUse"/>
+        </g>
+        <g id="brows" transform="translate(0,-0.25)">
+          <path id="leftBrow" d="M426,317 q2,-2 8,-3 q-3,-1 -6,1 q2,-2 8,-3 q-3,-1 -6,1 q2,-2 8,-3 q-3,-1 -6,1 q2,-2 8,-3 q-3,-1 -5,1 q2,-2 8,-3 q-3,-1 -5,0 q2,-2 8,-2 q-3,-1 -5,0 q3,0 7,0 q-2,-2 -5,-2 q5,-2 15,2 q-6,-3 -8,-4 q3,-1 15,3 q-6,-3 -8,-4 q5,-2 15,4 q-6,-3 -3,-3 q3,-2 13,5 q-3,-4 -4,-4 q2,-1 5,4 q-1,-2 -1,-3 q1,-1 4,2 q1,-2 0,-2 q2,-1 4,4 q1,-2 1,-4 q1,-1 3,6 q1,-2 0,-4 q1,-2 2,5 q1,5 -1,8 q-35 -10 -48, -6z" style="fill: url(#browGrad); stroke:url(#browGrad); stroke-width: 1;" gradientUnits="userSpaceOnUse" />
+          <path id="rightBrow" transform="scale(-1, 1)" transform-origin="center" d="M426,317 q2,-2 8,-3 q-3,-1 -6,1 q2,-2 8,-3 q-3,-1 -6,1 q2,-2 8,-3 q-3,-1 -6,1 q2,-2 8,-3 q-3,-1 -5,1 q2,-2 8,-3 q-3,-1 -5,0 q2,-2 8,-2 q-3,-1 -5,0 q3,0 7,0 q-2,-2 -5,-2 q5,-2 15,2 q-6,-3 -8,-4 q3,-1 15,3 q-6,-3 -8,-4 q5,-2 15,4 q-6,-3 -3,-3 q3,-2 13,5 q-3,-4 -4,-4 q2,-1 5,4 q-1,-2 -1,-3 q1,-1 4,2 q1,-2 0,-2 q2,-1 4,4 q1,-2 1,-4 q1,-1 3,6 q1,-2 0,-4 q1,-2 2,5 q1,5 -1,8 q-35 -10 -48, -6z" style="fill: url(#browGrad); stroke:url(#browGrad); stroke-width: 1;" gradientUnits="userSpaceOnUse" />
+        </g>
+      </g>
+    <g id="noseDetail">
+      <path id="nose" d="M500,350 c-15,20 38,20 24,0" style="fill:none; stroke-width: 2; stroke:#222222; opacity:0.15; stroke-linecap:round" />
+      <path id="noseHighlight" d="M500,355 c12,-15 0,-30 12,-32v44" fill="url(#noseHL)" stroke="none" />
+      <path id="noseHighlight" d="M500,355 c12,-15 0,-30 12,-32v44" fill="url(#noseHL)" stroke="none" transform="scale(-1,1)" transform-origin="center" />
+    </g>
+      <path id="noseShadow" d="M493,355 
+      c19,-16 0,-35 19,-38 
+      c19,3 0,22 19,38" style="fill:none; stroke-width:7.5; stroke:#5c3b2a; opacity:0.25; stroke-linecap:round" />
+      <path id="glasses" d="M420,310 Q460,308 495,315C500,310 525,310 530,315Q563,308 605,310 L609,308L608,313L604,316Q602,345 589,358Q549,362 534,354C527,348 527,334 525,326 C521,312 503,312 499,326M525.5,330L526,316" style="fill: none; stroke:url(#glassesGrad); stroke-width: 10;" />
+      <path id="glasses" d="M420,310 Q460,308 495,315C500,310 525,310 530,315Q563,308 605,310 L609,308L608,313L604,316Q602,345 589,358Q549,362 534,354C527,348 527,334 525,326 C521,312 503,312 499,326M525.5,330L526,316" style="fill: none; stroke:url(#glassesGrad); stroke-width: 10;" transform="scale(-1, 1)" transform-origin="center" />
+      <path id="nosePiercing" d="M500,355 c -11,-5 -10,15 0,9" style="fill:none; stroke-width:2; stroke:#2c205d; stroke-linecap:round" />
+    </g>
+    <g id="hat" >
+      <path id="mainHat" d="M414,270 c-10,-105 206,-105 198,-10 l-3,28 c-8,-35 -186,-35 -192,0z" style="fill: url('#hatGrad'); stroke: url(#hatGrad); stroke-width: 1;" gradientUnits="userSpaceOnUse"/>
+      <path id="peak" d="M410,300 c-20,-50 236,-50 206,0 l-4,5 c2,-27 -198,-27 -192,0z" style="fill: #050505; stroke: #000000; stroke-width: 1;" gradientUnits="userSpaceOnUse"/>
+    </g>
+    <g id="shoulders" transform="translate(0,4)">
+      <path id="leftShoulder" d="M340,515 q0,-50 40,-60 l0,60" style="fill: url('#bodyGrad'); stroke: url(#bodyGrad); stroke-width: 1;" gradientUnits="userSpaceOnUse"/>
+      <path id="rightShoulder" transform="scale(-1, 1)" transform-origin="center" d="M340,515 q0,-50 40,-60 l0,60" style="fill: url('#bodyGrad'); stroke: url(#bodyGrad); stroke-width: 1;" gradientUnits="userSpaceOnUse"/>
+    </g>
+    <g id="mac" >
+      <path id="macPath" d="M387.5,515 c-10,0 -10,0 -12,-10 l-15,-140 c0,-10 0,-10 15,-10 l275,0 c15,0 15,0 15,10 l-15,140 c0,10 0,10 -15,10z" style="fill: url('#macGrad'); stroke: url(#macGrad); stroke-width: 1;" gradientUnits="userSpaceOnUse" transform="translate(0,4)"/>
+      <g id="raspberry" transform="scale(0.9) translate(0,-20)" transform-origin="center">
+        <g id="raspLeaves">
+          <path id="leftLeaf" d="M510,430 q-20,5 -25,-15 q35,0 30,15" style="fill:#efefef; stroke-width: 1; stroke:#efefef" gradientUnits="userSpaceOnUse" />
+          <path id="rightLeaf" transform="scale(-1, 1)" transform-origin="center" d="M510,430 q-20,5 -25,-15 q35,0 30,15" style="fill:#efefef; stroke-width: 1; stroke:#efefef" gradientUnits="userSpaceOnUse" />
+        </g>
+        <g id="raspMain">
+          <circle id="raspberry1" cx="497.5" cy="438" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+          <circle id="raspberry2" cx="510" cy="437.5" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+          <circle id="raspberry3" cx="495" cy="450" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+          <circle id="raspberry4" cx="507" cy="447" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+          <circle id="raspberry5" cx="500" cy="462.5" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+          <circle id="raspberry6" cx="510" cy="460" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+          <circle id="raspberry7" cx="512" cy="470" r="8" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+        </g>
+        <g id="raspMain2" transform="scale(-1, 1)" transform-origin="center">
+          <circle id="raspberry8" cx="497.5" cy="438" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+          <circle id="raspberry9" cx="510" cy="437.5" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+          <circle id="raspberry10" cx="495" cy="450" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+          <circle id="raspberry11" cx="507" cy="447" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+          <circle id="raspberry12" cx="500" cy="462.5" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+          <circle id="raspberry13" cx="510" cy="460" r="9" style="fill:#efefef; stroke-width: 0;" gradientUnits="userSpaceOnUse"/>
+        </g>
+      </g>
+    </g>
+    <animate attributeName="opacity" from="0" to="1" dur="2s" begin="strokeAnim4.end" repeatCount="1" fill="freeze" calcMode="linear" />
+    <animateTransform id="meAnim" attributType="XML" attributeName="transform" type="scale" values="0;1.4" dur="2s" begin="strokeAnim4.end" repeatCount="1" fill="freeze" />   
+  </g>
+  </g>
+
+
+  <!-- LAYER 5 -->
+
+  <g id="layer5" fill="none" stroke="#ffffff"  stroke-width="13" stroke-linecap="round" transform="scale(1.25)" transform-origin="center">
+    <path id="nDark" d="M200 698v-125c0 -15 25 -30 45 -15l60,80v-87 M238 698v-87l60,80c20,15 45,0 45,-15v-125" stroke="#333333" transform="translate(-5,5)" stroke-opacity="0" stroke-width="14.5" >
+      <animate id="animN" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="1.5s" repeatCount="1"  begin="meAnim.end-1s" fill="freeze" />
+      <animate attributeName="stroke-opacity" from="0" to="0.35" dur="2s" begin="meAnim.end-1s" repeatCount="1" fill="freeze" calcMode="linear" />
+    </path>
+    <g stroke-opacity="0" stroke-dasharray="0% 100%" >
+      <path id="nLight" d="M200 698v-125c0 -15 25 -30 45 -15l60,80v-87 M238 698v-87l60,80c20,15 45,0 45,-15v-125" />
+      <animate id="animN" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="1.5s" repeatCount="1"  begin="meAnim.end-1.5s" fill="freeze" />
+      <animate attributeName="stroke-opacity" from="0" to="1" dur="2s" begin="meAnim.end-1s" repeatCount="1" fill="freeze" calcMode="linear" />
+    </g>
+
+    <path id="jDark" d="M438 551h40c12.5 0 25 12.5 25 25v68c0 71 -140 71 -140 3 M438 590 h20 c5 0 10 5 10 10 v37 c0 38 -68 38 -68 10" stroke="#333333" transform="translate(-5,5)" stroke-opacity="0" stroke-width="14.5" >
+      <animate id="animN" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="1.5s" repeatCount="1"  begin="meAnim.end-1s" fill="freeze" />
+      <animate attributeName="stroke-opacity" from="0" to="0.35" dur="2s" begin="meAnim.end-1s" repeatCount="1" fill="freeze" calcMode="linear" />
+    </path>
+    <g stroke-dasharray="0% 100%" stroke-opacity="0" >
+      <path id="jLight" d="M438 551h40c12.5 0 25 12.5 25 25v68c0 71 -140 71 -140 3 M438 590 h20 c5 0 10 5 10 10 v37 c0 38 -68 38 -68 10" />
+      <animate id="animJ" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="1.5s" repeatCount="1"  begin="meAnim.end-1s" fill="freeze" />
+      <animate attributeName="stroke-opacity" from="0" to="1" dur="2s" begin="meAnim.end-1s" repeatCount="1" fill="freeze" calcMode="linear" />
+    </g>
+
+    <path id="tDark" d="M522.5 551h145 M522.5 590 h40c5 0 10 5 10 10 v98 M617.5 698v-98c0 -5 5 -10 10 -10h40" stroke="#333333" transform="translate(-5,5)" stroke-opacity="0" stroke-width="14.5" >
+      <animate id="animN" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="1.5s" repeatCount="1"  begin="meAnim.end-0.5s" fill="freeze" />
+      <animate attributeName="stroke-opacity" from="0" to="0.35" dur="2s" begin="meAnim.end-0.5s" repeatCount="1" fill="freeze" calcMode="linear" />
+    </path>
+    <g stroke-dasharray="0% 100%" stroke-opacity="0" >
+      <path id="tLight" d="M522.5 551h145 M522.5 590 h40c5 0 10 5 10 10 v98 M617.5 698v-98c0 -5 5 -10 10 -10h40" />
+      <animate id="animT" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="1.5s" repeatCount="1"  begin="meAnim.end-0.5s" fill="freeze" />
+      <animate attributeName="stroke-opacity" from="0" to="1" dur="2s" begin="meAnim.end-0.5s" repeatCount="1" fill="freeze" calcMode="linear" />
+    </g>
+
+    <path id="dDark" d="M727,551h30c95,15 95,130 15,146h-50c-35,0 -35,0 -35,-35v-76c0,-35 0,-35 35,-35z M732 588 h5c 70,5 70,75 -5,70h-5v-70z" stroke="#333333" transform="translate(-5,5)" stroke-opacity="0" stroke-width="14.5" >
+      <animate id="animN" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="1s" repeatCount="1"  begin="meAnim.end" fill="freeze" />
+      <animate attributeName="stroke-opacity" from="0" to="0.35" dur="2s" begin="meAnim.end-0.5s" repeatCount="1" fill="freeze" calcMode="linear" />
+    </path>
+    <g stroke-dasharray="0% 100%" stroke-opacity="0" >
+      <path id="dLight" d="M727,551h30c95,15 95,130 15,146h-50c-35,0 -35,0 -35,-35v-76c0,-35 0,-35 35,-35z M732 588 h5c 70,5 70,75 -5,70h-5v-70z" />
+      <animate id="animD" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="1.5s" begin="meAnim.end" repeatCount="1" fill="freeze" />
+      <animate attributeName="stroke-opacity" from="0" to="1" dur="2s" begin="meAnim.end-0.5s" repeatCount="1" fill="freeze" calcMode="linear" />
+    </g>
+  </g>
+</svg>

@@ -19,7 +19,7 @@ export default function Navbar(props) {
       setShowNav(false);
       setShowSideNav(false);
     }
-  }, [current]);
+  }, [current, setShowNav]);
 
   // Value being driven by scrolling (e.g. height)
   const initialValue = 200; // This is initial height of nav bar
