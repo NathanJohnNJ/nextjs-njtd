@@ -1,5 +1,4 @@
 import Cards from './cards';
-import { View } from 'react-native-web';
 
 const Javascript = () => {
   const drumImg = require('../../assets/images/portfolio/drumPreview.png');
@@ -39,9 +38,9 @@ const Javascript = () => {
     const cardList = [drumkit, keycode, dice, matrix]
      
     return (
-      <View className="flex flex-row w-full">
+      <div className="flex flex-row w-full">
         <Cards cardList={cardList} module="JavaScript" side="left" />
-      </View>
+      </div>
     )
 }
 

@@ -9,28 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@gsap/react": "^2.1.2",
+    "@next/bundle-analyzer": "^15.2.2",
     "@react-navigation/native": "^7.0.15",
     "@svgr/webpack": "^8.1.0",
-    "clsx": "^2.1.1",
     "deps": "^1.0.0",
-    "framer-motion": "^12.4.10",
-    "gsap": "^3.12.7",
-    "motion": "^12.4.10",
-    "next": "^15.2.1",
-    "next-svgr": "^0.0.2",
+    "framer-motion": "^12.5.0",
+    "motion": "^12.5.0",
+    "next": "^15.2.2",
+    "next-compose-plugins": "^2.2.1",
+    "next-plugin-svgr": "^1.1.12",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-native-web": "^0.19.13",
-    "styled-components": "^6.1.15"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4.0.11",
+    "@tailwindcss/postcss": "^4.0.13",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9",
-    "eslint-config-next": "^15.2.1",
-    "react-native-svg-web": "^1.0.9",
-    "tailwindcss": "^4.0.11"
+    "eslint": "^9.22.0",
+    "eslint-config-next": "^15.2.2",
+    "tailwindcss": "^4.0.13"
   }
 }

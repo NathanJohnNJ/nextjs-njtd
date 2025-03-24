@@ -2,7 +2,7 @@
 export default function CV() {
   return (
     <div className="h-[100vh]">
-      <svg width="100vw" height="100vh" viewBox="0 0 1000 1000">
+      <svg width="1000" height="1000" viewBox="0 0 1000 1000">
         <defs>
           <linearGradient id="Gradient1">
             <stop offset="0%" stopColor="blue" />

@@ -1,25 +1,25 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { useSideNavLinks } from '../../hooks';
 
 export default function SideNavButtons(props) {
-  const { showSideNav, setShowSideNav } = props;
+  const { showSideLinks, setShowSideLinks } = props;
   const actions = useSideNavLinks();
   const current = usePathname();
 
     useEffect(() => {
       if (current === "/") {
-        setShowSideNav(true);
+        setShowSideLinks(true);
       } else {
-        setShowSideNav(false);
+        setShowSideLinks(false);
       }
-    }, []);
+    }, [current, setShowSideLinks]);
   return (
     <motion.div className="flex flex-row justify-center -mt-[200px]">
       {actions.map((action, i) => (
-        <SideNavButton key={i} action={action} index={i} showSideNav={showSideNav} />
+        <SideNavButton key={i} action={action} index={i} showSideLinks={showSideLinks} />
       ))}
     </motion.div>
   );

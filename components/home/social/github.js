@@ -1,3 +1,4 @@
+'use client';
 import './styles.css';
 import { useState } from 'react';
 const GitHub = () => {
@@ -12,7 +13,7 @@ const GitHub = () => {
        </span>
        <span className="BG shadow-2xl" />
      </button>
-     <h1 style={{visibility: visibility}} className="text-6xl justify-self-center font-bold fontGeo absolute coloredShadow top-[80%] left-[-45px] text-[var(--mid-color)] rounded-2xl bg-[var(--light-color)] p-[8px] shadow-2xl shadow-(color:--darkBorder-color)">GitHub</h1>
+     <h1 style={{visibility: visibility}} className="text-4xl justify-self-center font-bold fontGeo absolute coloredShadow top-[80%] left-[-45px] text-[var(--white-color)] rounded-2xl bg-[#a0a0a0] p-[8px] shadow-2xl shadow-(color:--darkBorder-color)">GitHub</h1>
    </div>
   )
 };

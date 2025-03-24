@@ -2,7 +2,7 @@
 export default function About() {
   return (
     <div className="h-[400vh]">
-      <svg className=" left" width="100vw" height="100vh" viewBox="0 0 1000 1000">
+      <svg className=" left" width="1000" height="1000" viewBox="0 0 1000 1000">
         <defs>
           <linearGradient id="Gradient1">
             <stop offset="0%" stopColor="blue" />
