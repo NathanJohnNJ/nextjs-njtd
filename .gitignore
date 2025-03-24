@@ -35,3 +35,7 @@ yarn-error.log*
 .npmcheckrc
 colours.txt
 pushToGit.sh
+public/test
+public/burgerLogo.svg
+sitespeed-result/
+logoTest.animated.svg

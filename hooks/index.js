@@ -1,3 +1,4 @@
+'use client';
 import { useState, useEffect, useLayoutEffect } from 'react';
 import { useScroll } from 'motion/react'
 

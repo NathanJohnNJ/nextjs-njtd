@@ -1,4 +1,4 @@
-import Carousel from '@/components/portfolio/html-css/carousel';
+// import Carousel from '@/components/portfolio/html-css/carousel';
 export default function Portfolio() {
 
     const drumkit = { 
@@ -33,9 +33,9 @@ export default function Portfolio() {
     const cardList = [drumkit, keycode, dice, matrix]
   return (
     <div className="h-[300vh]">
-      <div  className="mt-[40vh]">
+      {/* <div  className="mt-[40vh]">
       <Carousel cardList={cardList} title="JavaScript" />
-      </div>
+      </div> */}
       <svg width="1000" height="1000" viewBox="0 0 1000 1000">
         <defs>
           <linearGradient id="Gradient1">

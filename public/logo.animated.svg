@@ -98,7 +98,7 @@
 
   <!-- LAYER 2 -->
 
-  <circle id="layer2" r="465" cx="512" cy="512" style="stroke:black;fill:black;" transform-origin="center">
+  <circle id="layer2" r="465" cx="512" cy="512" style="stroke:black;fill:black;">
       <animate id="circleAnim4" attributeName="fill-opacity" values="0;0.8" dur="8s" begin="0s" repeatCount="1" fill="freeze" />
   </circle>
 
@@ -297,19 +297,4 @@
       <animate attributeName="stroke-opacity" from="0" to="1" dur="2s" begin="meAnim.end-0.5s" repeatCount="1" fill="freeze" calcMode="linear" />
     </g>
   </g>
-
-  <!-- <g id="burgerBtn" opacity="1">
-    <g id="darkBurger" opacity="0">
-      <path d="M251,482h512" stroke-width="80" stroke-linecap="round" stroke="#333333" opacity="0.35"/>
-      <path d="M251,602h512" stroke-width="80" stroke-linecap="round" stroke="#333333" opacity="0.35"/>
-      <path d="M251,722h512" stroke-width="80" stroke-linecap="round" stroke="#333333" opacity="0.35"/>
-    </g>
-    <g id="burgerWhite" stroke-dasharray="0% 100%" stroke-opacity="0" >
-      <path d="M256,487h512" stroke-width="80" stroke-linecap="round"  stroke="white" opacity="1" />
-      <path d="M256,607h256M768,607h-256" stroke-width="80" stroke-linecap="round" stroke="white" opacity="1"/>
-      <path d="M768,727h-512" stroke-width="80" stroke-linecap="round"  stroke="white" opacity="1"/>
-      <animate id="animBurger" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="1.5s" begin="animD.end" repeatCount="1" fill="freeze" />
-      <animate attributeName="stroke-opacity" from="0" to="1" dur="2s" begin="animD.end-0.5s" repeatCount="1" fill="freeze" calcMode="linear" />
-    </g>
-  </g> -->
 </svg>
