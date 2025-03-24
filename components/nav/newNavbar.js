@@ -16,7 +16,7 @@ export default function Navbar(props) {
   const [svgWidth, svgHeight ] = useSvgSize();
   const { scrollY, scrollYProgress } = useScroll();
   const [showSVG, setShowSVG] = useState(false);
-  const { current } = usePathname();22
+  const current = usePathname();
   const thresholdY = 350; // set the scroll position where you want the state change for the content of the nav bar - amount scrolled, not distance from top of screen
 
   const scrollOutput = useTransform(
