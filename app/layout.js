@@ -1,20 +1,14 @@
-import { Poppins, League_Spartan } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
 import Image from "next/image";
-import Navbar from "@/components/nav/newNavbar";
+import Navbar from "@/components/nav/navbar";
 
 export const poppins = Poppins({ 
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   style: ['normal'],
   variable: "--font-poppins"
-});
-export const spartan = League_Spartan({ 
-  subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  style: ['normal'],
-  variable: "--font-spartan"
 });
 
 export default function RootLayout({ children }) {
@@ -31,8 +25,8 @@ export default function RootLayout({ children }) {
         <meta property="og:description" content="A website built with Next JS, and styled with Tailwind CSS, to showcase my work and host my protfolio." />
         <title>NJTD</title>
       </head>
-      <body className={`${poppins.variable} ${spartan.variable} antialiased containerBG`}>
-        <div className="pt-8 mt-[20px]">
+      <body className={`${poppins.variable} antialiased containerBG`}>
+        <div className="pt-8 mt-[20px] relative">
           <Navbar />
         </div>
 
@@ -40,7 +34,7 @@ export default function RootLayout({ children }) {
           {children}
         </div>
       
-        <div className="h-[50vh]">
+        <div className="h-fit">
           <Footer />
         </div>
       </body>

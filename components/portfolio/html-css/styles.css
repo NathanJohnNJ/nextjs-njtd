@@ -1,91 +1,65 @@
-@supports (animation-timeline: view()) {}
-[data-component="carousel"] {
-	timeline-scope: --entry1, --entry2, --entry3, --entry4;
-}
-  [data-component="carousel"] {
-    .entries li:nth-child(1) {
-      view-timeline: --entry1 inline;
-    }
-    .entries li:nth-child(2) {
-      view-timeline: --entry2 inline;
-    }
-    .entries li:nth-child(3) {
-      view-timeline: --entry3 inline;
-    }
-    .entries li:nth-child(4) {
-      view-timeline: --entry4 inline;
-    }
-    .markers li:nth-child(1) a {
-      animation-timeline: --entry1;
-    }
-    .markers li:nth-child(2) a {
-      animation-timeline: --entry2;
-    }
-    .markers li:nth-child(3) a {
-      animation-timeline: --entry3;
-    }
-    .markers li:nth-child(4) a {
-      animation-timeline: --entry4;
-    }
-    .markers li a {
-      animation: changeColor linear both;
-    }
-  }
-
-
-
-[data-component="carousel"] {
+div[data-component="carousel"] {
   position: relative;
   margin: 0 auto;
   height: 80vh;
   width: 50vw;
   overflow: hidden;
-  timeline-scope: --carousel;
+}
 
-  .entries {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      flex-direction: row;
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      scroll-behavior: smooth;
-      overscroll-behavior: contain;
-      scroll-timeline: --carousel x;
-  }
-  .markers{
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    bottom: 1.5rem;
-    left: 50%;
-    translate: -50% 0;
-  }
+.entries {
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+  /* scroll-timeline-axis: x; */
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  scroll-timeline: --carousel inline;
+}
+
+.entries li {
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+.markers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 15vw; /* Adjust width as needed */
+  height: 5vh; /* Adjust height as needed */
+  position: absolute;
+  bottom: 1vw; /* Adjust spacing as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  /* pointer-events: none; Prevent interference with scrolling */
+}
+
+.markers li:nth-child(1) {
+  animation-range-start: entry -100%;
+  animation-range-end: entry;
+}
+
+.markers li:nth-child(2) {
+  animation-range-start: entry;
+  animation-range-end: entry 200%;
 }
 
 .markers li {
-  background-attachment: scroll;
-  background-clip: border-box;
-  background-color: rgb(255, 0, 250);
-  background-image: none;
-  background-origin: padding-box;
-  background-position-x: 0%;
-  background-position-y: 0%;
-  background-repeat: repeat;
-  background-size: auto;
-}
-
-.sr-only {
-  position: absolute;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+  width: 40px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 50%;
+  background-color: #ff00fa;
+  transform: scale(0.75);
+  animation: changeColor linear forwards;
+  animation-timeline: --carousel;
 }
 
 @keyframes changeColor {
-  50% { background-color: #aaddfa}
+  50% {
+    background-color: #aaddfa;
+    transform: scale(1);
+  }
 }
