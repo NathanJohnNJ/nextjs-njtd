@@ -20,14 +20,15 @@ export default function First() {
 
   const textX = useTransform(scrollYProgress, [0.6, 0.9], [0, -600]);
   const textOpacity = useTransform(scrollYProgress, [0.6, 0.85], [1, 0]);
-  const imageX = useTransform(scrollYProgress, [0.6, 0.9], ['0vw', '25vw']);
+  const imageX = useTransform(scrollYProgress, [0.6, 0.9], ['0vw', '5vw']);
   const imageScale = useTransform(scrollYProgress, [0.6, 0.8], [1, 1.2]);
 
   const circleFill = useTransform(scrollYProgress, [0, 0.25], [
     'rgba(255, 255, 255, 0)', 'rgba(45, 80, 190, 0.9)']);
   const pictureOpacity = useTransform(scrollYProgress, [0, 0.3, 0.85, 1], [0, 1, 1, 0]);
   const circleRotate = useTransform(scrollYProgress, [0, 0.75], ["0deg", "720deg"]);
-  const pathLengthLength = useTransform(scrollYProgress, [0, 0.75], [0, 1])
+  const pathLengthLength = useTransform(scrollYProgress, [0, 0.75], [0, 1]);
+  const width = useTransform(scrollYProgress, [0, 0.6, 1], ['100%', '100%', '35%']);
 
   const text = "Full-Stack Web Developer";
   const developerArray = text.split('');
@@ -35,8 +36,8 @@ export default function First() {
 
   return (
     <section ref={ref} className="relative h-[500vh] w-[90vw] flex flex-col self-center justify-self-center items-center justify-flex-end mt-[45vh]">
-      <motion.div id="stickyDiv"  className="sticky top-[38vh] w-[fit] h-[min] flex flex-col p-4 border rounded-4xl shadow-2xl shadow-(color:--darkBorder-color)" style={{ translateX: '-100px', translateY: '100px' }} whileInView={{ opacity: 1, translateX: '0px', translateY: '0px' }} viewport={{ amount: 0.2 }} transition={{ duration: 1.5, ease: 'easeInOut' }}>
-        <div id="rowDiv" className="flex lg:flex-row flex-col ">
+      <motion.div id="stickyDiv" className="sticky top-[38vh] h-[min] flex flex-col p-4 border rounded-4xl shadow-2xl shadow-(color:--darkBorder-color)" style={{ translateX: '-100px', translateY: '100px', width: width }} whileInView={{ opacity: 1, translateX: '0px', translateY: '0px' }} viewport={{ amount: 0.2 }} transition={{ duration: 1.5, ease: 'easeInOut' }}>
+        <div id="rowDiv" className="flex md:flex-row flex-col ">
 
           <motion.div id="imageDiv" className="ml-[12vw] -mt-[4vh] p-0 z-50" style={{ translateX: imageX, scale: imageScale }} >
             <svg width="290" height="290" viewBox="0 0 290 290" className="-translate-x-[25px] translate-y-[300px] overflow-visible" >

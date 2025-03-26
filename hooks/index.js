@@ -11,7 +11,6 @@ export function useSvgSize() {
     window.addEventListener('resize', updateSvgSize);
     updateSvgSize();
     return () => window.removeEventListener('resize', updateSvgSize);
-    // eslint-disable-next-line
   }, []);
   return svgSize;
 };
@@ -25,22 +24,22 @@ export function useNavLinks() {
       let list = [];
       if (width > 1300){
         list = [
-          { link: '/',  name: 'Home', side: 'left', x: '-5vw' },
-          { link: '/about',  name: 'About', side: 'left', x:'-4vw' },
-          { link: '/cv', name: 'CV', side: 'right', x: '4vw' },
-          { link: '/portfolio', name: 'Portfolio',  side: 'right', x: '5vw' },
+          { link: '/',  name: 'Home', x: '-5vw' },
+          { link: '/about',  name: 'About', x:'-4vw' },
+          { link: '/cv', name: 'CV', x: '4vw' },
+          { link: '/portfolio', name: 'Portfolio', x: '5vw' },
         ]
       }else if(width > 960){
-        list=[
-          { link: '/',  name: 'Home', side: 'left', x: '4vw', y: '-5vh' },
-          { link: '/about',  name: 'About', side: 'left', x:'-4vw', y: '5vh' },
-          { link: '/cv', name: 'CV', side: 'right', x: '3vw', y: '-5vh'  },
-          { link: '/portfolio', name: 'Portfolio',  side: 'right', x: '3vw', y: '5vh' },
+        list = [
+          { link: '/',  name: 'Home', x: '4vw', y: '-5vh' },
+          { link: '/about',  name: 'About', x:'-4vw', y: '5vh' },
+          { link: '/cv', name: 'CV', x: '3vw', y: '-5vh'  },
+          { link: '/portfolio', name: 'Portfolio', x: '3vw', y: '5vh' },
         ];
       } else {
         list = [
-          { link: '/cv', name: 'CV', side: 'left', x: '0' },
-          { link: '/portfolio', name: 'Portfolio',  side: 'right', x: '50', y: '-50' }
+          { link: '/cv', name: 'CV', x: '0' },
+          { link: '/portfolio', name: 'Portfolio', x: '50', y: '-50' }
         ]
       }
       setNavLinks(list);
@@ -48,7 +47,6 @@ export function useNavLinks() {
     window.addEventListener('resize', updateNavLinks);
     updateNavLinks();
     return () => window.removeEventListener('resize', updateNavLinks);
-    // eslint-disable-next-line
   }, [width]);
   return navLinks;
 };
@@ -62,10 +60,10 @@ export function useSideNavLinks() {
       let list = [];
       if (width > 1000){
         list = [
-          { link: '/',  name: 'Home', x: '25vw' },
-          { link: '/about',  name: 'About', x:'40vw' },
-          { link: '/cv', name: 'CV', x: '58vw' },
-          { link: '/portfolio', name: 'Portfolio',  x: '68vw' },
+          { link: '/',  name: 'Home', x: '15vw' },
+          { link: '/about',  name: 'About', x:'30vw' },
+          { link: '/cv', name: 'CV', x: '48vw' },
+          { link: '/portfolio', name: 'Portfolio',  x: '58vw' },
         ]
       } else {
         list=[
@@ -80,7 +78,6 @@ export function useSideNavLinks() {
     window.addEventListener('resize', updateSideNavLinks);
     updateSideNavLinks();
     return () => window.removeEventListener('resize', updateSideNavLinks);
-    // eslint-disable-next-line
   }, [width]);
   return sideNavLinks;
 };

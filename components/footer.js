@@ -10,7 +10,7 @@ const Footer = (props) => {
 
    const scrollOutput = useTransform(
       scrollYProgress,
-      [0, 0.95, 1],
+      [0, 0.975, 1],
       [0, 0, 1],
       {
         clamp: false
@@ -18,7 +18,7 @@ const Footer = (props) => {
     );
     const scrollVisibility = useTransform(
       scrollYProgress,
-      [0, 0.95, 1],
+      [0, 0.975, 1],
       ['hidden', 'hidden', 'visible'],
       {
         clamp: false
@@ -26,7 +26,7 @@ const Footer = (props) => {
     );
     const strokeOutput = useTransform(
       scrollYProgress,
-      [0, 0.95, 1],
+      [0, 0.975, 1],
       [0, 0, 1],
       {
         clamp: false
