@@ -72,11 +72,11 @@ export default function MenuButton(props) {
       setLogoLeft(otherLogoLeft);
       setLogoScale(otherLogoScale);
     }else{
-      setLogoTop(logoTop);
-      setLogoLeft(logoLeft);
-      setLogoScale(logoScale);
+      setLogoTop(homeLogoTop);
+      setLogoLeft(homeLogoLeft);
+      setLogoScale(homeLogoScale);
     }
-  }, [current])
+  }, [current, otherLogoLeft, otherLogoTop, otherLogoScale, homeLogoLeft, homeLogoScale, homeLogoTop])
 
   return (
     <motion.div className="fixed flex flex-col items-center justify-center w-[100%] z-50" style={{ translateX: logoLeft, translateY: logoTop, scale: logoScale }}>
