@@ -49,7 +49,7 @@ export default function Carousel(){
                   <a href={card.link}>
                     <Image src={card.src} alt={card.name} title={card.name} width={222} height={184} draggable="false" className="rounded-full scale-[0.8] hover:scale-[1] hover:rounded-2xl" />
                   </a>
-                  <h1 className="geoFont font-extrabold uppercase  align-center text-4xl" >{card.title}</h1>
+                  <h1 className="geoFont font-extrabold uppercase  align-center text-4xl" >{card.name}</h1>
                   <a href={card.link} className="group geoFont text-xl group-hover:text-2xl -mb-[5] text-[var(--black-color) group-hover:text-[var(--dark-color)] no-underline">Click here to view the app yourself!</a>
                   <a href={card.git} className="group geoFont text-xl group-hover:text-2xl -mb-[5] text-[var(--black-color) group-hover:text-[var(--dark-color)] no-underline">Or view the code on GitHub</a>
                   <h2 className="geoFont text-lg -mb-[20] text-[var(--dark-color)]">Skills/Languages used:</h2>

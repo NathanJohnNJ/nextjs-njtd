@@ -39,7 +39,7 @@ function Cards(props){
               }}
               initial="hidden"
               whileInView="visible"
-              >a
+              >
               <h2 className="font-[LeagueSpartan] align-center text-2xl">{card.title}</h2>
               <Image className="w-[18vmin] h-auto rounded-[20] mb-[15]" src={card.image} alt={card.title} />
               <Link href={card.link} className="group">
