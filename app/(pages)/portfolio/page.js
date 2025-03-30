@@ -3,7 +3,7 @@ import JavaScript from '@/components/portfolio/javascript';
 
 export default function Page(){
   return (
-    <div className="h-[300vh] mt-[50vh]">
+    <div className="h-[200vh] mt-[50vh]">
       <div  className="mt-[40vh] flex flex-col items-center justify-center">
         <HTML />
         {/* <JavaScript /> */}

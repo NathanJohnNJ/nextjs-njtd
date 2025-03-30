@@ -10,6 +10,7 @@ const nextConfig = {
     ignoreDuringBuilds: true
   },
   experimental: {
+    optimizePackageImports: ['framer-motion', 'tailwindcss', 'autoprefixer', 'eslint', '@svgr/webpack'],
     turbo: {
       rules: {
         '*.svg': {
@@ -24,16 +25,4 @@ const nextConfig = {
 
 
 
-// module.exports = withPlugins([withBundleAnalyzer, withSvgr], nextConfig);
-const config = withPlugins([withBundleAnalyzer], nextConfig);
-
-module.exports = {
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/i,
-      issuer: /\.[jt]sx?$/,
-      use: ["@svgr/webpack"],
-    });
-    return config;
-  }
-}
+module.exports = withPlugins([withBundleAnalyzer, withSvgr], nextConfig);
