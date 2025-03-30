@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Terms = () => {
+const Page = () => {
     return (
       <div className="flex flex-col items-center justify-center w-[85vw] ml-[7.5vw] h-max p-8 relative">
         <div className="w-full h-[50vh] bg-gradient-to-tr from-[var(--background-start-rgb)] to-[var(--background-end-rgb)]  -mt-16 sticky top-0 flex flex-col items-center justify-center">
@@ -34,7 +34,7 @@ const Terms = () => {
     )
 };
 
-export default Terms;
+export default Page;
 
 
 

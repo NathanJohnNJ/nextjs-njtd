@@ -44,7 +44,7 @@ const Footer = (props) => {
     <motion.div className="w-full flex justify-center items-center">
       <motion.svg width={svgWidth} height={svgHeight} fill="none" className="fixed bottom-0"> 
         <motion.g id="paths" >
-          <motion.path id="fill" d={thirdPath} className="fill-[var(--svg-fill)]" stroke-none opacity={scrollOutput}   />
+          <motion.path id="fill" d={thirdPath} className="fill-[var(--svg-fill)] stroke-none" opacity={scrollOutput}   />
           <motion.path id="path" d={thirdPath} className="stroke-[var(--first-svg-stroke)] fill-none" strokeWidth="2.5" pathLength={strokeOutput} />
           <motion.path id="path" d={thirdPath} className="stroke-[var(--first-svg-stroke-light)] fill-none" strokeWidth="2.5" pathLength={strokeOutput} />
           <motion.path id="fill" d={secondPath} className="fill-[var(--second-svg-fill)] stroke-none" opacity={scrollOutput} />
