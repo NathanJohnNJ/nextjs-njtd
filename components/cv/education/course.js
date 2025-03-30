@@ -15,7 +15,9 @@ const Course = (props) => {
                 <li key={i} className="">{point.title}
                   <ul key={i,i} className="list-disc">
                     {point.points.map((point, i) => {
-                      <li key={i} className="list-disc">{point}</li>
+                      return(
+                        <li key={i} className="list-disc">{point}</li>
+                      )
                     })}
                   </ul>
                 </li>
