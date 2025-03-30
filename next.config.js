@@ -22,18 +22,13 @@ const nextConfig = {
   }
 };
 
-
-
-// module.exports = withPlugins([withBundleAnalyzer, withSvgr], nextConfig);
-const config = withPlugins([withBundleAnalyzer], nextConfig);
-
-module.exports = {
-  webpack(config) {
-    config.module.rules.push({
+module.exports = withPlugins([ withBundleAnalyzer, withSvgr], {
+  webpack() {
+    nextConfig.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
       use: ["@svgr/webpack"],
     });
-    return config;
+    return nextConfig;
   }
-}
+})

@@ -1,8 +1,8 @@
 div[data-component="carousel"] {
   position: relative;
   margin: 0 auto;
-  height: 80vh;
   width: 50vw;
+  height: fit-content;
   overflow: hidden;
 }
 
@@ -26,9 +26,9 @@ div[data-component="carousel"] {
   flex-direction: row;
   justify-content: space-evenly;
   width: 15vw;
-  height: 5vh; 
+  /* height: 5vh;  */
   position: absolute;
-  bottom: 1vw;
+  /* bottom: 1vw; */
   left: 50%;
   transform: translateX(-50%);
 }

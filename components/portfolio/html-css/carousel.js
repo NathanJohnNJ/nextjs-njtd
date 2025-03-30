@@ -21,12 +21,12 @@ const dragSite = {
 
   const cardList = [cloneSite, dragSite]
   return (
-    <div className="relative m-4 mt-8">
-      <div data-component="carousel" className="rainbowBG relative">
-        <ul className="entries flex flex-row w-[100%] h-[100%] rounded-2xl py-12 cubes">
+    <div className="relative m-4 mt-8 h-min">
+      <div data-component="carousel" className="rainbowBG relative h-fit ">
+        <ul className="entries flex flex-row w-[100%] h-fit rounded-2xl py-20 cubes">
           {cardList.map((card, i) => {
             return(
-              <li name={`carousel_${i}`} id={`carousel_${i}`} key={i} className="w-[min] mx-[10vw] h-min flex flex-col items-center justify-center p-2 bg-gradient-to-br from-neutral-300 via-white via-45% to-neutral-200 to-70% filter-(--my-shadow) rounded-2xl shadow-xl">
+              <li name={`carousel_${i}`} id={`carousel_${i}`} key={i} className="w-[70%] mx-[10vw] h-min flex flex-col items-center justify-center p-2 bg-gradient-to-br from-neutral-300 via-white via-45% to-neutral-200 to-70% filter-(--my-shadow) rounded-2xl shadow-xl">
                 <h1 className="geoFont repoTitle font-extrabold uppercase align-center text-center text-3xl w-[65%] " >{card.title}</h1>
                 <Link href={card.href}>
                   <Image src={card.src} alt={card.title} title={card.title} width={200} height={200} draggable="false" className="rounded-full scale-[0.75] hover:scale-[0.9] hover:rounded-2xl" />
@@ -44,7 +44,7 @@ const dragSite = {
               </li>
             )
           })}
-          <ul className="markers w-[100%] h-[5vh] bottom-[1vw] flex flex-row justify-evenly">
+          <ul className="markers w-[100%] h-min  bottom-5 flex flex-row justify-evenly">
             {cardList.map((card, i) => {
               return(
                 <li key={`secondList${i}`} className="h-[50px] w-[50px] gap-[5%] rounded-full"></li>
