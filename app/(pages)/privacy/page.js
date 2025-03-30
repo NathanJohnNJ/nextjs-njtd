@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Privacy = () => {
+const Page = () => {
   return (
     <div className="h-[150vh] text-[var(--mid-color)] ">
       <div className="flex flex-col items-center justify-around h-[80vh] p-[25vh]">
@@ -25,4 +25,4 @@ const Privacy = () => {
   )
 };
 
-export default Privacy;
+export default Page;

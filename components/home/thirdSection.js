@@ -38,20 +38,21 @@ const ThirdSection = () => {
           description: x.description
         }
       })
+      console.log(repoData)
       setRepos(repoData);
     } catch (err) { 
       console.log(err)
     }
   } 
   useEffect(() => { 
-    fetchData()
+     fetchData()
   }, []);
 
   return(
     <div ref={ref} className="relative h-[150vh] w-[90vw] flex flex-col self-center mb-[20vh] justify-self-center items-center justify-flex-end pb-16">
       <div className="sticky top-[2vh] w-[85%] flex flex-col pl-16 pr-16">    
-        <motion.h1 className='geoFont text-[var(--dark-color)] font-bold whitespace-nowrap text-4xl self-center coloredShadow' style={{opacity: opacity, scale: opacity}}>
-          Latest GitHub Repository Updates
+        <motion.h1 className='font-[GeologicaExtraBold] text-[var(--dark-color)] font-bold whitespace-wrap text-4xl text-center self-center coloredShadow' style={{opacity: opacity, scale: opacity}}>
+          Recently Updated GitHub Repositories
         </motion.h1>
         <motion.div className="flex w-full flex-col justify-center items-center text-center" id="mainGit" style={{opacity: opacity, scale: opacity}}>
           <div className="flex flex-col items-center w-[80vw] relative font-[var(--font-poppins)] text-xl text-[var(--mid-color)] self-center">
@@ -60,7 +61,7 @@ const ThirdSection = () => {
               const divID = `div${ID}`
               side = side * -1
             return(
-              <motion.div key={i} id={divID} className="flex flex-col w-[min] max-w-[60vw] mt-[20px] p-4 bg-[var(--light-color)] animate-[var(--rainbowBG)] hover:animate-[var(--reverseRainbowBG)] rainbowBG shadow-2xl"
+              <motion.div key={i} id={divID} className="flex flex-col w-min max-w-[60%] mt-[20px] p-4 bg-[var(--light-color)] animate-[var(--rainbowBG)] hover:animate-[var(--reverseRainbowBG)] rainbowBG shadow-2xl"
                 variants={{
                   hidden: { opacity: 0 },
                   visible: { x: 0, opacity: 1 },
@@ -71,10 +72,10 @@ const ThirdSection = () => {
                 transition={{ duration: 1.5, ease: "easeIn", type: "spring", bounce: 0.4}}
                 style={{ translateX: side }}
                 >
-                  <p className="-mb-[10px] group font-geologica font-semibold text-xl -mt-4 repoTitle">{repo.name}</p>
-                  <div className="text-left group" id={ID}>
+                  <h2 className="font-geologica font-semibold text-xl -mt-4 text-(--light-color) filter-(--my-shadow)">{repo.name}</h2>
+                  <div className="text-left" id={ID}>
                   <p className="whitespace-nowrap text-sm"><b>URL:</b><a href={repo.url} target="_blank" rel="noreferrer" className="no-underline font-semibold text-[var(--dark-color)] hover:text-[var(--light-color)] text-sm"> {repo.url}</a></p>
-                  <p className="text-sm"><b>Description:</b> {repo.description}</p>
+                  {repo.description?<p className="text-sm w-[85%]"><b>Description:</b> {repo.description}</p>:<></>}
                   </div>
                   </motion.div>)
             })}

@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100..900,1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic:wdth@75..100');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @import "tailwindcss";
 
 @font-face {
@@ -85,24 +90,6 @@
 } 
 
 @theme {
-  --font-geologica: 'Geologica', sans-serif;
-  --font-geologica--font-variation-settings: "CRSV" 1, "SHRP" 100;
-  --drop-shadow-box: 0 0 1px var(--darkCol) , 0 0 2px var(--darkCol) inset, 0 0 4px var(--lightCol) , 0 0 8px var(--darkCol) inset, 0 0 16px var(--lightCol), 0 0 1px hsl(0deg 0% 0% / 0.075) inset,  0 0 2px hsl(0deg 0% 0% / 0.075), 0 0 4px hsl(0deg 0% 0% / 0.075) inset,  0 0 8px hsl(0deg 0% 0% / 0.075), 0 0 16px hsl(0deg 0% 0% / 0.075);
-  --shadow-box: 1px 1px 3px var(--darkCol) , 1px 1px 4px var(--darkCol), 2px 2px 5px var(--blackCol) , 0 0 8px var(--darkCol), 0 0 16px var(--lightCol), 0 0 1px hsl(0deg 0% 0% / 0.075),  0 0 2px hsl(0deg 0% 0% / 0.075), 0 0 4px hsl(0deg 0% 0% / 0.075),  0 0 8px hsl(0deg 0% 0% / 0.075), 0 0 16px hsl(0deg 0% 0% / 0.075);
-  --drop-shadow-splash: inset 0 0 1px var(--darkCol), 0 0 2px var(--darkCol) inset, 0 0 4px var(--lightCol) inset, 0 0 16px var(--lightCol)inset, inset 0 0 2px hsl(0deg 0% 0% / 0.075), inset 0 0 8px hsl(0deg 0% 0% / 0.075), inset 0 0 16px hsl(0deg 0% 0% / 0.075);
-  --drop-shadow-card: inset 0 0 1px var(--blackCol), 0 0 2px var(--infoCol), 0 0 4px var(--blackCol) , 0 0 8px var(--infoCol), 0 0 16px var(--blackCol), 0 0 1px hsl(0deg 0% 0% / 0.075) inset, 0 0 2px hsl(0deg 0% 0% / 0.075) inset, 0 0 4px hsl(0deg 0% 0% / 0.075) inset, 0 0 8px hsl(0deg 0% 0% / 0.075) inset, 0 0 16px hsl(0deg 0% 0% / 0.075) inset;
-  --drop-shadow-text: 4px 2px 4px var(--darkCol);
-  --drop-shadow-textBox: inset 0 0 1px var(--darkCol), 0 0 2px var(--darkCol), 0 0 4px var(--lightCol) inset, 0 0 8px var(--darkCol), 0 0 16px var(--lightCol)inset, 0 0 1px hsl(0deg 0% 0% / 0.075), inset 0 0 2px hsl(0deg 0% 0% / 0.075), 0 0 4px hsl(0deg 0% 0% / 0.075), inset 0 0 8px hsl(0deg 0% 0% / 0.075), inset 0 0 16px hsl(0deg 0% 0% / 0.075);
-  --shadow-big:  4px 4px 4px 4px var(--blackCol), 4px -4px 4px 4px var(--blackCol), -4px 4px 4px 4px var(--blackCol) , -4px -4px 4px 4px var(--blackCol);
-  --rainbowBG: rainbowAnimation 20s infinite linear running;
-  --reverseRainbowBG: rainbowAnimation 20s infinite reverse running;
-  --my-shadow: drop-shadow(0 2px 2px var(--border-color)) drop-shadow(0 -2px 2px var(--border-color)) drop-shadow(2px 0 2px var(--border-color)) drop-shadow(-2px 0 2px var(--highlight-color));
-  --current-shadow: drop-shadow(0 2px 4px var(--highlight-color)) drop-shadow(0 -2px 2px var(--border-color)) drop-shadow(2px 0 4px var(--highlight-color)) drop-shadow(-2px 0 2px var(--border-color));
-  --rainbow-color: conic-gradient( from var(--universal-angle) in oklch longer hue, oklch(1 0.37 0) 0 0 );
-  --rainbow-shadow: drop-shadow(0 2px 14px var(--white-color)) drop-shadow(0 -2px 12px var(--white-color)) drop-shadow(2px 0 14px var(--white-color)) drop-shadow(-2px 0 16px var(--white-color));
-}
-:root {
-  --font-geologica: 'Geologica', sans-serif;
   --GeoBlack: 'GeologicaBlack', sans-serif;
   --GeoBold: 'GeologicaBold', sans-serif;
   --GeoLight: 'GeologicaLight', sans-serif;
@@ -112,7 +99,41 @@
   --GeoRegular: 'GeologicaRegular', sans-serif;
   --GeoMedium: 'GeologicaMedium', sans-serif;
   --GeoSemiBold: 'GeologicaSemiBold', sans-serif;
-  --font-geologica--font-variation-settings: "CRSV" 1, "SHRP" 100;
+  --LeagueSpartan: 'League Spartan', sans-serif;
+  --text-spartan-bold: 'League Spartan', sans-serif;
+  --text-spartan-bold--font-weight: 700;
+  --text-spartan-bold--letter-spacing: 0.25rem;
+  --text-spartan-light: 'League Spartan', sans-serif;
+  --text-spartan-light--font-weight: 300;
+  --text-spartan-light--letter-spacing: 0.5rem;
+  --text-spartan-black: 'League Spartan', sans-serif;
+  --text-spartan-black--font-weight: 900;
+  --text-spartan-black--letter-spacing: 0.125rem;
+  --text-section-title: 'League Spartan', sans-serif;
+  --text-section-title--font-weight: 900;
+  --text-section-title--letter-spacing: 0.175rem;
+  --text-section-title--font-size: 65px;
+  --Raleway: 'Raleway', sans-serif;
+  --rainbowBG: rainbowAnimation 20s infinite linear running;
+  --reverseRainbowBG: rainbowAnimation 20s infinite reverse running;
+  --border-color:  rgba(45, 80, 190,0.8);
+  --darkBorder-color:  rgba(5, 40, 100,0.8);
+  --highlight-color: rgba(100, 120, 185,0.8);
+}
+
+@theme inline{
+  --drop-shadow-box: 0 0 1px var(--darkCol) , 0 0 2px var(--darkCol) inset, 0 0 4px var(--lightCol) , 0 0 8px var(--darkCol) inset, 0 0 16px var(--lightCol), 0 0 1px hsl(0deg 0% 0% / 0.075) inset,  0 0 2px hsl(0deg 0% 0% / 0.075), 0 0 4px hsl(0deg 0% 0% / 0.075) inset,  0 0 8px hsl(0deg 0% 0% / 0.075), 0 0 16px hsl(0deg 0% 0% / 0.075);
+  --shadow-box: 1px 1px 3px var(--darkCol) , 1px 1px 4px var(--darkCol), 2px 2px 5px var(--blackCol) , 0 0 8px var(--darkCol), 0 0 16px var(--lightCol), 0 0 1px hsl(0deg 0% 0% / 0.075),  0 0 2px hsl(0deg 0% 0% / 0.075), 0 0 4px hsl(0deg 0% 0% / 0.075),  0 0 8px hsl(0deg 0% 0% / 0.075), 0 0 16px hsl(0deg 0% 0% / 0.075);
+  --drop-shadow-splash: inset 0 0 1px var(--darkCol), 0 0 2px var(--darkCol) inset, 0 0 4px var(--lightCol) inset, 0 0 16px var(--lightCol)inset, inset 0 0 2px hsl(0deg 0% 0% / 0.075), inset 0 0 8px hsl(0deg 0% 0% / 0.075), inset 0 0 16px hsl(0deg 0% 0% / 0.075);
+  --drop-shadow-card: inset 0 0 1px var(--blackCol), 0 0 2px var(--infoCol), 0 0 4px var(--blackCol) , 0 0 8px var(--infoCol), 0 0 16px var(--blackCol), 0 0 1px hsl(0deg 0% 0% / 0.075) inset, 0 0 2px hsl(0deg 0% 0% / 0.075) inset, 0 0 4px hsl(0deg 0% 0% / 0.075) inset, 0 0 8px hsl(0deg 0% 0% / 0.075) inset, 0 0 16px hsl(0deg 0% 0% / 0.075) inset;
+  --drop-shadow-text: 4px 2px 4px var(--darkCol);
+  --drop-shadow-textBox: inset 0 0 1px var(--darkCol), 0 0 2px var(--darkCol), 0 0 4px var(--lightCol) inset, 0 0 8px var(--darkCol), 0 0 16px var(--lightCol)inset, 0 0 1px hsl(0deg 0% 0% / 0.075), inset 0 0 2px hsl(0deg 0% 0% / 0.075), 0 0 4px hsl(0deg 0% 0% / 0.075), inset 0 0 8px hsl(0deg 0% 0% / 0.075), inset 0 0 16px hsl(0deg 0% 0% / 0.075);
+  --shadow-big:  4px 4px 4px 4px var(--blackCol), 4px -4px 4px 4px var(--blackCol), -4px 4px 4px 4px var(--blackCol) , -4px -4px 4px 4px var(--blackCol);
+  --my-shadow: drop-shadow(0 2px 2px var(--border-color)) drop-shadow(0 -2px 2px var(--border-color)) drop-shadow(2px 0 2px var(--border-color)) drop-shadow(-2px 0 2px var(--highlight-color));
+  --current-shadow: drop-shadow(0 2px 4px var(--highlight-color)) drop-shadow(0 -2px 2px var(--border-color)) drop-shadow(2px 0 4px var(--highlight-color)) drop-shadow(-2px 0 2px var(--border-color));
+  --rainbow-color: conic-gradient( from var(--universal-angle) in oklch longer hue, oklch(1 0.37 0) 0 0 );
+}
+:root {
   --foreground-rgb: rgb(30, 30, 30);
   --background-start-rgb:rgb(255, 255, 255);
   --background-end-rgb: rgb(255, 255, 255);
@@ -121,32 +142,18 @@
   --dark-color:  rgb(80, 80, 80);
   --light-color:  rgb(200, 200, 200);
   --mid-color:  rgb(115, 115, 115);
-  --border-color:  rgba(45, 80, 190,0.8);
-  --darkBorder-color:  rgba(5, 40, 100,0.8);
-  --highlight-color: rgba(100, 120, 185,0.8);
-  --svg-fill: rgba(110,110,110,0.75);
+  --svg-fill: rgba(110,110,110,1);
   --first-svg-stroke: rgba(20,20,20,0.85);
   --first-svg-stroke-light: rgba(90,90,90,0.85);
   --second-svg-fill: rgba(135,135,135,0.75);
   --second-svg-stroke: rgba(100,100,100,0.8);
   --second-svg-stroke-light: rgba(170,170,170,0.8);
-  --third-svg-fill: rgba(150,150,150,0.75);
+  --third-svg-fill: rgba(140,140,140,0.75);
   --third-svg-stroke: rgba(115,115,115,0.8);
-  --third-svg-stroke-light: rgba(195,195,195,0.75);
+  --third-svg-stroke-light: rgba(195,195,195,0.85);
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --font-geologica: 'Geologica', sans-serif;
-    --GeoBlack: 'GeologicaBlack', sans-serif;
-    --GeoBold: 'GeologicaBold', sans-serif;
-    --GeoLight: 'GeologicaLight', sans-serif;
-    --GeoExtraBold: 'GeologicaExtraBold', sans-serif;
-    --GeoExtraLight: 'GeologicaExtraLight', sans-serif;
-    --GeoThin: 'GeologicaThin', sans-serif;
-    --GeoRegular: 'GeologicaRegular', sans-serif;
-    --GeoMedium: 'GeologicaMedium', sans-serif;
-    --GeoSemiBold: 'GeologicaSemiBold', sans-serif;
-    --font-geologica--font-variation-settings: "CRSV" 1, "SHRP" 100;
     --foreground-rgb: rgb(235, 235, 235);
     --background-start-rgb: rgb(50, 50, 50);
     --background-end-rgb: rgb(50, 50, 50);
@@ -155,27 +162,29 @@
     --dark-color: rgb(20, 20, 20);
     --light-color: rgb(180, 180, 180);
     --mid-color: rgb(99, 99, 99);
-    --border-color: rgba(45, 80, 190,0.8);
-    --highlight-color: rgba(100, 120, 185,0.8);
     --svg-fill: rgba(85,85,85,1);
-    --second-svg-fill: rgba(85,85,85,0.75);
     --first-svg-stroke: rgba(60,60,60,0.75);
     --first-svg-stroke-light: rgba(180,180,180,0.85);
+    --second-svg-fill: rgba(85,85,85,0.75);
     --second-svg-stroke: rgba(50,50,50,0.8);
     --second-svg-stroke-light: rgba(150,150,150,0.8);
+    --third-svg-fill: rgba(110,110,110,0.75);
     --third-svg-stroke: rgba(70,70,70,0.75);
-    --third-svg-stroke-light: rgba(175,175,175,0.65);
+    --third-svg-stroke-light: rgba(175,175,175,0.85);
   }
 }
 
 html::-webkit-scrollbar{
   display: none;
 }
+
 html{
   scrollbar-width:0;
-  margin-right: -20px;
+  /* margin-right: -20px; */
   position: relative;
-  animation: universalAnimation 20s infinite reverse running
+  /* animation: universalAnimation 20s infinite reverse running;
+  -moz-animation: universalAnimation 20s infinite reverse running;
+  -webkit-animation: universalAnimation 20s infinite reverse running; */
 }
 
 .cubes{
@@ -198,11 +207,6 @@ html{
   background-size: var(--s) calc(var(--s) * 0.577);
 }
 
-.geoFont{
-  font-family: 'Geologica', sans-serif;
-  font-variation-settings: 'CRSV' 1;
-  font-variation-settings: 'SHRP' 100;
-}
 .largeShadow{
   text-shadow: -7.5px 3.5px 8px var(--mid-color);
 }
@@ -252,6 +256,9 @@ html{
   -webkit-animation: rainbowAnimation 12s infinite linear running;
   border: 10px solid transparent;
 }
+#test{
+  background: border-box, conic-gradient( from var(--bg-angle) in oklch longer hue, oklch(1 0.37 0) 0 0 ) content-box, none;
+}
 .rainbowBG{
   background:
   padding-box linear-gradient(75deg, var(--white-color) 45%, var(--mid-color) 110%), border-box conic-gradient( from var(--bg-angle) in oklch longer hue, oklch(1 0.37 0) 0 0 ); 
@@ -268,15 +275,14 @@ html{
 }
 .repoTitle{
   height: fit-content;
-    overflow:visible;
-    /* background-image: linear-gradient(75deg, red, magenta, aqua, green); */
-    background-image: conic-gradient( from var(--bg-angle) in oklch longer hue, oklch(1 0.37 0) 0 0 );
-    animation: rainbowAnimation 16s infinite alternate running;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-stroke-color: transparent;
-    -webkit-text-stroke-width: 0.4vmin;
-    -webkit-text-fill-color: var(--darkCol);
+  overflow:visible;
+  background-image: conic-gradient( from var(--bg-angle) in oklch longer hue, oklch(1 0.37 0) 0 0 );
+  animation: rainbowAnimation 16s infinite alternate running;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: 0.4vmin;
+  -webkit-text-fill-color: var(--darkCol);
 }
 .spin{
 	animation: spin 0.5s infinite linear forwards;
@@ -284,31 +290,17 @@ html{
   -webkit-animation: spin 0.5s infinite linear forwards;
 }
 
-@keyframes stroke {
-	0% {fill: transparent; stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 1;}
-	50% {fill: transparent; stroke-width: 1.5;}
-	100% {fill: transparent; stroke-dashoffset: 0%; stroke-dasharray: 50% 0; stroke-width: 3;}
-}
 
 @keyframes spin {
   0% { transform: 'rotate(-360deg)' }
   100% { transform: 'rotate(360deg)' }
 }
 
-@-moz-keyframes stroke {
-	0% {fill: black; stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 1;}
-	50% {fill: black; stroke-width: 1.5;}
-	100% {fill: white; stroke-dashoffset: 0%; stroke-dasharray: 50% 0; stroke-width: 3;}
-}
 @-moz-keyframes spin {
   0% { transform: 'rotate(0deg)' }
   100% { transform: 'rotate(360deg)' }
 }
-@-webkit-keyframes stroke {
-	0% {fill: black; stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 1;}
-	50% {fill: black; stroke-width: 1.5;}
-	100% {fill: white; stroke-dashoffset: 0%; stroke-dasharray: 50% 0; stroke-width: 3;}
-}
+
 @-webkit-keyframes spin {
   0% { transform: 'rotate(0deg)' }
   100% { transform: 'rotate(360deg)' }
@@ -342,29 +334,4 @@ html{
   to {
     --bg-angle: 360deg;
   }
-}
-@keyframes reveal {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes left {
-  from { translate: (100, 0); opacity: 0; }
-  to { translate: (0, 0); opacity: 1; }
-}
-@keyframes right {
-  from { scale: 2; opacity: 0; }
-  to { scale: 1; opacity: 1; }
-}
-
-.reveal {
-  animation: reveal linear;
-  animation-timeline: view();
-}
-.left {
-  animation: left linear;
-  animation-timeline: view();
-}
-.right {
-  animation: right linear;
-  animation-timeline: view();
 }

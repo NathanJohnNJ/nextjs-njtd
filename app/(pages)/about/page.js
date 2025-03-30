@@ -1,5 +1,5 @@
 
-export default function About() {
+export default function Page() {
   return (
     <div className="h-[400vh]">
       <svg className=" left" width="1000" height="1000" viewBox="0 0 1000 1000">

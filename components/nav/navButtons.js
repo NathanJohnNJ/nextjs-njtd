@@ -20,7 +20,6 @@ export default function NavButtons(props) {
       setActions(sideActions);
     }
   })
-  console.log(actions)
 
   return (
     actions===topActions?

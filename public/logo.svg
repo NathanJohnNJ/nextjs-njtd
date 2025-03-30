@@ -128,7 +128,7 @@
 
   <!-- LAYER 4 --> 
 
-  <g id="layer4" transform="translate(0, 75)" >
+  <g id="layer4" transform="translate(0, 75) scale(1.4)" transform-origin="center" >
     <g id="face">
       <g id="ears">
         <g id="leftEar">

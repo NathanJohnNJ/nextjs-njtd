@@ -1,0 +1,38 @@
+<svg width="1500" height="1000" xmlns='http://www.w3.org/2000/svg' xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="topClip">
+      <rect x="125" y="45" width="1400" height="275" />
+    </clipPath>
+    <linearGradient id="topGrad">
+      <stop stop-color='#d8d8d8' offset="0%" />
+      <stop stop-color='#707070' offset="100%" />
+    </linearGradient>
+  </defs>
+    <rect x="121" y="50" width="1400" height="1000*2" rx="25" ry="25" stroke="rgba(0,0,0,0.1)" stroke-width="8" fill="white" />
+    <rect x="122" y="49" width="1400" height="1000*2" rx="25" ry="25" stroke="rgba(0,0,0,0.15)" stroke-width="6" fill="white" />
+    <rect x="123" y="48" width="1400" height="1000*2" rx="25" ry="25" stroke="rgba(0,0,0,0.2)" stroke-width="4" fill="white" />
+    <rect x="124" y="47" width="1400" height="1000*2" rx="25" ry="25" stroke="rgba(0,0,0,0.25)" stroke-width="2" fill="white" />
+    <rect x="125" y="45" width="1400" height="1000*2" rx="25" ry="25" stroke="rgba(0,0,0,0.3)" stroke-width="1" fill="white" />
+    <rect x="125" y="45" width="1400" height="300" rx="25" ry="25" stroke="rgba(0,0,0,0.3)" stroke-width="1" fill="url(#topGrad)" clipPath='url(#topClip)' />
+    <text x="((1400/4)*2.25)" y="120" fill="white" class="font-[GeologicaExtraBold] text-6xl tracking-[4px] whitespace-nowrap">NATHAN JOHN</text>
+    <text x="(1400/4)*2.9" y="175" class="font-[GeologicaLight] text-6xl tracking-[6px]" fill="white">HYNES</text>
+    <text x="(1400/4)*2.2" y="210" class="font-[GeologicaMedium] text-4xl/7 font-medium tracking-[4px]" fill="white">Full-Stack Web Developer</text>
+    <rect x="(1400/4)*2.4" y="230" fill="white" stroke="white" width="1400/2" height="2" />
+  
+
+    <!-- {/* <div class="flex w-[100%] rounded-tl-md rounded-tr-md bg-gradient-to-r from-neutral-300 via-neutral-400 to-neutral-800 h-fit">
+      <div class="ml-[35%] w-[65%] text-center">
+        <div  class="font-geo text-2xl font-light text-white py-1 tracking-[2.5px]">Diversity<span class="tracking-[15px]"> |</span> Agile<span class="tracking-[15px]"> |</span> Collaborative</div>
+      </div>
+      <div class="absolute w-[25%] ml-[1%]">
+        <Sidebar />
+      </div>
+    </div>
+    
+    <div class="flex flex-col w-[75%]">
+      <Introduction />
+      <Experience />
+
+    </div>
+  </div> */} -->
+</svg>

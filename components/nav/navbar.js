@@ -15,7 +15,7 @@ export default function Navbar(props) {
   const { scrollYProgress } = useScroll();
   const [showSVG, setShowSVG] = useState(false);
   const path = usePathname();
-  const current = path===''?'/':path;
+  const current = path===[]?'/':path;
 
   const homeOutput = useTransform(
     scrollYProgress,
@@ -46,10 +46,12 @@ export default function Navbar(props) {
   const [scrollOutput, setScrollOutput] = useState(homeOutput)
 
   useEffect(()=> {
-    if(current != '/'){
-      setScrollOutput(otherOutput);
+    if(current === '/'){
+      setScrollOutput(homeOutput);
+    } else  {
+      setScrollOutput(otherOutput)
     }
-  }, [])
+  }, [current, otherOutput, homeOutput])
 
   const firstPath = `M0,0v${svgHeight-(svgHeight/12)}C${svgWidth/10},${svgHeight+30} ${svgWidth/10},${svgHeight-(svgHeight/2)} ${svgWidth/5.5},${svgHeight-(svgHeight/3.2)}c${svgWidth/10},${svgHeight/4} ${svgWidth/8},-${svgHeight/2.5} ${svgWidth/4},-${svgHeight/8}c${svgWidth/8.5},${svgHeight/4} ${svgWidth/3.5},${svgHeight/6} ${svgWidth/1.5},-${svgHeight*1.5}z`;
   const firstCurve =`M0,${svgHeight-(svgHeight/12)}C${svgWidth/10},${svgHeight+30} ${svgWidth/10},${svgHeight-(svgHeight/2)} ${svgWidth/5.5},${svgHeight-(svgHeight/3.2)}c${svgWidth/10},${svgHeight/4} ${svgWidth/8},-${svgHeight/2.5} ${svgWidth/4},-${svgHeight/8}c${svgWidth/8.5},${svgHeight/4} ${svgWidth/3.5},${svgHeight/6} ${svgWidth/1.5},-${svgHeight*1.5}`;
@@ -59,17 +61,17 @@ export default function Navbar(props) {
   return (
     <div className="w-full flex justify-center items-center relative">
       <motion.svg width={svgWidth} height={svgHeight} className="fixed top-0 z-40">  
-        <motion.path id="fill" d={firstPath} className="bg-none fill-[var(--second-svg-fill)]" stroke="none" opacity={scrollOutput} />
-        <motion.path id="path" d={firstCurve} className="bg-none stroke-[var(--third-svg-stroke-light)]" strokeWidth="2.5" fill="none" pathLength={scrollOutput} />
-        <motion.path id="path" d={firstCurve} className="bg-none stroke-[var(--third-svg-stroke)]" fill="none" pathLength={scrollOutput} />
+        <motion.path id="fill" d={firstPath} className="bg-none fill-[var(--svg-fill)]" stroke="none" opacity={scrollOutput} />
+        <motion.path id="path" d={firstCurve} className="bg-none stroke-[var(--first-svg-stroke-light)]" strokeWidth="2.5" fill="none" pathLength={scrollOutput} />
+        <motion.path id="path" d={firstCurve} className="bg-none stroke-[var(--first-svg-stroke)]" fill="none" pathLength={scrollOutput} />
   
-        <motion.path id="fill" d={secondPath} className="fill-[var(--svg-fill)]" stroke="none" transform={`rotate(-3.5 0 ${svgHeight})`} opacity={scrollOutput} />
-        <motion.path id="path" d={secondCurve} className="stroke-[var(--first-svg-stroke-light)]" strokeWidth="2.8" fill="none" transform={`rotate(-3.5 0 ${svgHeight})`}  pathLength={scrollOutput}/>
-        <motion.path id="path" d={secondCurve} className="stroke-[var(--first-svg-stroke)]" fill="none" transform={`rotate(-3.5 0 ${svgHeight})`} pathLength={scrollOutput} />
+        <motion.path id="fill" d={secondPath} className="fill-[var(--second-svg-fill)]" stroke="none" transform={`rotate(-3.5 0 ${svgHeight})`} opacity={scrollOutput} />
+        <motion.path id="path" d={secondCurve} className="stroke-[var(--second-svg-stroke-light)]" strokeWidth="2.8" fill="none" transform={`rotate(-3.5 0 ${svgHeight})`}  pathLength={scrollOutput}/>
+        <motion.path id="path" d={secondCurve} className="stroke-[var(--second-svg-stroke)]" fill="none" transform={`rotate(-3.5 0 ${svgHeight})`} pathLength={scrollOutput} />
 
-        <motion.path id="fill" d={secondPath} className="bg-none fill-[var(--svg-fill)]" stroke="none" opacity={scrollOutput} />
-        <motion.path id="path" d={secondCurve} className="bg-none stroke-[var(--second-svg-stroke-light)]" strokeWidth="2.5" fill="none"  pathLength={scrollOutput} />
-        <motion.path id="path" d={secondCurve} className="bg-none stroke-[var(--second-svg-stroke)]" stroke="rgba(50,50,50,0.8)" fill="none" pathLength={scrollOutput} />
+        <motion.path id="fill" d={secondPath} className="bg-none fill-[var(--third-svg-fill)]" stroke="none" opacity={scrollOutput} />
+        <motion.path id="path" d={secondCurve} className="bg-none stroke-[var(--third-svg-stroke-light)]" strokeWidth="2.5" fill="none"  pathLength={scrollOutput} />
+        <motion.path id="path" d={secondCurve} className="bg-none stroke-[var(--third-svg-stroke)]" stroke="rgba(50,50,50,0.8)" fill="none" pathLength={scrollOutput} />
       </motion.svg>
       <Menu />
     </div>
