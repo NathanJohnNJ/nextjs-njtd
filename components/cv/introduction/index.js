@@ -3,7 +3,7 @@ import { useState, useLayoutEffect } from 'react';
 import { useWindowSize } from '@/hooks';
 
 const Introduction = () => {
-  const title = "INTRODCUTION"
+  const title = "INTRODUCTION"
   const [windowWidth, windowHeight] = useWindowSize();
 
   const titleArray = title.split('');
