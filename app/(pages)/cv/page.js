@@ -1,13 +1,8 @@
-'use client';
-import CV from '@/components/cv/cv';
-// import Image from 'next/image';
-import { useWindowSize } from '@/hooks';
-
+import CV from '@/components/cv';
 
 export default function Page() {
-  const [windowWidth, windowHeight] = useWindowSize();
   return (
-    <div className="h-[400vh] mt-[20vh] w-[100vw]">
+    <div className="h-[400vh] w-full">
       <CV />
     </div>
   );

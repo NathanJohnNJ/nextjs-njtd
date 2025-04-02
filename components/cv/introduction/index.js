@@ -2,8 +2,8 @@
 import { useState, useLayoutEffect } from 'react';
 import { useWindowSize } from '@/hooks';
 
-const Section = (props) => {
-  const { title, body } = props;
+const Introduction = () => {
+  const title = "INTRODCUTION"
   const [windowWidth, windowHeight] = useWindowSize();
 
   const titleArray = title.split('');
@@ -13,6 +13,7 @@ const Section = (props) => {
   const titleHeightInPx = 45;
 
   const top = (titleWidthInPx/3)*2;
+  const bottomSVGY = windowWidth > 1400 ? 170 : 200;
   const titleSide = 45;
   const titleHeight = `${titleSide}px`;
   const path = `M${titleWidthInPx/3},0h${top-titleSide/1.75}c${(titleSide/4)*3},0 ${(titleSide/4)*3},${titleSide} 0,${titleSide}h-${titleWidthInPx-(titleWidthInPx/5)}q-40,0 -40,50v50`;
@@ -32,12 +33,12 @@ const Section = (props) => {
 
         <path fill='none' d={path} stroke='#0000009E' strokeWidth='2'/>
         </g>
-        <foreignObject width={(windowWidth/100)*45} height="150" x="40" y="50">
-          <p className="introContent text-center font-(--Raleway)" >{body}</p>
+        <foreignObject width={windowWidth*0.5} height="150" x="60" y="60">
+          <p className="introContent text-center font-(--Raleway)" >Having a varied career has allowed me to gain a wide skillset, and experiences, that I enjoy sharing with others and expanding upon. Currently I am looking for a new challenge in a modern and diverse company where I can continue to grow and satisfy my curious mind.</p>
         </foreignObject>
-        <path fill='none' d={`M${(windowWidth*0.3)},210h205q40,0 40,-50v-75`} stroke='#0000009E' strokeWidth='2'/>
+        <path fill='none' d={`M${(windowWidth*0.42)},${bottomSVGY}h${windowWidth*0.1}q40,0 40,-50v-45`} stroke='#0000009E' strokeWidth='2'/>
       </svg>
   )
 }
 
-export default Section;
+export default Introduction;
