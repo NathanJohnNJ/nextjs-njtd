@@ -10,8 +10,7 @@
     "module": "Node16",
     "moduleResolution": "node16",
     "checkJs": false,
-    "jsx": "react",
-    // "target": ""
+    "jsx": "react"
   },
   "exclude": ["node_modules", ".next"]
 }

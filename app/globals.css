@@ -11,7 +11,7 @@
   src: url(../public/fonts/NJTD-Regular.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
-};
+}
 @font-face {
   font-family: 'NJTD-Bold';
   src: url(../public/fonts/NJTD-Bold.ttf) format('truetype');
@@ -82,12 +82,7 @@
   inherits: false;
   initial-value: 0deg;
   syntax: "<angle>";
-} 
-@property --universal-angle {
-  inherits: false;
-  initial-value: 0deg;
-  syntax: "<angle>";
-} 
+}
 
 @theme {
   --GeoBlack: 'GeologicaBlack', sans-serif;
@@ -114,8 +109,6 @@
   --text-section-title--letter-spacing: 0.175rem;
   --text-section-title--font-size: 65px;
   --Raleway: 'Raleway', sans-serif;
-  --rainbowBG: rainbowAnimation 20s infinite linear running;
-  --reverseRainbowBG: rainbowAnimation 20s infinite reverse running;
   --border-color:  rgba(45, 80, 190,0.8);
   --darkBorder-color:  rgba(5, 40, 100,0.8);
   --highlight-color: rgba(100, 120, 185,0.8);
@@ -131,7 +124,6 @@
   --shadow-big:  4px 4px 4px 4px var(--blackCol), 4px -4px 4px 4px var(--blackCol), -4px 4px 4px 4px var(--blackCol) , -4px -4px 4px 4px var(--blackCol);
   --my-shadow: drop-shadow(0 2px 2px var(--border-color)) drop-shadow(0 -2px 2px var(--border-color)) drop-shadow(2px 0 2px var(--border-color)) drop-shadow(-2px 0 2px var(--highlight-color));
   --current-shadow: drop-shadow(0 2px 4px var(--highlight-color)) drop-shadow(0 -2px 2px var(--border-color)) drop-shadow(2px 0 4px var(--highlight-color)) drop-shadow(-2px 0 2px var(--border-color));
-  --rainbow-color: conic-gradient( from var(--universal-angle) in oklch longer hue, oklch(1 0.37 0) 0 0 );
 }
 :root {
   --foreground-rgb: rgb(30, 30, 30);
@@ -180,11 +172,12 @@ html::-webkit-scrollbar{
 
 html{
   scrollbar-width:0;
-  /* margin-right: -20px; */
   position: relative;
-  /* animation: universalAnimation 20s infinite reverse running;
-  -moz-animation: universalAnimation 20s infinite reverse running;
-  -webkit-animation: universalAnimation 20s infinite reverse running; */
+}
+
+body, html{
+  margin:0;
+  padding:0;
 }
 
 .cubes{
@@ -250,25 +243,23 @@ html{
 }
 .firstLogo{
   border-radius: 50%;
-  background: border-box, conic-gradient( from var(--bg-angle) in oklch longer hue, oklch(1 0.37 0) 0 0 ) content-box, none; 
-  animation: rainbowAnimation 12s infinite linear running;
-  -moz-animation: rainbowAnimation 12s infinite linear running;
-  -webkit-animation: rainbowAnimation 12s infinite linear running;
+  background: border-box,  conic-gradient(from var(--bg-angle) at 50% 50%, #4eeaff, #4bb9ff, #5463ff, #b35dff, #ff5bdb, #ff547d, #ff7c43, #ffb642, #fff847, #76ff4f, #49ffd2, #44efff) content-box, none; 
+  animation: rainbowAnimation 15s infinite linear running;
+  -moz-animation: rainbowAnimation 15s infinite linear running;
+  -webkit-animation: rainbowAnimation 15s infinite linear running;
   border: 10px solid transparent;
 }
-#test{
-  background: border-box, conic-gradient( from var(--bg-angle) in oklch longer hue, oklch(1 0.37 0) 0 0 ) content-box, none;
-}
 .rainbowBG{
-  background:
-  padding-box linear-gradient(75deg, var(--white-color) 45%, var(--mid-color) 110%), border-box conic-gradient( from var(--bg-angle) in oklch longer hue, oklch(1 0.37 0) 0 0 ); 
+  background: padding-box linear-gradient(75deg, var(--white-color) 45%, var(--mid-color) 110%), border-box  conic-gradient(from var(--bg-angle) at 50% 50%, #4eeaff, #4bb9ff, #5463ff, #b35dff, #ff5bdb, #ff547d, #ff7c43, #ffb642, #fff847, #76ff4f, #49ffd2, #44efff);
   animation: rainbowAnimation 20s infinite linear running;
-  border-radius: 50px;
+  -webkit-animation: rainbowAnimation 20s infinite linear running;
+  -moz-animation: rainbowAnimation 20s infinite linear running;
+  border-radius: 40px;
   border: 10px solid transparent;
 }
 .reverseRainbowBG {
   background:
-  padding-box linear-gradient(75deg, var(--white-color) 45%, var(--mid-color) 110%), border-box conic-gradient( from var(--bg-angle) in oklch longer hue, oklch(1 0.37 0) 0 0 ); 
+  padding-box linear-gradient(75deg, var(--white-color) 45%, var(--mid-color) 110%), border-box  conic-gradient(from var(--bg-angle) at 50% 50%, #4eeaff, #4bb9ff, #5463ff, #b35dff, #ff5bdb, #ff547d, #ff7c43, #ffb642, #fff847, #76ff4f, #49ffd2, #44efff);; 
   animation: rainbowAnimation 20s infinite reverse running;
   border-radius: 25px;
   border: 10px solid transparent;
@@ -276,7 +267,7 @@ html{
 .repoTitle{
   height: fit-content;
   overflow:visible;
-  background-image: conic-gradient( from var(--bg-angle) in oklch longer hue, oklch(1 0.37 0) 0 0 );
+  background: conic-gradient(from var(--bg-angle) at 50% 50%, #4eeaff, #4bb9ff, #5463ff, #b35dff, #ff5bdb, #ff547d, #ff7c43, #ffb642, #fff847, #76ff4f, #49ffd2, #44efff);;
   animation: rainbowAnimation 16s infinite alternate running;
   background-clip: text;
   -webkit-background-clip: text;
@@ -320,18 +311,4 @@ html{
     --bg-angle: 360deg;
   }
 }
-@keyframes universalAnimation {
-  to {
-    --bg-angle: 360deg;
-  }
-}
-@-moz-keyframes universalAnimation {
-  to {
-    --bg-angle: 360deg;
-  }
-}
-@-webkit-keyframes universalAnimation {
-  to {
-    --bg-angle: 360deg;
-  }
-}
+

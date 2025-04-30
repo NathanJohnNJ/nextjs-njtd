@@ -1,5 +1,5 @@
 'use client';
-import { AnimatePresence, motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
+import { AnimatePresence, motion, useScroll, useTransform, useMotionValueEvent } from 'motion/react';
 import { usePathname } from 'next/navigation';
 import { useNavLinks, useSideNavLinks } from '../../hooks';
 import { useState, useEffect } from 'react';
@@ -31,7 +31,7 @@ export default function NavButtons(props) {
     :
     <AnimatePresence>
       {showLinks &&
-    <motion.div className="absolute left-[50vw] bg-gradient-to-r from-(--svg-fill) via-90% via-(--third-svg-stroke-light) w-[1500px] h-[100px] z-40 " initial={{scaleX: 0, x: -800}} animate={{ scaleX: 1, x: 0}} exit={{ scaleX: 0, x:-800}} transition={{type: 'tween', ease: [0, 0.71, 0.2, 1.01], dur: 10}}>
+    <motion.div className="absolute left-[50vw] bg-gradient-to-r from-(--svg-fill) via-90% via-(--third-svg-stroke-light) w-[1500px] h-[100px] z-40 " initial={{scaleX: 0, x: -800}} animate={{ scaleX: 1, x: 0}} exit={{ scaleX: 0, x:-800}} transition={{type: 'tween', ease: [0, 0.71, 0.2, 1.01], dur: 8}}>
       {actions.map((action, i) => {
         return(
           <SideNavButton key={i} action={action} index={i} showLinks={showLinks} />
@@ -89,7 +89,7 @@ function SideNavButton( props ) {
       { showLinks &&
         <motion.button
         className="m-[25] absolute" 
-        transition={{ delay: index * 0.25, duration: 3, type: 'tween', ease: [0, 0.71, 0.2, 1.01] }}
+        transition={{ delay: index * 0.15, duration: 2, type: 'tween', ease: [0, 0.71, 0.2, 1.01] }}
         initial={{
           left: 0,
           top: 0,
@@ -98,7 +98,7 @@ function SideNavButton( props ) {
         }}
         animate={{
           left: action.x ? action.x : '3vw',
-          top: action.y ? action.y : '0px',
+          top: action.y ? action.y : '15px',
           scale: 1,
           opacity:1
         }}

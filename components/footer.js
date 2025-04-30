@@ -1,6 +1,6 @@
 'use client';
 import { useSvgSize } from "../hooks";
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll } from "motion/react";
 import Link from "next/link";
 
 

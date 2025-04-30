@@ -1,5 +1,5 @@
 'use client';
-import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion';
+import { AnimatePresence, motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 
 export default function First() {

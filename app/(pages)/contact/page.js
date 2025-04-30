@@ -1,7 +1,8 @@
+'use client';
 
 export default function Page() {
   return (
-    <div className="h-[100vh]">
+    <div className="h-[500vh] w-[90vw]">
       <svg width="1000" height="1000" viewBox="0 0 1000 1000">
         <defs>
           <linearGradient id="Gradient1">

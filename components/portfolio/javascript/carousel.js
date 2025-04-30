@@ -1,74 +1,56 @@
 'use client';
 import './styles.css';
-import Image from 'next/image';
+import Image from 'next/image'; 
+import Card from './card';
+import { motion, AnimatePresence, useScroll } from 'motion/react';
+import { useState, useRef, useEffect } from 'react';
 
 export default function Carousel(){
-  const drumkit = { 
-    name: "Drumkit",
-    src: "/images/portfolio/drumPreview.png",
-    link: "https://drum.njtd.xyz",
-    skills: ["HTML", "CSS", "JavaScript"],
-    git: "https://github.com/NathanJohnNJ/drumkit"
-  };
-  const matrix = {
-    name: "Matrix",
-    src: "/images/portfolio/matrix.png",
-    link: "https://matrix.njtd.xyz",
-    skills: ["HTML", "CSS", "JavaScript", "ReactJS"],
-    git: "https://github.com/NathanJohnNJ/matrix"
-  };
-  const dice = {
-    name: "Dice Game",
-    src: "/images/portfolio/dice.png",
-    link: "https://dice.njtd.xyz",
-    skills: ["HTML", "CSS", "JavaScript"],
-    git: "https://github.com/NathanJohnNJ/dice"
-  };
-  const keycode = {
-    name: "Keycode Generator",
-    src: "/images/portfolio/keycode.png",
-    link: "https://keycode.njtd.xyz",
-    skills: ["HTML", "CSS", "JavaScript"],
-    git: "https://github.com/NathanJohnNJ/keycode"
-  };
+  const [activeIndex, setActiveIndex] = useState(0);
+ 
+  const len = cardList.length;
 
-  const cardList = [drumkit, keycode, dice, matrix];
-  const title = "JavaScript";
+  useEffect(() => {
+  const carouselList = document.getElementById('carousel');
+  const carouselWidth = carouselList.offsetWidth;
+  const card = carouselList.querySelectorAll('.card');
+  const cardWidth = card.offsetWidth;
+  let currentPosition = 0;
 
+  function scrollCarousel() {
+    if (currentPosition < carouselWidth * -1) {
+        currentPosition = 0;
+    }
+    currentPosition -= cardWidth;
+    carouselList.style.transform = `translateX(${currentPosition}px)`;
+}
+    const interval = setInterval(() => {
+      setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
+      scrollCarousel();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [activeIndex, len]);
+
+  function clickHandler(index){
+    setActiveIndex(index)
+  }
   return (
-    <div className="relative">
-      <div className="absolute top-[65px] left-[30vw] z-10 bg-[var(--white-color)] rounded-2xl py-2 px-3 filter-[var(--current-shadow)]">
-        <h1 className="text-6xl filter-[var(--current-shadow)]">{title}</h1>
-      </div>
-      <div data-component="carousel" className="rainbowBG sticky top-[100px] ">
-        <ul className="entries flex flex-row overflow-x-scroll w-[100%] h-[100%] rounded-2xl py-12 cubes" tabIndex="0">
+    <div className="h-min">
+      <div className="rainbowBG relative h-fit">
+        <ul className="flex flex-row overflow-x-scroll w-[55vw] h-[100%] rounded-2xl py-12 cubes snap-x snap-mandatory" id="carousel" tabIndex="0">
           {cardList.map((card, i) => {
+            const ID = `marker${i}`;
             return(
-              <li name={`carousel_${i}`} id={`carousel_${i}`} key={i} className="flex flex-col items-center justify-center">
-                <div className="w-[30vw] mx-[10vw] h-[100%] flex flex-col items-center justify-center p-4 bg-white border-[5px] border-[var(--border-color)] rounded-2xl shadow-2xl">
-                  <a href={card.link}>
-                    <Image src={card.src} alt={card.name} title={card.name} width={222} height={184} draggable="false" className="rounded-full scale-[0.8] hover:scale-[1] hover:rounded-2xl" />
-                  </a>
-                  <h1 className="geoFont font-extrabold uppercase  align-center text-4xl" >{card.name}</h1>
-                  <a href={card.link} className="group geoFont text-xl group-hover:text-2xl -mb-[5] text-[var(--black-color) group-hover:text-[var(--dark-color)] no-underline">Click here to view the app yourself!</a>
-                  <a href={card.git} className="group geoFont text-xl group-hover:text-2xl -mb-[5] text-[var(--black-color) group-hover:text-[var(--dark-color)] no-underline">Or view the code on GitHub</a>
-                  <h2 className="geoFont text-lg -mb-[20] text-[var(--dark-color)]">Skills/Languages used:</h2>
-                  <ul className="pb-4 w-[50%] flex flex-col justify-start list-disc text-[var(--dark-color)]">
-                    {card.skills.map((skill, i) => {
-                      return(
-                        <li key={skill} className="geoFont text-base">{skill}</li>
-                      )
-                    })}
-                  </ul>
-                </div>
-              </li>
+              <motion.li key={i} className="flex flex-col items-center justify-center w-full snap-center rounded-2xl" style={activeIndex === i ? {opacity: 1} : {opacity: 0.5}}>
+                <Card card={card} activeIndex={activeIndex} />
+              </motion.li>
             )
           })}
         </ul>
-        <ul className="markers absolute w-[15vw] h-[5vh] bg-white bottom-[1vw] flex flex-row justify-evenly left-[50%] -translate-x-[50%]">
+        <ul className="absolute w-[75%] h-fit py-1 bg-white bottom-[1vw] flex flex-row justify-evenly left-[50%] -translate-x-[50%]">
           {cardList.map((card, i) => {
             return(
-              <li key={`secondList${i}`} className="h-[100%] w-[20%] gap-[5%] rounded-full"><a href={`#carousel_${i}`} className="sr-only rounded-full w-[100%] h-[100%]">{card.name}</a></li>
+              <Dot key={i} activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={i} />
             )}
           )}
         </ul>
@@ -76,3 +58,16 @@ export default function Carousel(){
     </div>
   )
 }
+
+
+function Dot({ activeIndex, setActiveIndex, index }){
+  const ID = `marker${index}`;
+  return (
+    <li key={index} onClick={() => setActiveIndex(index)}>
+      <svg xmlns='http://www.w3.org/2000/svg' xmlnsXlink="http://www.w3.org/1999/xlink" width="50" height="50">
+        <motion.circle id={ID} cx="25" cy="25" r="25" fill={index === activeIndex ? '#ff22aa' : '#aa22ff'} stroke={index === activeIndex ? '#ff22aa' : 'none'}  />
+      </svg>
+    </li>
+  )
+}
+
