@@ -33,9 +33,7 @@ yarn-error.log*
 .vercel
 
 .npmcheckrc
-colours.txt
 pushToGit.sh
 public/test
-public/burgerLogo.svg
 sitespeed-result/
-public/test
+public/images/gifs

@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect, useLayoutEffect } from 'react';
-import { useScroll } from 'framer-motion';
+import { useScroll } from 'motion/react';
 
 export function useWindowSize() {
   const [windowSize, setWindowSize] = useState([0, 0]);

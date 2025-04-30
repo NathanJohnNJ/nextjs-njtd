@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         <meta property="og:description" content="A website built with Next JS, and styled with Tailwind CSS, to showcase my work and host my protfolio." />
         <title>NJTD</title>
       </head>
-      <body className={`${poppins.variable} antialiased containerBG flex flex-col items-center justify-center`}>
+      <body className={`${poppins.variable} antialiased flex flex-col items-center justify-center`}>
         <div className="pt-8 mt-[20px] relative">
           <Navbar />
         </div>

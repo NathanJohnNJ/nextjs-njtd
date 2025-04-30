@@ -1,10 +1,11 @@
 'use client';
 import { useState, useEffect, useRef } from "react";
-import { motion, useTransform, useMotionValueEvent, AnimatePresence, useScroll } from "framer-motion";
+import { motion, useTransform, useMotionValueEvent, AnimatePresence, useScroll } from "motion/react";
 import Image from "next/image";
 import { useSvgSize } from "@/hooks";
 import NavButtons from "./navButtons";
 import { usePathname } from "next/navigation";
+import AnimatedLogo from "@/public/animatedLogo";
 
 // Logo button who's position should change depending on the page scroll position.
 
@@ -80,10 +81,12 @@ export default function MenuButton(props) {
 
   return (
     <motion.div className="fixed flex flex-col items-center justify-center w-[100%] z-50" style={{ translateX: logoLeft, translateY: logoTop, scale: logoScale }}>
-      <button onClick={() => {setShowLinks(!showLinks)}} style={{ width: '400px', height: 'auto' }} className={ showLinks ? 'transition-all flex items-center justify-center scale-[80%] hover:scale-[85%] z-50' : 'transition-all flex items-center justify-center scale-75 hover:scale-[80%] z-50' }>
-        <Image id="homeAnimatedLogo" src="./logo.animated.svg" alt="NJTD Logo" className="firstLogo z-50" width="400"height="400" priority />
-      </button>
-          <div className="flex flex-row items-center fixed justify-center w-[100%]">
+      {/* <motion.button onClick={() => {setShowLinks(!showLinks)}} style={{ width: '400px', height: 'auto' }} className={ showLinks ? 'transition-all flex items-center justify-center scale-[80%] hover:scale-[85%] z-50' : 'transition-all flex items-center justify-center scale-75 hover:scale-[80%] z-50' }> */}
+        {/* <img id="homeAnimatedLogo" src="./logo.animated.svg" alt="NJTD Logo"  /> */}
+        <AnimatedLogo size="256" setShowLinks={setShowLinks} showLinks={showLinks} />
+        
+      {/* </motion.button> */}
+          <div className="flex flex-row items-center fixed justify-center w-[100%] z-40">
             <NavButtons showLinks={showLinks} setShowLinks={setShowLinks} />
           </div>
     </motion.div>
