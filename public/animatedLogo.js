@@ -1,10 +1,8 @@
 'use client';
-import { AnimatePresence, motion, useScroll, useTransform, useMotionValueEvent } from 'motion/react';
-import { useState, useEffect } from 'react';
+import { motion, useScroll, useMotionValueEvent } from 'motion/react';
 
 export default function AnimatedLogo(props){
   const { size, showLinks, setShowLinks } = props;
-  const [ showBurger, setShowBurger ] = useState(false);
   const { scrollYProgress } = useScroll();
   let startAnimation;
   if(typeof window !== "undefined"){

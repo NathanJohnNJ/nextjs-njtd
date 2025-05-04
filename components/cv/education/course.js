@@ -1,4 +1,3 @@
-
 const Course = (props) => {
   return(
     <li className="flex flex-col justify-center m-2 list-disc text-left w-full">

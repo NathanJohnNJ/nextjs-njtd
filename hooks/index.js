@@ -1,6 +1,5 @@
 'use client';
-import { useState, useEffect, useLayoutEffect } from 'react';
-import { useScroll } from 'motion/react';
+import { useState, useLayoutEffect } from 'react';
 
 export function useWindowSize() {
   const [windowSize, setWindowSize] = useState([0, 0]);
@@ -21,7 +20,7 @@ export function useWindowSize() {
 
 export function useSvgSize() {
   const [svgSize, setSvgSize] = useState([0, 0]);
-  useEffect(() => {
+  useLayoutEffect(() => {
     function updateSvgSize() {
       setSvgSize([window.innerWidth, window.innerHeight/3]);
     }

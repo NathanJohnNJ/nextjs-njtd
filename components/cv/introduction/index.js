@@ -1,5 +1,4 @@
 'use client';
-import { useState, useLayoutEffect } from 'react';
 import { useWindowSize } from '@/hooks';
 
 const Introduction = () => {
