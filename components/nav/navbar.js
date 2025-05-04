@@ -51,7 +51,7 @@ export default function Navbar(props) {
         <motion.path id="path" d={firstCurve} className="bg-none stroke-[var(--first-svg-stroke)]" fill="none" pathLength={scrollOutput} />
   
         <motion.path id="fill" d={secondPath} className="fill-[var(--second-svg-fill)]" stroke="none" transform={`rotate(-3.5 0 ${svgHeight})`} opacity={scrollOutput} />
-        <motion.path id="path" d={secondCurve} className="stroke-[var(--second-svg-stroke-light)]" strokeWidth="2.8" fill="none" transform={`rotate(-3.5 0 ${svgHeight})`}  pathLength={scrollOutput}/>
+        <motion.path id="path" d={secondCurve} className="stroke-[var(--second-svg-stroke-light)]" strokeWidth="2.8" fill="none" transform={`rotate(-3.5 0 ${svgHeight})`} pathLength={scrollOutput}/>
         <motion.path id="path" d={secondCurve} className="stroke-[var(--second-svg-stroke)]" fill="none" transform={`rotate(-3.5 0 ${svgHeight})`} pathLength={scrollOutput} />
 
         <motion.path id="fill" d={secondPath} className="bg-none fill-[var(--third-svg-fill)]" stroke="none" opacity={scrollOutput} />

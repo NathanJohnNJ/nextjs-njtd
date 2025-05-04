@@ -9,7 +9,7 @@ import AnimatedLogo from "@/public/animatedLogo";
 
 // Logo button who's position should change depending on the page scroll position.
 
-export default function MenuButton(props) {
+export default function MenuButton() {
   const [showSVG, setShowSVG] = useState(false);
   const [showLinks, setShowLinks] = useState(false);
   const  path  = usePathname();
@@ -48,7 +48,7 @@ export default function MenuButton(props) {
   );
   const otherLogoLeft = useTransform(
     scrollYProgress,
-    [0, 0.3, 1],
+    [0, 0.2, 1],
     ['0vw', '-40vw', '-40vw'],
     {
       clamp: false
@@ -81,14 +81,10 @@ export default function MenuButton(props) {
 
   return (
     <motion.div className="fixed flex flex-col items-center justify-center w-[100%] z-50" style={{ translateX: logoLeft, translateY: logoTop, scale: logoScale }}>
-      {/* <motion.button onClick={() => {setShowLinks(!showLinks)}} style={{ width: '400px', height: 'auto' }} className={ showLinks ? 'transition-all flex items-center justify-center scale-[80%] hover:scale-[85%] z-50' : 'transition-all flex items-center justify-center scale-75 hover:scale-[80%] z-50' }> */}
-        {/* <img id="homeAnimatedLogo" src="./logo.animated.svg" alt="NJTD Logo"  /> */}
-        <AnimatedLogo size="256" setShowLinks={setShowLinks} showLinks={showLinks} />
-        
-      {/* </motion.button> */}
-          <div className="flex flex-row items-center fixed justify-center w-[100%] z-40">
-            <NavButtons showLinks={showLinks} setShowLinks={setShowLinks} />
-          </div>
+      <AnimatedLogo size="256" setShowLinks={setShowLinks} showLinks={showLinks} />
+      <div className="flex flex-row items-center fixed justify-center w-[100%] z-40">
+        <NavButtons showLinks={showLinks} setShowLinks={setShowLinks} />
+      </div>
     </motion.div>
   );
 }
