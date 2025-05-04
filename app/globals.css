@@ -127,8 +127,9 @@
 }
 :root {
   --foreground-rgb: rgb(30, 30, 30);
-  --background-start-rgb:rgb(255, 255, 255);
-  --background-end-rgb: rgb(255, 255, 255);
+  --background-color:rgb(255, 255, 255);
+  --background-second: rgb(200, 200, 200);
+  --text-color: rgb(50, 50, 50);
   --black-color: rgb(35, 35, 35);
   --white-color:  rgb(235, 235, 235);
   --dark-color:  rgb(80, 80, 80);
@@ -147,8 +148,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: rgb(235, 235, 235);
-    --background-start-rgb: rgb(50, 50, 50);
-    --background-end-rgb: rgb(50, 50, 50);
+    --background-color: rgb(50, 50, 50);
+    --background-second: rgb(150, 150, 150);
+    --text-color: rgb(250, 250, 250);
     --black-color: rgb(25, 25, 25);
     --white-color: rgb(225, 225, 225);
     --dark-color: rgb(20, 20, 20);
@@ -181,7 +183,7 @@ body, html{
 }
 
 .cubes{
-  --s: 150px; 
+  --s:275px; 
   --c1: #1d1d1d;
   --c2: #4b4d51;
   --c3: #3c3c3c;

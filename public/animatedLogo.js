@@ -12,15 +12,14 @@ export default function AnimatedLogo(props){
   }
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    console.log(latest)
-    if (latest > 0.1 && latest < 0.3){
+    if (latest > 0.15 && latest < 0.155){
       startAnimation.beginElement()
     }else {
     }
   })
   
   return(
-    <svg id="animatedLogo" height={size} width={size} viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"  xmlnsXlink="http://www.w3.org/1999/xlink" onClick={() => {setShowLinks(!showLinks)}} className="z-50 firstLogo transition-all scale-[90%] hover:scale-[95%]">
+    <motion.svg id="animatedLogo" height={size} width={size} viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"  xmlnsXlink="http://www.w3.org/1999/xlink" onClick={() => {setShowLinks(!showLinks)}} className="z-50 firstLogo transition-all scale-[90%] hover:scale-[95%]">
 
       <defs>
         <clipPath id="clipCircle">
@@ -157,6 +156,7 @@ export default function AnimatedLogo(props){
         </g>
         <g clipPath="url(#clipCircle)" fillOpacity="0" strokeWidth="0" fill="url(#camoGrad4)" stroke="url(#camoGrad4)">
           <path d="M 475 201 C 514 172 558 267 509 294 Q 456 327 526 353 C 592 382 484 374 456 425 C 428 468 379 421 406 383 C 439 336 301 356 359 307 C 427 250 291 293 379 204 C 443 144 404 244 475 201 ZM 800 635 C 805 683 701 674 702 618 Q 700 556 643 604 C 585 647 646 557 615 507 C 592 461 657 442 677 485 C 701 537 753 407 766 482 C 782 569 812 430 845 551 C 865 636 798 552 800 635 ZM 261 700 C 217 680 277 595 325 624 Q 380 653 367 579 C 359 508 406 606 465 604 C 516 607 500 673 453 668 C 396 663 482 773 411 747 C 328 717 433 813 312 781 C 228 756 334 740 261 700 Z" />
+          <path d="M 368 423 C 448 551 481 363 571 337 C 669 292 565 412 693 396 C 770 397 703 440 661 432 C 510 437 657 560 634 651 C 624 758 572 608 522 727 C 483 793 479 713 507 681 C 578 548 398 614 331 548 C 243 486 399 516 321 413 C 283 346 354 383 368 423Z" stroke="#eaeaea" fill="#eaeaea" />
           <animate id="strokeAnim3" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="1.5s" repeatCount="1" calcMode="linear" begin="strokeAnim2.end-2s" />
           <animate attributeName="fill-opacity" from="0" to="1" dur="2s" begin="strokeAnim2.end-1s" repeatCount="1" fill="freeze" calcMode="linear" />
           <animate attributeName="stroke-width" values="5;1" dur="2s" begin="strokeAnim2.end-2s" repeatCount="1" fill="freeze" />
@@ -164,7 +164,7 @@ export default function AnimatedLogo(props){
       </g>
         
 
-    <g transform="translate(0, 75)" transformOrigin="center">
+      <g transform="translate(0, 75)" transformOrigin="center">
       <g id="layer4" transform="scale(0)" opacity="0" transformOrigin="center">
         <g id="face">
           <g id="ears">
@@ -270,48 +270,47 @@ export default function AnimatedLogo(props){
       </g>
 
       <g id="layer5" fill="none" stroke="#ffffff"  strokeWidth="13" strokeLinecap="round" transform="scale(1.18)" transformOrigin="center" strokeDasharray="0% 100%">
-        <path id="dark" d="M190 720v-145c0 -18 28 -35 51 -18l69,90v-100  M227 720v-100l69,90c23,18 51,0 51,-17v-145M433 551h45c15 0 30 15 30 30v83c2 82 -140 82 -142 0M433 588 h25 c6 0 12 6 12 12 v64 c-3 33 -65 33 -68 0" stroke="#333333" transform="translate(-5,5)"  strokeWidth="0" >
-          <animate id="animN" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="3.5s"   begin="meAnim.end-1s" fill="freeze" calcMode="linear" />
-          <animate attributeName="stroke-width" from="0" to="14.5" dur="1.5s" begin="meAnim.end-1.5s"  fill="freeze" calcMode="linear" />
-          <animate attributeName="d" values="M190 720v-145c0 -18 28 -35 51 -18l69,90v-100 M227 720v-100l69,90c23,18 51,0 51,-17v-145 M433 551h45c15 0 30 15 30 30v83c2 82 -140 82 -142 0 M433 588 h25 c6 0 12 6 12 12 v64 c-3 33 -65 33 -68 0; M 319 482 V 482 C 500 482 500 482 500 482 L 700 482 V 482 M 319 482 V 482 L 319 482 C 319 482 347 482 347 482 V 482M 319 482 H 319 C 319 482 326 482 326 482 V 482 C 328 482 330 482 340 482M 319 482 H 458 C 464 482 470 482 470 482 V 482 C 467 482 405 482 700 482" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-          <animate attributeName="stroke-width" values="14.5;80" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-          <animate attributeName="d" values="M 319 482 V 482 C 500 482 500 482 500 482 L 700 482 V 482 M 319 482 V 482 L 319 482 C 319 482 347 482 347 482 V 482M 319 482 H 319 C 319 482 326 482 326 482 V 482 C 328 482 330 482 340 482M 319 482 H 458 C 464 482 470 482 470 482 V 482 C 467 482 405 482 700 482;M 190 720 V 575 C 190 557 218 540 241 557 L 310 647 V 547 M 227 720 V 620 L 296 710 C 319 728 347 710 347 693 V 548M 433 551 H 478 C 493 551 508 566 508 581 V 664 C 510 746 368 746 366 664M 433 588 H 458 C 464 588 470 594 470 600 V 664 C 467 697 405 697 402 664" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
-          <animate attributeName="stroke-width" values="80;14.5" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
+        <path id="darkNJ" d="M 190 720 V 575 C 190 557 218 540 241 557 L 310 647 V 548 M 227 720 V 620 L 296 710 C 319 728 347 710 347 693 V 548 M 433 551 H 478 C 493 551 508 566 508 581 V 664 C 510 746 368 746 366 664 M 433 588 H 458 C 464 588 470 594 470 600 V 664 C 467 697 405 697 402 664"  stroke="#333333" transform="translate(-5,5)"  strokeWidth="0" >
+          <animate id="animN" attributeName="stroke-dasharray" to="100% 0%" dur="3.5s"  begin="meAnim.end-1s" fill="freeze" calcMode="linear" />
+          <animate attributeName="stroke-width" to="14.5" dur="1.5s"  begin="meAnim.end-1.5s" fill="freeze" calcMode="linear" />
+          <animate attributeName="d" to="M 319 482 V 482 C 500 482 500 482 500 482 L 700 482V 482 M 319 482 V 482L 500 482 C 510 482 550 482 600 482 V 482M 319 482 H 319 C 319 482 326 482 326 482 V 482 C 328 482 330 482 340 482M 319 482 H 458 C 464 482 470 482 470 482 V 482 C 467 482 405 482 700 482" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
+          <animate attributeName="stroke-width" to="80" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
+          <animate attributeName="d" to="M 190 720 V 575 C 190 557 218 540 241 557 L 310 647 V 547 M 227 720 V 620 L 296 710 C 319 728 347 710 347 693 V 548M 433 551 H 478 C 493 551 508 566 508 581 V 664 C 510 746 368 746 366 664M 433 588 H 458 C 464 588 470 594 470 600 V 664 C 467 697 405 697 402 664" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
+          <animate attributeName="stroke-width" to="14.5" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
         </path>
-        <path id="dark2" d="M 527.5 551 H 672.5 M 527.5 588 H 571 C 576 588 581 593 581 598 V 720M 619.5 720 V 598 C 619.5 593 624.5 588 629.5 588 H 673M 733 551 H 763 C 858 566 858 705 778 726 H 728 C 693 726 693 726 693 691 V 586 C 693 551 693 551 733 551 M 743 589 H 748 C 813 594 816 688 743 683 H 738 C 734 683 734 683 734 679 V 593 C 734 589 734 589 743 589" stroke="#333333" transform="translate(-5,5)" strokeWidth="0" >
-          <animate attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="3.5s" begin="meAnim.end-1s" fill="freeze" calcMode="linear"/>
-          <animate attributeName="stroke-width" from="0" to="14.5" dur="1.5s" begin="meAnim.end-1.5s" fill="freeze" calcMode="linear" />
-          <animate attributeName="d" values="M 527.5 551 H 672.5 M 527.5 588 H 571 C 576 588 581 593 581 598 V 720 M 619.5 720 V 598 C 619.5 593 624.5 588 629.5 588 H 673M 733 551 H 763 C 858 566 858 705 778 726 H 728 C 693 726 693 726 693 691 V 586 C 693 551 693 551 733 551 M 743 589 H 748 C 813 594 816 688 743 683 H 738 C 734 683 734 683 734 679 V 593 C 734 589 734 589 743 589; M 319 602 H 700 M 319 602 H 700 C 700 602 700 602 700 602 V 602 M 319 602 V 602 C 319 602 319 602 319 602 H 700M 319 722 H 351 C 351 722 351 722 351 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722 M 319 722 H 700 C 700 722 700 722 700 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-          <animate attributeName="stroke-width" values="14.5;80" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-          <animate attributeName="d" values="M 319 602 H 700 M 319 602 H 700 C 700 602 700 602 700 602 V 602 M 319 602 V 602 C 319 602 319 602 319 602 H 700 M 319 722 H 351 C 351 722 351 722 351 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722 M 319 722 H 700 C 700 722 700 722 700 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722 ; M 527.5 551 H 672.5 M 527.5 588 H 571 C 576 588 581 593 581 598 V 720 M 619.5 720 V 598 C 619.5 593 624.5 588 629.5 588 H 673 M 733 551 H 763C 858 566 858 705 778 726 H 728 C 693 726 693 726 693 691 V 586 C 693 551 693 551 733 551 M 743 589 H 748 C 813 594 816 688 743 683 H 738 C 734 683 734 683 734 679 V 593 C 734 589 734 589 743 589" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
-          <animate attributeName="stroke-width" values="80;14.5" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
+        <path id="darkTD" d="M 527.5 551 H 672.5 M 527.5 588 H 571 C 576 588 581 593 581 598 V 720M 619.5 720 V 598 C 619.5 593 624.5 588 629.5 588 H 673M 733 551 H 763 C 858 566 858 705 778 726 H 728 C 693 726 693 726 693 691 V 586 C 693 551 693 551 733 551 M 743 589 H 748 C 813 594 816 688 743 683 H 738 C 734 683 734 683 734 679 V 593 C 734 589 734 589 743 589" stroke="#333333" transform="translate(-5,5)" strokeWidth="0" >
+          <animate attributeName="stroke-dasharray" to="100% 0%" dur="3.5s" begin="meAnim.end-1s" fill="freeze" calcMode="linear"/>
+          <animate attributeName="stroke-width" to="14.5" dur="1.5s" begin="meAnim.end-1.5s" fill="freeze" calcMode="linear" />
+          <animate attributeName="d" to="M 319 602 H 700 M 319 602 H 700 C 700 602 700 602 700 602 V 602 M 319 602 V 602 C 319 602 319 602 319 602 H 700M 319 722 H 351 C 351 722 351 722 351 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722 M 319 722 H 700 C 700 722 700 722 700 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
+          <animate attributeName="stroke-width" to="80" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
+          <animate attributeName="d" to="M 527.5 551 H 672.5 M 527.5 588 H 571 C 576 588 581 593 581 598 V 720 M 619.5 720 V 598 C 619.5 593 624.5 588 629.5 588 H 673 M 733 551 H 763C 858 566 858 705 778 726 H 728 C 693 726 693 726 693 691 V 586 C 693 551 693 551 733 551 M 743 589 H 748 C 813 594 816 688 743 683 H 738 C 734 683 734 683 734 679 V 593 C 734 589 734 589 743 589" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
+          <animate attributeName="stroke-width" to="14.5" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
         </path>
-        <path id="light" d="M190 720v-145c0 -18 28 -35 51 -18l69,90v-100  M227 720v-100l69,90c23,18 51,0 51,-17v-145M433 551h45c15 0 30 15 30 30v83c2 82 -140 82 -142 0M433 588 h25 c6 0 12 6 12 12 v64 c-3 33 -65 33 -68 0" strokeWidth="0" >
-          <animate id="animN" attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="3.5s" begin="meAnim.end-1s" fill="freeze" calcMode="linear" />
-          <animate attributeName="stroke-width" from="0" to="13" dur="1.5s" begin="meAnim.end-1.5s" fill="freeze" calcMode="linear" />
-          <animate attributeName="d" values="M190 720v-145c0 -18 28 -35 51 -18l69,90v-100 M227 720v-100l69,90c23,18 51,0 51,-17v-145 M433 551h45c15 0 30 15 30 30v83c2 82 -140 82 -142 0 M433 588 h25 c6 0 12 6 12 12 v64 c-3 33 -65 33 -68 0; M 319 482 V 482 C 500 482 500 482 500 482 L 700 482 V 482 M 319 482 V 482 L 319 482 C 319 482 347 482 347 482 V 482M 319 482 H 319 C 319 482 326 482 326 482 V 482 C 328 482 330 482 340 482M 319 482 H 458 C 464 482 470 482 470 482 V 482 C 467 482 405 482 700 482
-          " dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-          <animate attributeName="stroke-width" values="13;80" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-          <animate attributeName="d" values="M 319 482 V 482 C 500 482 500 482 500 482 L 700 482 V 482 M 319 482 V 482 L 319 482 C 319 482 347 482 347 482 V 482M 319 482 H 319 C 319 482 326 482 326 482 V 482 C 328 482 330 482 340 482M 319 482 H 458 C 464 482 470 482 470 482 V 482 C 467 482 405 482 700 482;M 190 720 V 575 C 190 557 218 540 241 557 L 310 647 V 547 M 227 720 V 620 L 296 710 C 319 728 347 710 347 693 V 548M 433 551 H 478 C 493 551 508 566 508 581 V 664 C 510 746 368 746 366 664M 433 588 H 458 C 464 588 470 594 470 600 V 664 C 467 697 405 697 402 664" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
-          <animate attributeName="stroke-width" values="80;13" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
+        <path id="lightNJ" d="M 190 720 V 575 C 190 557 218 540 241 557 L 310 647 V 548 M 227 720 V 620 L 296 710 C 319 728 347 710 347 693 V 548 M 433 551 H 478 C 493 551 508 566 508 581 V 664 C 510 746 368 746 366 664 M 433 588 H 458 C 464 588 470 594 470 600 V 664 C 467 697 405 697 402 664" strokeWidth="0" >
+          <animate id="animN" attributeName="stroke-dasharray" to="100% 0%" dur="3.5s" begin="meAnim.end-1s" fill="freeze" calcMode="linear" />
+          <animate attributeName="stroke-width" to="13" dur="1.5s" begin="meAnim.end-1.5s" fill="freeze" calcMode="linear" />
+          <animate attributeName="d" to="M 319 482 V 482 C 500 482 500 482 500 482 L 700 482V 482 M 319 482 V 482L 500 482 C 510 482 550 482 600 482 V 482M 319 482 H 319 C 319 482 326 482 326 482 V 482 C 328 482 330 482 340 482M 319 482 H 458 C 464 482 470 482 470 482 V 482 C 467 482 405 482 700 482" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
+          <animate attributeName="stroke-width" to="80" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
+          <animate attributeName="d" to="M 190 720 V 575 C 190 557 218 540 241 557 L 310 647 V 547 M 227 720 V 620 L 296 710 C 319 728 347 710 347 693 V 548M 433 551 H 478 C 493 551 508 566 508 581 V 664 C 510 746 368 746 366 664M 433 588 H 458 C 464 588 470 594 470 600 V 664 C 467 697 405 697 402 664" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
+          <animate attributeName="stroke-width" to="13" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
         </path>
-        <path id="light2" d="M 527.5 551 H 672.5 M 527.5 588 H 571 C 576 588 581 593 581 598 V 720M 619.5 720 V 598 C 619.5 593 624.5 588 629.5 588 H 673M 733 551 H 763 C 858 566 858 705 778 726 H 728 C 693 726 693 726 693 691 V 586 C 693 551 693 551 733 551 M 743 589 H 748 C 813 594 816 688 743 683 H 738 C 734 683 734 683 734 679 V 593 C 734 589 734 589 743 589" strokeWidth="0" >
-          <animate attributeName="stroke-dasharray" values="0% 100%;100% 0%" dur="3.5s" begin="meAnim.end-1s" fill="freeze" calcMode="linear" />
-          <animate attributeName="stroke-width" from="0" to="13" dur="1.5s" begin="meAnim.end-1.5s" fill="freeze" calcMode="linear" />
-          <animate attributeName="d" values="M 527.5 551 H 672.5 M 527.5 588 H 571 C 576 588 581 593 581 598 V 720 M 619.5 720 V 598 C 619.5 593 624.5 588 629.5 588 H 673M 733 551 H 763 C 858 566 858 705 778 726 H 728 C 693 726 693 726 693 691 V 586 C 693 551 693 551 733 551 M 743 589 H 748 C 813 594 816 688 743 683 H 738 C 734 683 734 683 734 679 V 593 C 734 589 734 589 743 589; M 319 602 H 700 M 319 602 H 700 C 700 602 700 602 700 602 V 602 M 319 602 V 602 C 319 602 319 602 319 602 H 700M 319 722 H 351 C 351 722 351 722 351 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722 M 319 722 H 700 C 700 722 700 722 700 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-          <animate attributeName="stroke-width" values="13;80" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-          <animate attributeName="d" values="M 319 602 H 700 M 319 602 H 700 C 700 602 700 602 700 602 V 602M 319 602 V 602 C 319 602 319 602 319 602 H 700M 319 722 H 351 C 351 722 351 722 351 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722M 319 722 H 700 C 700 722 700 722 700 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722;M 527.5 551 H 672.5 M 527.5 588 H 571 C 576 588 581 593 581 598 V 720 M 619.5 720 V 598 C 619.5 593 624.5 588 629.5 588 H 673M 733 551 H 763 C 858 566 858 705 778 726 H 728 C 693 726 693 726 693 691 V 586 C 693 551 693 551 733 551M 743 589 H 748 C 813 594 816 688 743 683 H 738 C 734 683 734 683 734 679 V 593 C 734 589 734 589 743 589" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
-          <animate attributeName="stroke-width" values="80;13" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
+        <path id="lightTD" d="M 527.5 551 H 672.5 M 527.5 588 H 571 C 576 588 581 593 581 598 V 720M 619.5 720 V 598 C 619.5 593 624.5 588 629.5 588 H 673M 733 551 H 763 C 858 566 858 705 778 726 H 728 C 693 726 693 726 693 691 V 586 C 693 551 693 551 733 551 M 743 589 H 748 C 813 594 816 688 743 683 H 738 C 734 683 734 683 734 679 V 593 C 734 589 734 589 743 589" strokeWidth="0" >
+          <animate attributeName="stroke-dasharray" to="100% 0%" dur="3.5s" begin="meAnim.end-1s" fill="freeze" calcMode="linear" />
+          <animate attributeName="stroke-width" to="13" dur="1.5s" begin="meAnim.end-1.5s" fill="freeze" calcMode="linear" />
+          <animate attributeName="d" to="M 319 602 H 700 M 319 602 H 700 C 700 602 700 602 700 602 V 602 M 319 602 V 602 C 319 602 319 602 319 602 H 700M 319 722 H 351 C 351 722 351 722 351 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722 M 319 722 H 700 C 700 722 700 722 700 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
+          <animate attributeName="stroke-width" to="80" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
+          <animate attributeName="d" to="M 527.5 551 H 672.5 M 527.5 588 H 571 C 576 588 581 593 581 598 V 720 M 619.5 720 V 598 C 619.5 593 624.5 588 629.5 588 H 673M 733 551 H 763 C 858 566 858 705 778 726 H 728 C 693 726 693 726 693 691 V 586 C 693 551 693 551 733 551M 743 589 H 748 C 813 594 816 688 743 683 H 738 C 734 683 734 683 734 679 V 593 C 734 589 734 589 743 589" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
+          <animate attributeName="stroke-width" to="13" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
         </path>
       </g>
       <circle cx="512" cy="512" r="512" stroke="none" fill="transparent">
-          <animate id="startAnimation" attributeName="r" from="512" to="0" dur="0.001s" begin="click" fill="freeze" calcMode="linear" />
-          <animate attributeName="r" from="0" to="512" dur="0.001s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
-        </circle>
-        <circle cx="512" cy="512" r="0" stroke="none" fill="transparent">
-          <animate attributeName="r" from="0" to="512" dur="0.001s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-          <animate id="reverseAnimation" attributeName="r" from="512" to="0" dur="0.001s" begin="click" fill="freeze" calcMode="linear" />
-        </circle>
-    </svg>
+        <animate id="startAnimation" attributeName="r" to="0" dur="0.001s" begin="click" fill="freeze" calcMode="linear" />
+        <animate attributeName="r" to="512" dur="0.001s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
+      </circle>
+      <circle cx="512" cy="512" r="0" stroke="none" fill="transparent">
+        <animate attributeName="r" to="512" dur="0.001s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
+        <animate id="reverseAnimation" attributeName="r" to="0" dur="0.001s" begin="click" fill="freeze" calcMode="linear" />
+      </circle>
+    </motion.svg>
   )
 }
