@@ -1,8 +1,7 @@
 'use client';
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion, useTransform, useMotionValueEvent, AnimatePresence, useScroll } from "motion/react";
 import Image from "next/image";
-import { useSvgSize } from "@/hooks";
 import NavButtons from "./navButtons";
 import { usePathname } from "next/navigation";
 import AnimatedLogo from "@/public/animatedLogo";

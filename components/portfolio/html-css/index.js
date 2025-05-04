@@ -1,6 +1,5 @@
 import Carousel from "./carousel";
 import Statement from "./statement";
-import { motion } from "motion/react";
 
 export default function HTML(){
 

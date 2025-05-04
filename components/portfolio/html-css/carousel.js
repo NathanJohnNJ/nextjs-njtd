@@ -35,11 +35,11 @@ const styleGuide = {
             return(
               <li name={`carousel_${i}`} id={`carousel_${i}`} key={i} className="w-[70%] mx-[10vw] h-min flex flex-col items-center justify-center p-2 bg-gradient-to-br from-neutral-300 via-white via-45% to-neutral-200 to-70% filter-(--my-shadow) rounded-2xl shadow-xl">
                 <h1 className="font-[GeologicaExtraBold] repoTitle font-extrabold uppercase align-center text-center text-3xl w-[65%] " >{card.title}</h1>
-                <Link href={card.href}>
+                <Link href={card.href} target="_blank">
                   <Image src={card.src} alt={card.title} title={card.title} width={200} height={200} draggable="false" className="rounded-full scale-[0.75] hover:scale-[0.9] hover:rounded-2xl" />
                 </Link>
-                <p className="font-[Geologica] text-base -mb-[5] text-[var(--black-color)"><Link href={card.href} className="hover:text-xl hover:text-[var(--border-color)] text-(--highlight-color) no-underline">Click here</Link> to view the app yourself!</p>
-                <p className="font-[Geologica] text-base -mb-[5] text-[var(--black-color)">Or view the code on <Link href={card.git} className="hover:text-xl text-(--highlight-color) hover:text-[var(--border-color)] no-underline">GitHub</Link></p>
+                <p className="font-[Geologica] text-base -mb-[5] text-[var(--black-color)"><Link target="_blank" href={card.href} className="hover:text-xl hover:text-[var(--border-color)] text-(--highlight-color) no-underline">Click here</Link> to view the app yourself!</p>
+                <p className="font-[Geologica] text-base -mb-[5] text-[var(--black-color)">Or view the code on <Link href={card.git} target="_blank" className="hover:text-xl text-(--highlight-color) hover:text-[var(--border-color)] no-underline">GitHub</Link></p>
                 <h2 className="font-[Geologica] text-base -mb-[20] text-[var(--dark-color)]">Skills/Languages used:</h2>
                 <ul className="pb-4 w-[50%] flex flex-col justify-start list-disc text-[var(--dark-color)] -mb-[20]">
                   {card.skills.map((skill, i) => {

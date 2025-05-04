@@ -1,9 +1,6 @@
 'use client';
-import { AnimatePresence, motion, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef, useState, useEffect } from 'react';
-import GitHub from './social/github';
-import LinkedIn from './social/linkedIn';
-import Twitter from './social/twitter';
 
 const ThirdSection = () => {
   const ref = useRef(null);

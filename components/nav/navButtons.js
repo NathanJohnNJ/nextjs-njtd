@@ -2,7 +2,7 @@
 import { AnimatePresence, motion, useScroll, useTransform, useMotionValueEvent } from 'motion/react';
 import { usePathname } from 'next/navigation';
 import { useNavLinks, useSideNavLinks } from '../../hooks';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 
 export default function NavButtons(props) {

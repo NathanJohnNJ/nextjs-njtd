@@ -1,5 +1,3 @@
-
-
 const Fieldset = (props) => {
   const { title, content } = props;
 

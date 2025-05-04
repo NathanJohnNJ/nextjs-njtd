@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from "react";
-import { motion, useTransform, useScroll, useSpring } from "motion/react";
+import { motion, useTransform, useScroll } from "motion/react";
 import Image from "next/image";
 import { useSvgSize } from "@/hooks";
 import { usePathname } from "next/navigation";
