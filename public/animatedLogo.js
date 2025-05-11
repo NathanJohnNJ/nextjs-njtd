@@ -106,10 +106,10 @@ export default function AnimatedLogo(props){
 
       <g id="layer1">
         <circle r="504" cx="512" cy="512" stroke="black" fill="none" strokeWidth="12px" transformOrigin="center" transform="scale(0)">
-          <animateTransform id="circleAnim1" attributeType="XML" attributeName="transform" type="scale" values="0;1" dur="2s" begin="0s" repeatCount="1" fill="freeze" />     
+          <animateTransform id="circleAnim1" attributeType="XML" attributeName="transform" type="scale" to="1" dur="2s" begin="0s" repeatCount="1" fill="freeze" />     
         </circle>
         <circle r="483" cx="512" cy="512" stroke="black" fill="none" strokeWidth="8px" transformOrigin="center" transform="scale(0)">
-          <animateTransform id="circleAnim2" attributeType="XML" attributeName="transform" type="scale" values="0;1" dur="0.8s" begin="circleAnim1.end-1s" repeatCount="1" fill="freeze" />     
+          <animateTransform id="circleAnim2" attributeType="XML" attributeName="transform" type="scale" to="1" dur="0.8s" begin="circleAnim1.end-1s" repeatCount="1" fill="freeze" />     
         </circle>
       </g>
 
@@ -180,7 +180,7 @@ export default function AnimatedLogo(props){
               <circle id="leftNine" cx="403" cy="312" r="2" fill="url(#piercingGrad)" strokeWidth="1px"   /> 
             </g>
             <g id="rightEar">
-              <path id="rightOne" d="M 610 310 c 25 -16 20 25 -5 52" fill="url('#faceGrad')" stroke="url(#faceGrad)" strokeWidth=" 3;" />
+              <path id="rightOne" d="M 610 310 c 25 -16 20 25 -5 52" fill="url('#faceGrad')" stroke="url(#faceGrad)" strokeWidth="3" />
               <path id="rightTwo" d="M 610 310 c 25 -16 20 25 -5 50" fill="none" stroke="url(#earGrad)" strokeWidth="5" />  
               <circle id="rightThree" cx="616" cy="343" r="2" fill="url(#piercingGrad)" strokeWidth="1px"  /> 
               <g id="rightTragus" transform="translate(0,-1.5)">
@@ -208,7 +208,7 @@ export default function AnimatedLogo(props){
               <circle id="rightEyeThree"  cx="558" cy="336" r="8.5" fill="black" stroke="#0e2089" strokeWidth="4.5"/>
               <circle id="rightEyeFour" cx="555" cy="342" r="3.5" fill="white" strokeWidth="0" />
               <circle id="rightEyeFive" cx="555.5" cy="341" r="4.5" fill="rgba(255,255,255,0.4)" strokeWidth="0" />
-              <path id="rightLash" d="M 584 337 Q 584 338 588 335 L 578 333 Q 578 334 582 331 L 572 329 Q 572 330 576 327 L 566 325 Q 551 317 531 337 Q 558 312 583 339 Z" fill="#black" stroke="black" strokeWidth="1" opacity="0.95" />
+              <path id="rightLash" d="M 584 337 Q 584 338 588 335 L 578 333 Q 578 334 582 331 L 572 329 Q 572 330 576 327 L 566 325 Q 551 317 531 337 Q 558 312 583 339 Z" fill="black" stroke="black" strokeWidth="1" opacity="0.95" />
             </g>
             <g id="brows" transform="translate(0,-0.25)">
               <path id="leftBrow" d="M426,317 q2,-2 8,-3 q-3,-1 -6,1 q2,-2 8,-3 q-3,-1 -6,1 q2,-2 8,-3 q-3,-1 -6,1 q2,-2 8,-3 q-3,-1 -5,1 q2,-2 8,-3 q-3,-1 -5,0 q2,-2 8,-2 q-3,-1 -5,0 q3,0 7,0 q-2,-2 -5,-2 q5,-2 15,2 q-6,-3 -8,-4 q3,-1 15,3 q-6,-3 -8,-4 q5,-2 15,4 q-6,-3 -3,-3 q3,-2 13,5 q-3,-4 -4,-4 q2,-1 5,4 q-1,-2 -1,-3 q1,-1 4,2 q1,-2 0,-2 q2,-1 4,4 q1,-2 1,-4 q1,-1 3,6 q1,-2 0,-4 q1,-2 2,5 q1,5 -1,8 q-35 -10 -48, -6z" fill="url(#browGrad)" stroke="url(#browGrad)" strokeWidth="1"  />

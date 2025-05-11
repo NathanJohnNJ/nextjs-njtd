@@ -39,7 +39,7 @@ const SecondSection = () => {
       </motion.div>
       <motion.div className="sticky top-[60vh] bg-[#b0b0b0] w-[45%] flex flex-col p-4 border rounded-4xl shadow-2xl shadow-(color:--darkBorder-color)" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'linear', delay:2}} style={{ translateX: translateX }}>
         <motion.h2 className='geoFont font-light text-[1.05rem] text-white'>
-          Feel free to take a look at what I’ve been working on, and follow me so I can keep you updated with exciting new projects along the way.
+          Explore my latest projects and keep up to date with the exciting innovations to come. Follow me to hear about new ideas, fresh designs, and groundbreaking developments!
         </motion.h2>
       </motion.div>
     </motion.div>

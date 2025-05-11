@@ -11,8 +11,8 @@
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
     "deps": "^1.0.0",
-    "motion": "^12.9.2",
-    "next": "^15.3.1",
+    "motion": "^12.10.3",
+    "next": "^15.3.2",
     "next-compose-plugins": "^2.2.1",
     "next-plugin-svgr": "^1.1.12",
     "react": "^19.1.0",
@@ -21,11 +21,11 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
-    "@tailwindcss/postcss": "^4.1.4",
+    "@tailwindcss/postcss": "^4.1.5",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9.25.1",
-    "eslint-config-next": "^15.3.1",
-    "tailwindcss": "^4.1.4"
+    "eslint": "^9.26.0",
+    "eslint-config-next": "^15.3.2",
+    "tailwindcss": "^4.1.5"
   },
   "browserslist": [
     "defaults and fully supports es6-module",

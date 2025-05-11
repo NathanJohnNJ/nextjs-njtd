@@ -168,6 +168,10 @@
   }
 }
 
+.test{
+  fill: white;
+}
+
 html::-webkit-scrollbar{
   display: none;
 }
