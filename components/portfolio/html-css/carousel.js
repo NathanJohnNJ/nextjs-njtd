@@ -1,4 +1,4 @@
-'use client';
+
 import './styles.css';
 import Image from 'next/image';
 import Link from 'next/link';

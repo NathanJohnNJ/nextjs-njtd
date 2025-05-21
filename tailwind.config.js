@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const config = {
-  content: ["./**/*.{js,jsx,svg}"],
+  content: ["./**/*.{js,jsx}"],
   presets: [],
   theme: {
     extend: {

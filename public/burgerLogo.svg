@@ -83,25 +83,19 @@
     </linearGradient>
   </defs>
 
-
-
   <!-- LAYER 1 -->
   <g id="layer1">
     <circle r="504" cx="512" cy="512" stroke="black" fill="none" stroke-width="12px" />
     <circle r="483" cx="512" cy="512" stroke="black" fill="none" stroke-width="8px" />
-    <circle r="465" cx="512" cy="512" stroke="black" fill="none" stroke-width="4px" />
   </g>
-
 
   <!-- LAYER 2 -->
   <circle id="layer2" r="465" cx="512" cy="512" stroke="black" fill="black" />
 
   <!-- LAYER 3 -->
   <g id="layer3" clip-path="url(#clipCircle)"> 
-    <g fill="url(#camoGrad)" stroke="url(#camoGrad)">
       <path d="M 139 234 C 144 265 255 250 176 305 C 147 316 183 367 150 362 C 136 357 116 306 80 340 C 10 409 -1 588 85 696 C 114 707 156 604 165 699 C 160 730 222 724 201 751 C 190 760 136 752 147 800 C 172 895 321 994 458 974 C 482 954 414 866 500 906 C 525 926 551 869 563 901 C 566 915 532 958 579 972 C 674 998 834 918 885 790 C 880 759 770 774 847 719 C 877 708 841 657 874 662 C 888 667 908 718 944 684 C 1014 615 1025 436 939 328 C 910 317 868 420 859 325 C 864 294 802 300 823 273 C 834 264 888 272 877 224 C 852 129 703 30 566 50 C 542 70 610 158 524 118 C 499 98 473 155 461 123 C 458 109 492 66 445 52 C 350 26 190 106 139 234 Z" fill="rgba(25, 25, 25, 0.8)" stroke="rgba(25, 25, 25, 0.8)" />
-    </g>
-    <g fill="url(#camoGrad2)" stroke="url(#camoGrad)">
+    <g fill="url(#camoGrad)" stroke="url(#camoGrad)" transform-origin="center" transform="rotate(-45) scale(1.3)">
       <path d="M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z" />
       <path d="M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z" transform="rotate(60 512 512)" />
       <path d="M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z" transform="rotate(120 512 512)" />
@@ -109,7 +103,7 @@
       <path d="M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z" transform="rotate(240 512 512)" />
       <path d="M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z" transform="rotate(300 512 512)" />
     </g>
-    <g clip-path="url(#clipCircle)" fill="url(#camoGrad2)" stroke="url(#camoGrad3)">
+    <g fill="url(#camoGrad2)" stroke="url(#camoGrad2)">
       <path d="M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z" />
       <path d="M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z" transform="rotate(60 512 512)" />
       <path d="M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z" transform="rotate(120 512 512)" />
@@ -117,20 +111,17 @@
       <path d="M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z" transform="rotate(240 512 512)" />
       <path d="M770,420c25,50 75,-50 100,0q25,50 70,0c55,-51 55,100 30,130q-20,35 -50,20q-35,-30 -80,-5t-40,-45c-20,-50 -80,-10 -65,-100c5,-30 25,-20 35,0z" transform="rotate(300 512 512)" />
     </g>
-    <g clip-path="url(#clipCircle)" fill="url(#camoGrad3)" stroke="url(#camoGrad4)">
+    <g fill="url(#camoGrad3)" stroke="url(#camoGrad3)">
       <path d="M 437 321 C 474 302 397 266 434 246 Q 472 227 432 193 C 385 150 500 159 529 166 Q 565 178 544 203 Q 522 229 543 263 T 511 295 C 486 294 503 362 436 346 C 399 339 421 328 437 321 Z M 640 352 C 675 374 667 289 703 311 Q 739 334 748 283 C 762 220 812 325 820 354 Q 828 391 796 385 Q 762 379 743 415 T 700 402 C 688 380 637 430 618 364 C 606 328 626 342 640 352 Z M 715 543 C 713 584 783 535 782 577 Q 779 619 829 602 C 889 583 824 679 803 700 Q 775 725 763 694 Q 752 662 712 664 T 701 619 C 715 599 646 580 694 529 C 719 501 717 526 715 543 Z M 587 703 C 550 722 628 758 591 778 Q 553 797 593 832 C 640 874 524 865 495 858 Q 460 847 480 821 Q 502 795 481 761 T 514 730 C 538 731 521 662 588 678 C 625 686 603 696 587 703 Z M 384 673 C 349 650 357 735 321 713 Q 286 690 276 742 C 262 804 212 699 204 670 Q 196 634 229 639 Q 262 645 281 610 T 325 622 C 336 644 387 595 406 661 C 418 697 398 682 384 673 Z M 309 481 C 311 440 241 489 242 447 Q 245 405 195 423 C 135 442 200 346 221 325 Q 249 299 261 330 Q 272 362 312 361 T 323 405 C 310 425 378 445 331 495 C 305 523 307 499 309 481 Z" transform-origin="center" transform="scale(1)" />
     </g>
-     <g clip-path="url(#clipCircle)" fill="url(#camoGrad4)" stroke="url(#camoGrad4)">
+     <g fill="url(#camoGrad4)" stroke="url(#camoGrad4)">
       <path d="M 475 201 C 514 172 558 267 509 294 Q 456 327 526 353 C 592 382 484 374 456 425 C 428 468 379 421 406 383 C 439 336 301 356 359 307 C 427 250 291 293 379 204 C 443 144 404 244 475 201 ZM 800 635 C 805 683 701 674 702 618 Q 700 556 643 604 C 585 647 646 557 615 507 C 592 461 657 442 677 485 C 701 537 753 407 766 482 C 782 569 812 430 845 551 C 865 636 798 552 800 635 ZM 261 700 C 217 680 277 595 325 624 Q 380 653 367 579 C 359 508 406 606 465 604 C 516 607 500 673 453 668 C 396 663 482 773 411 747 C 328 717 433 813 312 781 C 228 756 334 740 261 700 Z" />
       <path d="M 368 423 C 448 551 481 363 571 337 C 669 292 565 412 693 396 C 770 397 703 440 661 432 C 510 437 657 560 634 651 C 624 758 572 608 522 727 C 483 793 479 713 507 681 C 578 548 398 614 331 548 C 243 486 399 516 321 413 C 283 346 354 383 368 423Z" stroke="#eaeaea" fill="#eaeaea" />
     </g>
-    
   </g>
     
-
   <!-- LAYER 4 --> 
-
- <g id="layer4" transform="scale(0)" opacity="0" transform-origin="center">
+<g id="layer4" transform="scale(1) translate(0,-75)" opacity="1" transform-origin="center">
   <g id="face">
     <g id="ears">
       <g id="leftEar">
@@ -205,7 +196,7 @@
     <g id="raspberry" transform="scale(0.9) translate(0,-20)" transform-origin="center">
       <g id="raspLeaves">
         <path id="leftLeaf" d="M510,430 q-20,5 -25,-15 q35,0 30,15" fill="#efefef" stroke-width="1" stroke="#efefef" />
-        <path id="rightLeaf" d="M514 430 q 20 5 25 -15 q -35 -0 -30 15"fill="#efefef" stroke-width="1" stroke="#efefef"  />
+        <path id="rightLeaf" d="M514 430 q 20 5 25 -15 q -35 -0 -30 15" fill="#efefef" stroke-width="1" stroke="#efefef"  />
       </g>
       <g id="raspMain">
         <circle id="raspberry1" cx="497.5" cy="438" r="9" fill="#efefef" stroke-width="0" />
@@ -225,42 +216,12 @@
       </g>
     </g>
   </g>
+</g>
     
-  
   <!-- LAYER 5 -->
- <g id="layer5" fill="none" stroke="#ffffff"  stroke-width="13" stroke-linecap="round" transform="scale(1.18)" transform-origin="center" stroke-dasharray="0% 100%">
-    <path id="darkNJ" d="M 190 720 V 575 C 190 557 218 540 241 557 L 310 647 V 548 M 227 720 V 620 L 296 710 C 319 728 347 710 347 693 V 548 M 433 551 H 478 C 493 551 508 566 508 581 V 664 C 510 746 368 746 366 664 M 433 588 H 458 C 464 588 470 594 470 600 V 664 C 467 697 405 697 402 664"  stroke="#333333" transform="translate(-5,5)"  stroke-width="0" >
-      <animate id="animN" attributeName="stroke-dasharray" to="100% 0%" dur="3.5s"  begin="meAnim.end-1s" fill="freeze" calcMode="linear" />
-      <animate attributeName="stroke-width" to="14.5" dur="1.5s"  begin="meAnim.end-1.5s" fill="freeze" calcMode="linear" />
-      <animate attributeName="d" to="M 319 482 V 482 C 500 482 500 482 500 482 L 700 482V 482 M 319 482 V 482L 500 482 C 510 482 550 482 600 482 V 482M 319 482 H 319 C 319 482 326 482 326 482 V 482 C 328 482 330 482 340 482M 319 482 H 458 C 464 482 470 482 470 482 V 482 C 467 482 405 482 700 482" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-      <animate attributeName="stroke-width" to="80" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-      <animate attributeName="d" to="M 190 720 V 575 C 190 557 218 540 241 557 L 310 647 V 547 M 227 720 V 620 L 296 710 C 319 728 347 710 347 693 V 548M 433 551 H 478 C 493 551 508 566 508 581 V 664 C 510 746 368 746 366 664M 433 588 H 458 C 464 588 470 594 470 600 V 664 C 467 697 405 697 402 664" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
-      <animate attributeName="stroke-width" to="14.5" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
-    </path>
-    <path id="darkTD" d="M 527.5 551 H 672.5 M 527.5 588 H 571 C 576 588 581 593 581 598 V 720M 619.5 720 V 598 C 619.5 593 624.5 588 629.5 588 H 673M 733 551 H 763 C 858 566 858 705 778 726 H 728 C 693 726 693 726 693 691 V 586 C 693 551 693 551 733 551 M 743 589 H 748 C 813 594 816 688 743 683 H 738 C 734 683 734 683 734 679 V 593 C 734 589 734 589 743 589" stroke="#333333" transform="translate(-5,5)" stroke-width="0" >
-      <animate attributeName="stroke-dasharray" to="100% 0%" dur="3.5s" begin="meAnim.end-1s" fill="freeze" calcMode="linear"/>
-      <animate attributeName="stroke-width" to="14.5" dur="1.5s" begin="meAnim.end-1.5s" fill="freeze" calcMode="linear" />
-      <animate attributeName="d" to="M 319 602 H 700 M 319 602 H 700 C 700 602 700 602 700 602 V 602 M 319 602 V 602 C 319 602 319 602 319 602 H 700M 319 722 H 351 C 351 722 351 722 351 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722 M 319 722 H 700 C 700 722 700 722 700 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-      <animate attributeName="stroke-width" to="80" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-      <animate attributeName="d" to="M 527.5 551 H 672.5 M 527.5 588 H 571 C 576 588 581 593 581 598 V 720 M 619.5 720 V 598 C 619.5 593 624.5 588 629.5 588 H 673 M 733 551 H 763C 858 566 858 705 778 726 H 728 C 693 726 693 726 693 691 V 586 C 693 551 693 551 733 551 M 743 589 H 748 C 813 594 816 688 743 683 H 738 C 734 683 734 683 734 679 V 593 C 734 589 734 589 743 589" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
-      <animate attributeName="stroke-width" to="14.5" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
-    </path>
-    <path id="lightNJ" d="M 190 720 V 575 C 190 557 218 540 241 557 L 310 647 V 548 M 227 720 V 620 L 296 710 C 319 728 347 710 347 693 V 548 M 433 551 H 478 C 493 551 508 566 508 581 V 664 C 510 746 368 746 366 664 M 433 588 H 458 C 464 588 470 594 470 600 V 664 C 467 697 405 697 402 664" stroke-width="0" >
-      <animate id="animN" attributeName="stroke-dasharray" to="100% 0%" dur="3.5s" begin="meAnim.end-1s" fill="freeze" calcMode="linear" />
-      <animate attributeName="stroke-width" to="13" dur="1.5s" begin="meAnim.end-1.5s" fill="freeze" calcMode="linear" />
-      <animate attributeName="d" to="M 319 482 V 482 C 500 482 500 482 500 482 L 700 482V 482 M 319 482 V 482L 500 482 C 510 482 550 482 600 482 V 482M 319 482 H 319 C 319 482 326 482 326 482 V 482 C 328 482 330 482 340 482M 319 482 H 458 C 464 482 470 482 470 482 V 482 C 467 482 405 482 700 482" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-      <animate attributeName="stroke-width" to="80" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-      <animate attributeName="d" to="M 190 720 V 575 C 190 557 218 540 241 557 L 310 647 V 547 M 227 720 V 620 L 296 710 C 319 728 347 710 347 693 V 548M 433 551 H 478 C 493 551 508 566 508 581 V 664 C 510 746 368 746 366 664M 433 588 H 458 C 464 588 470 594 470 600 V 664 C 467 697 405 697 402 664" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
-      <animate attributeName="stroke-width" to="13" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
-    </path>
-    <path id="lightTD" d="M 527.5 551 H 672.5 M 527.5 588 H 571 C 576 588 581 593 581 598 V 720M 619.5 720 V 598 C 619.5 593 624.5 588 629.5 588 H 673M 733 551 H 763 C 858 566 858 705 778 726 H 728 C 693 726 693 726 693 691 V 586 C 693 551 693 551 733 551 M 743 589 H 748 C 813 594 816 688 743 683 H 738 C 734 683 734 683 734 679 V 593 C 734 589 734 589 743 589" stroke-width="0" >
-      <animate attributeName="stroke-dasharray" to="100% 0%" dur="3.5s" begin="meAnim.end-1s" fill="freeze" calcMode="linear" />
-      <animate attributeName="stroke-width" to="13" dur="1.5s" begin="meAnim.end-1.5s" fill="freeze" calcMode="linear" />
-      <animate attributeName="d" to="M 319 602 H 700 M 319 602 H 700 C 700 602 700 602 700 602 V 602 M 319 602 V 602 C 319 602 319 602 319 602 H 700M 319 722 H 351 C 351 722 351 722 351 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722 M 319 722 H 700 C 700 722 700 722 700 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-      <animate attributeName="stroke-width" to="80" dur="1.5s" begin="startAnimation.begin" fill="freeze" calcMode="linear" />
-      <animate attributeName="d" to="M 527.5 551 H 672.5 M 527.5 588 H 571 C 576 588 581 593 581 598 V 720 M 619.5 720 V 598 C 619.5 593 624.5 588 629.5 588 H 673M 733 551 H 763 C 858 566 858 705 778 726 H 728 C 693 726 693 726 693 691 V 586 C 693 551 693 551 733 551M 743 589 H 748 C 813 594 816 688 743 683 H 738 C 734 683 734 683 734 679 V 593 C 734 589 734 589 743 589" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
-      <animate attributeName="stroke-width" to="13" dur="1.5s" begin="reverseAnimation.begin" fill="freeze" calcMode="linear" />
-    </path>
+  <g id="layer5" fill="none" stroke="#ffffff"  stroke-width="80" stroke-linecap="round" transform="scale(1.18)" transform-origin="center" >
+    <path id="darkBurger" d="M 319 482 V 482 C 500 482 500 482 500 482 L 700 482V 482 M 319 482 V 482L 500 482 C 510 482 550 482 600 482 V 482M 319 482 H 319 C 319 482 326 482 326 482 V 482 C 328 482 330 482 340 482M 319 482 H 458 C 464 482 470 482 470 482 V 482 C 467 482 405 482 700 482 M 319 602 H 700 M 319 602 H 700 C 700 602 700 602 700 602 V 602 M 319 602 V 602 C 319 602 319 602 319 602 H 700M 319 722 H 351 C 351 722 351 722 351 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722 M 319 722 H 700 C 700 722 700 722 700 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722Z"  stroke="#333333" transform="translate(-5,5)" />
+    <path id="lightBurger" d="M 319 482 V 482 C 500 482 500 482 500 482 L 700 482V 482 M 319 482 V 482L 500 482 C 510 482 550 482 600 482 V 482M 319 482 H 319 C 319 482 326 482 326 482 V 482 C 328 482 330 482 340 482M 319 482 H 458 C 464 482 470 482 470 482 V 482 C 467 482 405 482 700 482 M 319 602 H 700 M 319 602 H 700 C 700 602 700 602 700 602 V 602 M 319 602 V 602 C 319 602 319 602 319 602 H 700M 319 722 H 351 C 351 722 351 722 351 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722 M 319 722 H 700 C 700 722 700 722 700 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722" />
   </g>
   
 </svg>

@@ -1,6 +1,5 @@
 
 'use client';
-import Hex from '@/components/portfolio/hex/blank'
 import { useSvgSize } from '@/hooks';
 
 export default function Page() {
@@ -36,18 +35,6 @@ export default function Page() {
           Check back soon to see the new format.
         </text>
       </svg>
-    </div>
+    </div> 
   );
 }
-
-
-
-// <svg height="1024" width="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"  xmlnsXlink="http://www.w3.org/1999/xlink">
-// <defs>
-//   <pattern id="hex" width="100" height="100" viewBox="0 0 100 100">
-//     <polygon points="25 0, 75 0, 100 50, 75 100, 25 100, 0 50" stroke="red" fill="black" />
-//     {/* 25% 0%, 75% 0%, 100% 50% ,75% 100%, 25% 100%, 0 50% */}
-//   </pattern>
-// </defs>
-// <rect fill="url(#hex)" stroke="none" x="0" y="0" height={svgHeight} width={svgWidth} />
-// </svg>

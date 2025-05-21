@@ -80,7 +80,7 @@ export default function MenuButton() {
 
   return (
     <motion.div className="fixed flex flex-col items-center justify-center w-[100%] z-50" style={{ translateX: logoLeft, translateY: logoTop, scale: logoScale }}>
-      <AnimatedLogo size="256" setShowLinks={setShowLinks} showLinks={showLinks} />
+      <AnimatedLogo size="300" setShowLinks={setShowLinks} showLinks={showLinks} />
       <div className="flex flex-row items-center fixed justify-center w-[100%] z-40">
         <NavButtons showLinks={showLinks} setShowLinks={setShowLinks} />
       </div>

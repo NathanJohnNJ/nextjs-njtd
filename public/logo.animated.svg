@@ -221,7 +221,7 @@
         <g id="raspberry" transform="scale(0.9) translate(0,-20)" transform-origin="center">
           <g id="raspLeaves">
             <path id="leftLeaf" d="M510,430 q-20,5 -25,-15 q35,0 30,15" fill="#efefef" stroke-width="1" stroke="#efefef" />
-            <path id="rightLeaf" d="M514 430 q 20 5 25 -15 q -35 -0 -30 15"fill="#efefef" stroke-width="1" stroke="#efefef"  />
+            <path id="rightLeaf" d="M514 430 q 20 5 25 -15 q -35 -0 -30 15" fill="#efefef" stroke-width="1" stroke="#efefef"  />
           </g>
           <g id="raspMain">
             <circle id="raspberry1" cx="497.5" cy="438" r="9" fill="#efefef" stroke-width="0" />
