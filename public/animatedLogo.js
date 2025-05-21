@@ -18,7 +18,6 @@ export default function AnimatedLogo(props){
   
   return(
     <motion.svg id="animatedLogo" height={size} width={size} viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"  xmlnsXlink="http://www.w3.org/1999/xlink" onClick={() => {setShowLinks(!showLinks)}} className="z-50 firstLogo transition-all scale-[90%] hover:scale-[95%]">
-
       <defs>
         <clipPath id="clipCircle">
           <circle cx="512" cy="512" r="465"/>

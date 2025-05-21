@@ -1,0 +1,45 @@
+/* .mainDiv{
+} */
+ svg{
+  background-color: black;
+ }
+polygon {
+  margin-bottom: -15%;
+  width: 9%;
+  aspect-ratio: 1.15;
+  object-fit: cover;
+  top: var(--_y);
+  left: var(--_x);
+  background-color: var(--infoCol);
+  color: var(--whiteCol);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  min-height: 65px;
+  min-width:65px;
+  box-shadow: 2px -4px 43px 18.5px inset rgba(0, 0, 0, 0.35);
+}
+.element{
+z-index: 9999;
+}
+.element:hover{
+clip-path: none;
+border-radius: 25%;
+}
+.child:hover{
+font-weight: bolder;
+background-color: var(--contrastCol);
+color: var(--infoCol);
+animation-play-state:paused;
+z-index:9999;
+box-shadow: 2px -4px 43px 18.5px inset rgba(255, 255, 255, 0.3);
+}
+#unit:hover{
+font-weight: bolder;
+background-color: var(--focalCol);
+color: var(--contrastCol);
+}
+/* 1 */
+.mainDiv > .child:nth-child(1){--_x:9%; --_y:10.5%}
+

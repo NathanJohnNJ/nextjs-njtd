@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/footer";
 import Image from "next/image";
 import Navbar from "@/components/nav/navbar";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const poppins = Poppins({ 
   subsets: ['latin'],

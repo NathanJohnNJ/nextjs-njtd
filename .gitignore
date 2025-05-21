@@ -34,6 +34,5 @@ yarn-error.log*
 
 .npmcheckrc
 pushToGit.sh
-public/test
 sitespeed-result/
-public/images/gifs
+.private/
