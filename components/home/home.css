@@ -1,0 +1,65 @@
+.card {
+  width: auto;
+  height: auto;
+  transition: all 700ms;
+  border-radius: 20px;
+  isolation: isolate;
+  padding: 5px;
+  }
+.inner {
+  display: flex;
+  width: auto;
+  height: auto;
+  transition: all 700ms;
+  padding: 25px;
+  margin: -10px;
+  background: var(--background-color);
+  color: var(--text-color);
+  border-radius: 20px;
+  z-index: 9
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: conic-gradient(from var(--bg-angle) at 50% 50%, #2737f2a1, #f942d1b6, #f86c30b8, #b35dffb6, #2737f2a1);
+  animation: glow 16s infinite linear;
+  z-index: -1;
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+  transform: translate3d(0, 0, 0);
+}
+
+.card::before{
+  filter: blur(1.5rem);
+  opacity: 0.8;
+}
+
+.nameText{
+  font-family: var(--GeoBlack);
+  display: flex;
+  font-weight: 900;
+  text-shadow: -7.5px 3.5px 8px var(--border-color);
+  color: var(--mid-color);
+  transition: all;
+}
+
+@keyframes glow {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}

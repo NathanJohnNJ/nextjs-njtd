@@ -31,6 +31,23 @@ export function useSvgSize() {
   return svgSize;
 };
 
+export function useHomeSvgSize() {
+  const [svgSize, setSvgSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSvgSize() {
+      if (window.innerWidth <= 450){
+        setSvgSize([window.innerWidth * 0.95, window.innerHeight * 0.85]);
+      } else {
+        setSvgSize([window.innerWidth * 0.75, window.innerHeight * 0.5]); 
+      }
+    }
+    window.addEventListener('resize', updateSvgSize);
+    updateSvgSize();
+    return () => window.removeEventListener('resize', updateSvgSize);
+  }, []);
+  return svgSize;
+};
+
 export function useNavLinks() {
   const [navLinks, setNavLinks] = useState([]);
   const [width, height] = useSvgSize();

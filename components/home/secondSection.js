@@ -1,50 +1,87 @@
 'use client';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { useRef } from 'react';
-import GitHub from './social/github';
-import LinkedIn from './social/linkedIn';
-import Twitter from './social/twitter';
+import { useRef, useState, useEffect } from 'react';
 
-const SecondSection = () => {
+const ThirdSection = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ["start end", "start 75%"]
   });
-  const translateX = useTransform(scrollYProgress, [0, 0.4, 0.7], ['100vw','25vw', '25vw']);
-  const opacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
-  const gitOpacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
-  const linkedOpacity = useTransform(scrollYProgress, [0.1, 0.5], [0, 1]);
-  const xOpacity = useTransform(scrollYProgress, [0.2, 0.6], [0, 1]);
-  const scrollScale = useTransform(scrollYProgress, [0, 0.3, 0.75, 1], [0, 1, 1, 0]);
-  
+  const translateX = useTransform(scrollYProgress, [0, 0.5, 0.8], ['100vw','25vw', '25vw'])
+  const opacity = useTransform(scrollYProgress, [0, 0.15], [0.6, 1])
+  const [repos, setRepos] = useState([])
+  let side = 150;
+
+  const fetchData = async () => {
+    try {
+      const url = 'https://api.github.com/users/NathanJohnNJ/repos?per_page=5&sort=pushed';
+      const response = await fetch(url, {
+        headers:{"Accept" : "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28"
+        }
+      })
+      if (!response.ok) {
+        throw new Error(response.statusText)
+        }
+      const data = await response.json()
+      const repoData = data.map((x, i) => {
+        return {
+          date: `${x.pushed_at.slice(8, 10)}/${x.pushed_at.slice(5, 7)}/${x.pushed_at.slice(0, 4)}`,
+          url:  `https://github.com/${x.full_name}`,
+          name: x.name,
+          homepage: x.homepage,
+          html_url: x.html_url,
+          description: x.description
+        }
+      })
+      console.log(repoData)
+      setRepos(repoData);
+    } catch (err) { 
+      console.log(err)
+    }
+  } 
+  useEffect(() => { 
+     fetchData()
+  }, []);
 
   return(
-    <motion.div ref={ref} className="relative h-[500vh] w-[90vw] flex flex-col self-center justify-self-center items-center justify-flex-end" style={{scale: scrollScale}}>
-      <motion.div className="sticky top-[15vh] w-[78%] flex flex-col p-8 border rounded-4xl shadow-2xl shadow-(color:--darkBorder-color)" >    
-        <motion.h1 className='geoFont text-[var(--dark-color)] font-extrabold whitespace-nowrap text-5xl mt-[3vh] self-center coloredShadow ' style={{opacity: opacity, scale: opacity}}>
-          Find Me On...
+    <motion.div ref={ref} className="relative h-[150vh] w-[90vw] flex flex-col self-center mb-[20vh] justify-self-center items-center justify-flex-end pb-16">
+      <motion.div className="sticky top-[2vh] w-[85%] flex flex-col pl-16 pr-16">    
+        <motion.h1 className='font-[GeologicaExtraBold] text-(--dark-color) font-bold whitespace-wrap text-4xl text-center self-center coloredShadow' style={{opacity: opacity, scale: opacity}}>
+          Recently Updated GitHub Repositories
         </motion.h1>
-        <motion.div className='flex flex-row mt-[4vh] mb-[2vh] justify-evenly'>
-          <motion.a href="https://www.github.com/NathanJohnNJ" target="_blank" rel="noreferrer" style={{opacity: gitOpacity, scale: gitOpacity}}>
-            <GitHub />
-          </motion.a>
-          <motion.a href="https://www.linkedin.com/in/NathanJohnNJ" target="_blank" rel="noreferrer" style={{opacity: linkedOpacity, scale: linkedOpacity}}>
-            <LinkedIn />
-          </motion.a>
-          <motion.a href="https://www.x.com/codesnj" target="_blank" rel="noreferrer" style={{opacity: xOpacity, scale: xOpacity}}>
-            <Twitter />
-          </motion.a>
+        <motion.div className="flex w-full flex-col justify-center items-center text-center" id="mainGit" style={{opacity: opacity, scale: opacity}}>
+          <motion.div className="flex flex-col items-center w-[80vw] relative font-(--font-poppins) text-xl text-(--mid-color) self-center">
+            {repos.map((repo, i) => {
+              const ID = `git${i}`
+              const divID = `div${ID}`
+              side = side * -1
+            return(
+              <motion.div key={i} id={divID} className="flex flex-col w-min max-w-[60%] mt-5 p-4 bg-(--light-color) animate-(--rainbowBG) hover:animate-(--reverseRainbowBG) rainbowBG shadow-2xl"
+                variants={{
+                  hidden: { opacity: 0.6 },
+                  visible: { x: 0, opacity: 1 },
+                }}
+                initial="hidden"
+                whileInView="visible"
+                viewport= '0.2'
+                transition={{ ease: "easeIn", type: "spring", bounce: 0.4}}
+                style={{ translateX: side }}
+                >
+                  <motion.h2 className="font-geologica font-semibold text-xl -mt-4 text-(--light-color) filter-(--my-shadow)">{repo.name}</motion.h2>
+                  <motion.div className="text-left" id={ID}>
+                  <motion.p className="whitespace-nowrap text-sm"><b>URL:</b><a href={repo.url} target="_blank" rel="noreferrer" className="no-underline font-semibold text-(--dark-color) hover:text-(--light-color) text-sm"> {repo.url}</a></motion.p>
+                  {repo.description?<p className="text-sm w-[85%]"><b>Description:</b> {repo.description}</p>:<></>}
+                  </motion.div>
+                  </motion.div>)
+            })}
+          </motion.div>
         </motion.div>
-      </motion.div>
-      <motion.div className="sticky top-[60vh] bg-[#b0b0b0] w-[45%] flex flex-col p-4 border rounded-4xl shadow-2xl shadow-(color:--darkBorder-color)" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'linear', delay:2}} style={{ translateX: translateX }}>
-        <motion.h2 className='geoFont font-light text-[1.05rem] text-white'>
-          Explore my latest projects and keep up to date with the exciting innovations to come. Follow me to hear about new ideas, fresh designs, and groundbreaking developments!
-        </motion.h2>
       </motion.div>
     </motion.div>
   )
 }; 
 
-export default SecondSection;
+export default ThirdSection;
 
