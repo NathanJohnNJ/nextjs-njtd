@@ -3,9 +3,6 @@ const withSvgr = require("next-plugin-svgr");
 const withPlugins = require("next-compose-plugins");
 
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true
-  },
   turbopack: {
     rules: {
       '*.svg': {
@@ -15,7 +12,7 @@ const nextConfig = {
     }
   },
   experimental: {
-    optimizePackageImports: ['motion', 'tailwindcss', 'autoprefixer', 'eslint', '@svgr/webpack', 'next-plugin-svgr'],
+    optimizePackageImports: ['motion', 'tailwindcss', 'autoprefixer', '@svgr/webpack', 'next-plugin-svgr'],
     webpackMemoryOptimizations: true,
   }
 };

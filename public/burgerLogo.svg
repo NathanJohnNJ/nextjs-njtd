@@ -1,7 +1,10 @@
 <svg id="stillLogo" height="1024" width="1024" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <clipPath id="clipCircle">
-      <circle cx="512" cy="512" r="465"/>
+      <circle cx="512" cy="512" r="463"/>
+    </clipPath>
+    <clipPath id="clipCircleOuter">
+      <circle cx="512" cy="512" r="500" />
     </clipPath>
     <clipPath id="camoClip">
       <path d="M 0 0 H 1024 V 1024 H0 V0z M 412 257 C 461 232 358 184 408 157 Q 458 132 405 86 C 342 29 496 41 534 51 Q 582 66 555 100 Q 525 135 553 180 T 510 222 C 477 221 500 312 411 291 C 361 281 391 267 412 257 Z M 683 298 C 729 328 719 215 767 244 Q 814 275 827 206 C 845 123 912 263 922 301 Q 933 350 890 343 Q 845 335 820 382 T 762 365 C 747 336 679 402 653 314 C 637 266 664 285 683 298 Z M 783 553 C 780 608 873 543 872 599 Q 868 655 935 632 C 1015 606 928 734 900 762 Q 863 796 847 755 Q 832 712 779 714 T 764 655 C 782 628 691 602 754 535 C 788 497 785 530 783 553 Z M 612 767 C 563 792 666 840 617 867 Q 566 892 620 938 C 682 995 528 983 489 973 Q 442 958 469 924 Q 499 889 471 844 T 514 802 C 547 804 524 712 613 733 C 663 744 633 757 612 767 Z M 341 726 C 295 696 305 809 257 780 Q 210 749 197 819 C 179 901 112 761 101 723 Q 91 674 134 681 Q 179 689 204 642 T 262 659 C 277 688 345 622 371 710 C 387 759 360 739 341 726 Z M 241 471 C 244 416 151 481 152 425 Q 156 369 89 393 C 9 418 96 290 124 262 Q 161 228 177 269 Q 192 312 245 310 T 260 369 C 242 396 333 422 270 489 C 236 527 239 494 241 471 Z" transform="rotate(40 512 512)" clipRule="evenodd"/>
@@ -83,14 +86,16 @@
     </linearGradient>
   </defs>
 
+  <image href="./rainbowBG.png" width="1135" height="1135" x="-50" y="-50"  clip-path='url(#clipCircleOuter)' />
+
+ 
+
   <!-- LAYER 1 -->
-  <g id="layer1">
-    <circle r="504" cx="512" cy="512" stroke="black" fill="none" stroke-width="12px" />
-    <circle r="483" cx="512" cy="512" stroke="black" fill="none" stroke-width="8px" />
-  </g>
+  <!-- Switched for after layer 4 to sit on top of camo layer -->
+
 
   <!-- LAYER 2 -->
-  <circle id="layer2" r="465" cx="512" cy="512" stroke="black" fill="black" />
+  <circle id="layer2" r="465" cx="512" cy="512" stroke="black" fill="black" fill-opacity="0.5" clip-path="url(#clipCircle)" />
 
   <!-- LAYER 3 -->
   <g id="layer3" clip-path="url(#clipCircle)"> 
@@ -218,10 +223,14 @@
   </g>
 </g>
     
+<circle r="473" cx="512" cy="512" stroke="rgb(220,220,220)" fill="none" stroke-width="16px" />
+ <circle r="468" cx="512" cy="512" stroke="#000000" fill="none" stroke-width="12px" />
+
   <!-- LAYER 5 -->
-  <g id="layer5" fill="none" stroke="#ffffff"  stroke-width="80" stroke-linecap="round" transform="scale(1.18)" transform-origin="center" >
-    <path id="darkBurger" d="M 319 482 V 482 C 500 482 500 482 500 482 L 700 482V 482 M 319 482 V 482L 500 482 C 510 482 550 482 600 482 V 482M 319 482 H 319 C 319 482 326 482 326 482 V 482 C 328 482 330 482 340 482M 319 482 H 458 C 464 482 470 482 470 482 V 482 C 467 482 405 482 700 482 M 319 602 H 700 M 319 602 H 700 C 700 602 700 602 700 602 V 602 M 319 602 V 602 C 319 602 319 602 319 602 H 700M 319 722 H 351 C 351 722 351 722 351 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722 M 319 722 H 700 C 700 722 700 722 700 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722Z"  stroke="#333333" transform="translate(-5,5)" />
-    <path id="lightBurger" d="M 319 482 V 482 C 500 482 500 482 500 482 L 700 482V 482 M 319 482 V 482L 500 482 C 510 482 550 482 600 482 V 482M 319 482 H 319 C 319 482 326 482 326 482 V 482 C 328 482 330 482 340 482M 319 482 H 458 C 464 482 470 482 470 482 V 482 C 467 482 405 482 700 482 M 319 602 H 700 M 319 602 H 700 C 700 602 700 602 700 602 V 602 M 319 602 V 602 C 319 602 319 602 319 602 H 700M 319 722 H 351 C 351 722 351 722 351 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722 M 319 722 H 700 C 700 722 700 722 700 722 H 700 C 700 722 700 722 700 722 V 722 C 700 722 700 722 700 722" />
+  <g id="layer5" fill="none" stroke="#ffffff"  stroke-width="80" stroke-linecap="round" transform="scale(1.025) translate(13 0)"  transform-origin="center" >
+    <path id="darkBurger" d="M 306 482 V 482 C 487 482 487 482 487 482 L 687 482 V 482 M 306 482 V 482 L 487 482 C 497 482 537 482 587 482 V 482 M 306 482 H 306 C 306 482 313 482 313 482 V 482 C 315 482 317 482 327 482 M 306 482 H 445 C 451 482 457 482 457 482 V 482 C 454 482 392 482 687 482 M 306 602 H 687 M 306 602 H 687 C 687 602 687 602 687 602 V 602 M 306 602 V 602 C 306 602 306 602 306 602 H 687 M 306 722 H 338 C 338 722 338 722 338 722 H 687 C 687 722 687 722 687 722 V 722 C 687 722 687 722 687 722 M 306 722 H 687 C 687 722 687 722 687 722 H 687 C 687 722 687 722 687 722 V 722 C 687 722 687 722 687 722"  stroke="#333333" transform="translate(-5,5)" stroke-linecap="round" stroke-linejoin="round" />
+    <path id="lightBurger" d="M 306 482 V 482 C 487 482 487 482 487 482 L 687 482 V 482 M 306 482 V 482 L 487 482 C 497 482 537 482 587 482 V 482 M 306 482 H 306 C 306 482 313 482 313 482 V 482 C 315 482 317 482 327 482 M 306 482 H 445 C 451 482 457 482 457 482 V 482 C 454 482 392 482 687 482M 306 602 H 687 M 306 602 H 687 C 687 602 687 602 687 602 V 602 M 306 602 V 602 C 306 602 306 602 306 602 H 687 M 306 722 H 338 C 338 722 338 722 338 722 H 687 C 687 722 687 722 687 722 V 722 C 687 722 687 722 687 722 M 306 722 H 687 C 687 722 687 722 687 722 H 687 C 687 722 687 722 687 722 V 722 C 687 722 687 722 687 722" stroke-linecap="round" stroke-linejoin="round" />
   </g>
   
 </svg>
+

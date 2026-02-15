@@ -79,11 +79,11 @@ export default function MenuButton() {
   }, [current, otherLogoLeft, otherLogoTop, otherLogoScale, homeLogoLeft, homeLogoScale, homeLogoTop])
 
   return (
-    <motion.div className="fixed flex flex-col items-center justify-center w-[100%] z-50" style={{ translateX: logoLeft, translateY: logoTop, scale: logoScale }}>
+    <motion.div className="fixed flex flex-col items-center justify-center w-full z-50" style={{ translateX: logoLeft, translateY: logoTop, scale: logoScale }}>
       <AnimatedLogo size="300" setShowLinks={setShowLinks} showLinks={showLinks} />
-      <div className="flex flex-row items-center fixed justify-center w-[100%] z-40">
+      <motion.div className="flex flex-row items-center fixed justify-center w-full z-40">
         <NavButtons showLinks={showLinks} setShowLinks={setShowLinks} />
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

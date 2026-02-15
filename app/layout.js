@@ -23,15 +23,15 @@ export default function RootLayout({ children }) {
         <meta property="og:image" content="/logo.rainbow.png" />
         <meta property="og:url" content="https://www.njtd.xyz/" />
         <meta property="og:type" content="website" />
-        <meta property="og:description" content="A website built with Next JS, and styled with Tailwind CSS, to showcase my work and host my protfolio." />
+        <meta property="og:description" content="A website built with Next JS, and styled with Tailwind CSS, to showcase my work and host my portfolio." />
         <title>NJTD</title>
       </head>
       <body className={`${poppins.variable} antialiased flex flex-col items-center justify-center`}>
-        <div className="pt-8 mt-[20px] relative">
+        <div className="pt-8 mt-5 relative">
           <Navbar />
         </div>
 
-        <div className="h-fit w-[100vw] max-w-[1600px] flex items-center justify-center">
+        <div className="h-fit w-screen max-w-400 flex items-center justify-center">
           {children}
         </div>
       

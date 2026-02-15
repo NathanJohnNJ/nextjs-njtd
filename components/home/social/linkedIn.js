@@ -15,7 +15,7 @@ const LinkedIn = () => {
       </span>
       <span className="LinkedBG shadow-2xl" />
     </button>
-    <h1 style={{visibility: visibility}} className="text-4xl justify-self-center font-bold fontGeo absolute coloredShadow top-[80%] left-[-60px]  text-[var(--white-color)] rounded-2xl bg-[#a0a0a0] p-[8px] shadow-2xl shadow-(color:--darkBorder-color)">LinkedIn</h1>
+    <h1 style={{visibility: visibility}} className="text-3xl justify-self-center font-bold fontGeo absolute coloredShadow top-[90%] -left-15  text-(--white-color) rounded-2xl bg-[#a0a0a0] p-2 shadow-2xl shadow-(color:--darkBorder-color)">LinkedIn</h1>
   </div>
   )
 };
